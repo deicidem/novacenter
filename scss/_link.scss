@@ -1,0 +1,75 @@
+.link {
+  font-size: 1.5rem;
+  color: $active;
+  text-decoration: none;
+  display: inline-block;
+  &__icon {
+    vertical-align: middle;
+    margin-left: 1rem;
+    width: 1.75rem;
+    height: 1.75rem;
+    background: #fff;
+    display: inline-block;
+    border: 1px solid $active;
+    border-radius: 50%;
+    position: relative;
+    &::after {
+      content: "";
+      width: 100%;
+      height: 100%;
+      top: 50%;
+      left: 50%;
+      transition: 0.2s ease-in-out;
+      transform: translate(-50%, -50%);
+      position: absolute;
+      background: $active;
+      border-radius: 50%;
+      z-index: 0;
+    }
+    svg {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      padding: 15%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 1;
+      path {
+        transition: 0.2s ease-out;
+      }
+    }
+  }
+
+  &:hover {
+    .link__icon {
+      &::after {
+        width: 0;
+        height: 0;
+      }
+      svg > path {
+        fill: $active;
+      }
+    }
+  }
+
+  &_white {
+    color: #fff;
+    .link__icon {
+      background: $active;
+      &::after {
+        background: #fff;
+      }
+      svg > path {
+        fill: $active;
+      }
+    }
+    &:hover {
+      .link__icon {
+        svg > path {
+          fill: #fff;
+        }
+      }
+    }
+  }
+}

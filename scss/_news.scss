@@ -1,0 +1,32 @@
+.news {
+  &-card {
+    box-shadow: 2px 3px 8px #b0c1df;
+    white-space: initial;
+    &__image {
+      flex: 1 1 auto;
+      height: 18rem;
+      width: 100%;
+      object-fit: cover;
+    }
+    &__content {
+      padding: 2.25rem 2rem;
+      background: #f6f6f6;
+      display: flex;
+      flex-wrap: wrap;
+    }
+    &__title {
+      max-width: 100%;
+      width: 100%;
+      font-size: 1.375rem;
+      color: $text-dark;
+      margin-bottom: 2rem;
+      font-weight: 400;
+      margin-top: 0;
+    }
+    &__date {
+      font-size: 1.25rem;
+      margin-bottom: 2rem;
+      color: #595959;
+    }
+  }
+}

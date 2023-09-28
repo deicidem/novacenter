@@ -1,0 +1,33 @@
+.logo {
+  display: flex;
+  align-items: center;
+  &__image {
+    width: 4rem;
+    .svg {
+      min-width: 100%;
+      max-width: 100%;
+    }
+  }
+  &__line {
+    height: 6.25rem;
+    width: 3px;
+    background-color: $active_dark;
+    display: inline-block;
+    margin: 0 1rem;
+  }
+  &__text {
+    text-transform: uppercase;
+    color: $active_dark;
+    font-size: 1.25rem;
+    font-weight: bold;
+  }
+  &_white &__image svg path {
+    fill: #fff;
+  }
+  &_white &__line {
+    background-color: #fff;
+  }
+  &_white &__text {
+    color: #fff;
+  }
+}
