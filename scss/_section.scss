@@ -65,7 +65,11 @@
     }
   }
 }
-
+@media (min-width: 2000px) {
+  .section {
+    max-width: 1900px;
+  }
+}
 @media (max-width: $xxl-screen) {
   .section {
     max-width: 1340px;
@@ -88,5 +92,26 @@
     padding-left: 2rem;
     padding-right: 2rem;
     width: 100%;
+  }
+}
+@media (max-width: $sm-screen) {
+  .section {
+    &-title {
+      text-align: center;
+      display: block;
+      position: relative;
+      padding-bottom: 0;
+      &::after {
+        position: absolute;
+        bottom: -1.5rem;
+        width: 80%;
+        left: 50%;
+        transform: translateX(-50%);
+        opacity: 0.4;
+      }
+    }
+    &-text {
+      text-align: center;
+    }
   }
 }

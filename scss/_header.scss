@@ -14,31 +14,36 @@
   &-menu {
     display: flex;
     align-items: center;
-    &__list {
+    & > ul {
       display: flex;
       align-items: center;
       justify-content: center;
       padding: 0;
       margin: 0;
       list-style: none;
-      &__item {
-        margin: 0 2rem;
+      & > li {
+        margin: 0;
+        margin-right: 2rem;
         position: relative;
+        & > a {
+          font-weight: 500;
+          font-size: 1.25rem;
+          color: $active_dark;
+          text-transform: uppercase;
+        }
       }
     }
-    &__link {
-      font-weight: 500;
-      font-size: 1.25rem;
-      color: $active_dark;
-      text-transform: uppercase;
-    }
-    .nav-link {
+    a {
       color: $active_dark;
       text-decoration: none;
       transition: color 0.1s ease-in-out;
       &:hover {
         color: lighten($active_dark, 15);
       }
+    }
+    &_wrapper {
+      display: flex;
+      align-items: center;
     }
   }
 
@@ -49,18 +54,18 @@
     left: -2.5rem;
     top: 100%;
     box-shadow: 0px 21px 46px rgba(#969696, 0.1);
-    &__list {
+    ul {
       padding: 2.5rem 3.7rem;
       margin: 0;
       list-style: none;
-      &__item {
+      li {
         margin-bottom: 1rem;
         &:last-child {
           margin-bottom: 0;
         }
       }
     }
-    &__link {
+    a {
       font-size: 1.25rem;
       text-decoration: none;
       color: $active_dark;
@@ -68,31 +73,27 @@
     }
   }
 
-  &-menu__list__item:has(.header-submenu) &-menu__link {
+  &-menu > ul > li:has(.header-submenu) > a {
     &::after {
       content: "";
       position: relative;
-      display: flex;
-      align-items: center;
-      justify-content: center;
       width: 1rem;
       height: 1rem;
       margin-left: 0.5rem;
       display: inline-block;
       background: url("../assets/icons/small-arrow.svg") center no-repeat;
       background-size: contain;
-      align-items: center;
       transform: rotate(180deg);
       transform-origin: center;
       transition: all 0.25s ease;
       color: $active_dark;
     }
   }
-  &-menu__list__item.active {
-    & > .nav-link {
+  &-menu > ul > li.active {
+    & > a {
       color: lighten($active_dark, 15);
     }
-    .header-menu__link::after {
+    & > a::after {
       transform: rotate(0deg);
     }
     & > .header-submenu {
@@ -108,6 +109,118 @@
     color: #969696;
     &_active {
       color: $active_dark;
+    }
+  }
+}
+@media (max-width: $md-screen) {
+  .header {
+    &-menu__list__item {
+      margin: 0 1rem;
+    }
+  }
+}
+
+@media (max-width: $sm-screen) {
+  .header {
+    &-aside {
+      display: flex;
+      align-items: center;
+    }
+
+    &-menu {
+      &_wrapper {
+        position: fixed;
+        right: 0;
+        top: 0;
+        background: #fff;
+        z-index: 1000;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        padding: 4rem;
+        min-width: 30%;
+        margin-top: 10.25rem;
+        transition: 0.3s ease-in-out;
+        &.mobile-hidden {
+          transform: translateX(100%);
+        }
+      }
+      &__list {
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+        &__item {
+          margin: 1rem 0;
+          width: 100%;
+        }
+      }
+      &__link {
+        font-size: 1.5rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      &-button {
+        position: relative;
+        width: 3rem;
+        height: 3rem;
+        margin-left: 2rem;
+        z-index: 10001;
+        span {
+          position: absolute;
+          background: $active-dark;
+          height: 2px;
+          width: 100%;
+          top: 50%;
+        }
+        &::after,
+        &::before {
+          content: "";
+          position: absolute;
+          background: $active-dark;
+          height: 2px;
+          transition: 0.2s ease-out;
+          width: 100%;
+          transform-origin: center;
+        }
+        &::after {
+          top: 20%;
+        }
+        &::before {
+          top: 80%;
+        }
+        &.active {
+          span {
+            opacity: 0;
+          }
+          &::after {
+            top: 50%;
+            transform: rotate(135deg);
+          }
+          &::before {
+            top: 50%;
+            transform: rotate(-135deg);
+          }
+        }
+      }
+    }
+    &-submenu {
+      display: block;
+      position: static;
+      background: none;
+      height: 0;
+      overflow: hidden;
+      &__list {
+        padding: 2rem;
+        box-shadow: none;
+        background: none;
+      }
+      &__link {
+        font-size: 1.5rem;
+      }
+    }
+    &-menu__list__item.active &-submenu {
+      height: 100%;
     }
   }
 }

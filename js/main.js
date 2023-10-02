@@ -1,11 +1,11 @@
 document.addEventListener("DOMContentLoaded", () => {
   defineCustomComponents();
-  setupSvg();
   setupHeroSlider();
   setupSlider();
   setupNavMenu();
   setupVideo();
   setupGoTop();
+  setupSvg();
 });
 
 class HeroSlider {
@@ -73,6 +73,40 @@ function setupNavMenu() {
 
   navLinks.forEach((link) => {
     let timer = null;
+    link.addEventListener("touchstart", (e) => {
+      if (
+        e.target.classList.contains("header-menu__link") &&
+        !link.classList.contains("active")
+      ) {
+        e.preventDefault();
+      }
+
+      clearTimeout(timer);
+
+      navLinks.forEach((link) => {
+        link.classList.remove("active");
+      });
+
+      link.classList.add("active");
+    });
+
+    link.addEventListener("click", (e) => {
+      if (
+        e.target.classList.contains("header-menu__link") &&
+        !link.classList.contains("active")
+      ) {
+        e.preventDefault();
+      }
+
+      clearTimeout(timer);
+
+      navLinks.forEach((link) => {
+        link.classList.remove("active");
+      });
+
+      link.classList.add("active");
+    });
+
     link.addEventListener("mouseover", () => {
       clearTimeout(timer);
       link.classList.add("active");
@@ -83,6 +117,15 @@ function setupNavMenu() {
       }, 300);
     });
   });
+
+  document
+    .querySelector(".header-menu-button")
+    .addEventListener("click", function () {
+      document
+        .querySelector(".header-menu_wrapper")
+        .classList.toggle("mobile-hidden");
+      this.classList.toggle("active");
+    });
 }
 
 function setupSvg() {
@@ -124,8 +167,9 @@ class CardComponent extends HTMLElement {
     let href = this.getAttribute("data-href") || "#";
     let imageSrc = this.getAttribute("data-src") || "";
     let title = this.getAttribute("data-title") || "";
+    let large = this.getAttribute("data-large");
     this.innerHTML = `
-    <div class="card">
+    <div class="card ${large != null ? "card_large" : ""}">
     <div class="card-image">
       <img src="${imageSrc}" alt="" />
     </div>
@@ -176,13 +220,46 @@ function defineCustomComponents() {
 }
 
 function setupSlider() {
-  new Glide(".glide", {
-    type: "carousel",
-    startAt: 0,
-    perView: 3,
-    gap: 24,
-    rewind: false,
-  }).mount();
+  // new Glide(".glide", {
+  //   type: "carousel",
+  //   startAt: 0,
+  //   perView: 3,
+  //   gap: 24,
+  //   breakpoints: {
+  //     768: {
+  //       perView: 2,
+  //     },
+  //     576: {
+  //       perView: 1,
+  //     },
+  //   },
+  // }).mount();
+  const prevArrow = $(".news-slider")
+    .parents(".section")
+    .find(".arrow-button_left");
+  const nextArrow = $(".news-slider")
+    .parents(".section")
+    .find(".arrow-button_right");
+  $(".news-slider").slick({
+    slidesToShow: 3,
+    infinite: false,
+    prevArrow,
+    nextArrow,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 576,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
+  });
 }
 
 function setupGoTop() {

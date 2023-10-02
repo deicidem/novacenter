@@ -13,6 +13,7 @@ body {
 
 img {
   max-width: 100%;
+  object-fit: cover;
 }
 
 .slider-buttons {
@@ -33,13 +34,17 @@ img {
   font-size: 1.25rem;
   font-weight: 500;
   color: #969696;
-  &_active {
-    color: $active_dark;
+  &__text {
+    color: #969696;
   }
-  &_white {
+  & a {
+    color: $active_dark;
+    text-decoration: none;
+  }
+  &__white &__text {
     color: #adadad;
   }
-  &_white &_active {
+  &_white a {
     color: #fff;
   }
 }
@@ -49,11 +54,28 @@ img {
   }
   .outer-container {
     max-width: 1600px;
+    padding: 0;
+  }
+}
+
+@media (min-width: 2000px) {
+  html {
+    font-size: 110%;
+  }
+  .container {
+    max-width: 1800px;
+  }
+  .outer-container {
+    max-width: 1900px;
+    padding: 0;
   }
 }
 @media (max-width: $xxl-screen) {
   html {
     font-size: 85%;
+  }
+  .outer-container {
+    max-width: 1340px;
   }
 }
 @media (max-width: $xl-screen) {
@@ -61,7 +83,7 @@ img {
     font-size: 70%;
   }
   .outer-container {
-    max-width: 1200px;
+    max-width: 1100px;
   }
 }
 @media (max-width: $lg-screen) {
@@ -71,13 +93,21 @@ img {
   .main {
     padding: 0 2rem;
   }
+  .outer-container {
+    max-width: none;
+    padding: 0 2rem;
+  }
 }
 @media (max-width: $md-screen) {
   html {
     font-size: 60%;
   }
 }
-
+@media (max-width: 420px) {
+  html {
+    font-size: 50%;
+  }
+}
 // @media (min-width: 1600px) {
 //   .container {
 //     max-width: 1340px;

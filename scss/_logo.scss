@@ -1,9 +1,13 @@
 .logo {
   display: flex;
   align-items: center;
+  text-decoration: none;
+  color: inherit;
   &__image {
     width: 4rem;
+    display: block;
     .svg {
+      width: 100%;
       min-width: 100%;
       max-width: 100%;
     }
@@ -21,7 +25,7 @@
     font-size: 1.25rem;
     font-weight: bold;
   }
-  &_white &__image svg path {
+  &_white &__image path {
     fill: #fff;
   }
   &_white &__line {

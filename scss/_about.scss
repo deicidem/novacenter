@@ -1,7 +1,6 @@
 $image-offset: 7%;
 .about {
   background-color: #e7e7e7;
-  padding: 4rem 0;
   position: relative;
   &-image {
     position: absolute;
@@ -58,5 +57,34 @@ $image-offset: 7%;
   }
   &__link {
     margin-top: 1rem;
+  }
+}
+
+@media (max-width: $lg-screen) {
+  .about {
+    &-image {
+      position: static;
+      max-height: 14rem;
+      display: flex;
+      justify-content: center;
+      margin-bottom: 2rem;
+      &::before {
+        display: none;
+      }
+    }
+    p {
+      text-align: center;
+    }
+  }
+}
+@media (max-width: $sm-screen) {
+  .about {
+    &__subtitle {
+      font-size: 1.5rem;
+    }
+    text-align: center;
+    ul {
+      text-align: center;
+    }
   }
 }

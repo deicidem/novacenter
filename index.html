@@ -6,8 +6,8 @@
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
     <link rel="stylesheet" href="assets/fonts/Roboto/font.css" />
     <link rel="stylesheet" href="css/normalize.min.css" />
-    <link rel="stylesheet" href="css/glide.core.min.css" />
-    <link rel="stylesheet" href="css/glide.theme.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/style.css" />
     <title>Центр инновационных технологий</title>
@@ -16,18 +16,18 @@
     <header class="header">
       <div class="container outer-container">
         <div class="header-container">
-          <div class="logo">
-            <div class="logo__image">
-              <img src="assets/icons/logo.svg" class="svg" alt="" />
-            </div>
+          <a href="#" class="logo">
+            <span class="logo__image">
+              <img class=" svg " src="assets/icons/logo.svg" alt="" />
+            </span>
             <span class="logo__line"></span>
-            <div class="logo__text">
-              центр <br />
-              инновационных <br />
+            <span class="logo__text">
+              центр <br/>
+              инновационных <br/>
               технологий
-            </div>
-          </div>
-          <div class="heade-menu_wrapper">
+            </span>
+          </a>
+          <div class="header-menu_wrapper mobile-hidden">
             <nav class="header-menu">
               <ul class="header-menu__list">
                 <li class="header-menu__list__item">
@@ -81,8 +81,13 @@
             </nav>
             <div class="header-search"></div>
           </div>
-          <div class="lang">
-            <span class="lang_active">RU</span>/<span>EN</span>
+          <div class="header-aside">
+            <div class="lang">
+              <span class="lang_active">RU</span>/<span>EN</span>
+            </div>
+            <div class="header-menu-button">
+              <span></span>
+            </div>
           </div>
         </div>
       </div>
@@ -171,12 +176,16 @@
       </section>
 
       <section class="section section_gray about">
-        <div class="about-image">
-          <img src="assets/images/about/IMC.png" alt="" />
-        </div>
         <div class="container">
-          <div class="row justify-content-end">
-            <div class="col-7">
+          <div class="row justify-content-xl-end justify-content-center">
+            <div class="col-xl-5 col-12">
+              <div class="about-image">
+                <img src="assets/images/about/IMC.png" alt="" />
+              </div>
+            </div>
+            <div
+              class="col-lg-7 col-md-10 col-12 d-xl-block d-flex justify-content-center align-items-center flex-column"
+            >
               <h4 class="about__subtitle">
                 Российский программный комплекс для обработки пространственных
                 данных
@@ -250,14 +259,14 @@
         <div class="container">
           <h2 class="section-title">Отраслевые решения</h2>
           <div class="row">
-            <div class="col-lg-6 col-12">
+            <div class="col-lg-6 col-md-9 col-12">
               <p class="section-text">
                 Программный комплекс IMC - многофункциональное решение задач,
                 подходящее для различных отраслей и сфер жизни.
               </p>
             </div>
           </div>
-          <div class="row row-cols-md-3 row-cols-2 g-4">
+          <div class="row row-cols-md-3 row-cols-sm-2 row-cols-1 g-md-4 g-5">
             <div class="col">
               <card-component
                 data-src="assets/images/cards/selhoz.png"
@@ -297,40 +306,6 @@
           </div>
         </div>
       </section>
-
-      <section class="section section_blue">
-        <div class="container">
-          <h2 class="section-title">Решаемые задачи недели</h2>
-          <div class="row">
-            <div class="col-md-6 col-12">
-              <p class="section-text">
-                Еженедельный обзор актуальных задач в программном комплексе IMC
-              </p>
-            </div>
-          </div>
-          <div class="row row-cols-3 g-4">
-            <div class="col">
-              <card-component
-                data-src="assets/images/cards/selhoz.png"
-                data-title="Устранение облаков на снимках"
-              ></card-component>
-            </div>
-            <div class="col">
-              <card-component
-                data-src="assets/images/cards/selhoz.png"
-                data-title="Паншарпенинг"
-              ></card-component>
-            </div>
-            <div class="col">
-              <card-component
-                data-src="assets/images/cards/selhoz.png"
-                data-title="Разновременной анализ"
-              ></card-component>
-            </div>
-          </div>
-        </div>
-      </section>
-
       <section class="section section_dark-blue video">
         <img
           class="video-background"
@@ -368,11 +343,46 @@
           </div>
         </div>
       </section>
+      <section class="section section_blue">
+        <div class="container">
+          <h2 class="section-title">Решаемые задачи недели</h2>
+          <div class="row">
+            <div class="col-md-6 col-12">
+              <p class="section-text">
+                Еженедельный обзор актуальных задач в программном комплексе IMC
+              </p>
+            </div>
+          </div>
+          <div class="row g-md-4 g-5">
+            <div class="col-md-4 col-sm-6 col-12">
+              <card-component
+                data-src="assets/images/cards/selhoz.png"
+                data-title="Устранение облаков на снимках"
+              ></card-component>
+            </div>
+            <div class="col-md-4 col-sm-6 col-12">
+              <card-component
+                data-src="assets/images/cards/selhoz.png"
+                data-title="Паншарпенинг"
+              ></card-component>
+            </div>
+            <div class="col-md-4 col-12">
+              <card-component
+                data-large
+                data-src="assets/images/cards/selhoz.png"
+                data-title="Разновременной анализ"
+              ></card-component>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <section class="section section_gray">
         <div class="container">
-          <div class="row mb-5 row-cols-md-2 row-cols-1 g-4">
-            <div class="col">
+          <div class="row mb-5 row-cols-md-2 row-cols-1 g-md-4 g-5">
+            <div
+              class="col d-md-block d-flex flex-column align-items-center justify-content-center"
+            >
               <h2 class="section-title mb-5">IMC для учебы</h2>
               <p class="section-text mb-4">
                 Центр инновационных технологий активно развивает сотрудничество
@@ -392,14 +402,16 @@
               </a>
             </div>
             <div class="col">
-              <img src="assets/images/university.png" alt="" />
+              <img class="h-100" src="assets/images/university.png" alt="" />
             </div>
           </div>
-          <div class="row pt-5 row-cols-md-2 row-cols-1 g-4">
-            <div class="col">
-              <img src="assets/images/university.png" alt="" />
+          <div class="row pt-5 row-cols-md-2 row-cols-1 g-md-4 g-5">
+            <div class="col order-md-first order-last">
+              <img class="h-100" src="assets/images/university.png" alt="" />
             </div>
-            <div class="col">
+            <div
+              class="col d-md-block d-flex flex-column align-items-center justify-content-center"
+            >
               <h2 class="section-title mb-5">IMC для бизнеса</h2>
               <p class="section-text mb-4">
                 Компания Центр инновационных технологий предлагает широкие
@@ -421,7 +433,7 @@
         <div class="container">
           <h2 class="section-title">География использования IMC</h2>
           <div class="row">
-            <div class="col-md-8 col-12">
+            <div class="col-lg-8 col-12">
               <p class="section-text">
                 Программный комплекс IMC используется во многих городах России и
                 за рубежом, в коммерческих организациях, образовательных
@@ -447,21 +459,22 @@
               </p>
             </div>
           </div>
-          <div class="row row-cols-3 g-4">
-            <div class="col">
+          <div class="row g-md-4 g-5">
+            <div class="col-md-4 col-sm-6 col-12">
               <card-component
                 data-src="assets/images/cards/selhoz.png"
                 data-title="Руководства IMC"
               ></card-component>
             </div>
-            <div class="col">
+            <div class="col-md-4 col-sm-6 col-12">
               <card-component
                 data-src="assets/images/cards/selhoz.png"
                 data-title="Версии и цены IMC"
               ></card-component>
             </div>
-            <div class="col">
+            <div class="col-md-4 col-12">
               <card-component
+                data-large
                 data-src="assets/images/cards/selhoz.png"
                 data-title="Попробовать IMC"
               ></card-component>
@@ -474,13 +487,15 @@
         <div class="container glide">
           <h2 class="section-title">Оставайтесь в курсе</h2>
           <div class="row">
-            <div class="col-md-5 col-9">
+            <div class="col-md-5 col-12">
               <p class="section-text">
                 Следите за новостями индустрии вместе с “Центром инновационных
                 технологий”
               </p>
             </div>
-            <div class="col d-flex justify-content-end">
+            <div
+              class="col-md-7 col-12 d-flex justify-content-md-end justify-content-center"
+            >
               <div class="slider-buttons" data-glide-el="controls">
                 <button
                   title="Назад"
@@ -499,37 +514,35 @@
               </div>
             </div>
           </div>
-          <div class="glide__track" data-glide-el="track">
-            <div class="glide__slides">
+          <div class="news-slider">
               <news-card-component
-                class="my-3"
+                class="p-3"
                 data-src="assets/images/news.png"
                 data-date="30.08.2023"
                 data-href="#"
                 data-title="Станция Чандраян-3 прислала первые замеры лунной температуры"
               ></news-card-component>
               <news-card-component
-                class="my-3"
+                class="p-3"
                 data-src="assets/images/news.png"
                 data-date="30.08.2023"
                 data-href="#"
                 data-title="Станция Чандраян-3 прислала первые замеры лунной температуры"
               ></news-card-component>
               <news-card-component
-                class="my-3"
+                class="p-3"
                 data-src="assets/images/news.png"
                 data-date="30.08.2023"
                 data-href="#"
                 data-title="Станция Чандраян-3 прислала первые замеры лунной температуры"
               ></news-card-component>
               <news-card-component
-                class="my-3"
+                class="p-3"
                 data-src="assets/images/news.png"
                 data-date="30.08.2023"
                 data-href="#"
                 data-title="Станция Чандраян-3 прислала первые замеры лунной температуры"
               ></news-card-component>
-            </div>
           </div>
           <div class="row mt-4">
             <div class="col d-flex justify-content-center">
@@ -550,9 +563,9 @@
 
     <footer class="footer">
       <div class="footer-main">
-        <div class="container">
+        <div class="container outer-container">
           <div class="row">
-            <div class="col-4 d-flex justify-content-between flex-column">
+            <div class="col-md-4 col-12 d-flex justify-content-md-between flex-md-column justify-content-center">
               <div class="logo logo_white">
                 <div class="logo__image">
                   <img src="assets/icons/logo.svg" class="svg" alt="" />
@@ -568,7 +581,7 @@
                 <span class="lang_active">RU</span>/<span>EN</span>
               </div>
             </div>
-            <div class="col-4">
+            <div class="col-md-4 col-12">
               <nav class="footer-menu">
                 <ul class="footer-menu__list">
                   <li class="footer-menu__list__item">
@@ -589,7 +602,7 @@
                 </ul>
               </nav>
             </div>
-            <div class="col-4 d-flex justify-content-between flex-column">
+            <div class="col-md-4 col-12 d-flex justify-content-between flex-column align-items-md-start align-items-center">
               <div>
                 <div class="footer-contacts__title">Контакты</div>
                 <ul class="footer-contacts__list">
@@ -609,7 +622,7 @@
         </div>
       </div>
       <div class="footer-small">
-        <div class="container d-flex justify-content-center">
+        <div class="container d-flex justify-content-center flex-md-row flex-column align-items-center ">
           <span
             >© Copyright 2010-2023 ООО "Центр Инновационных Технологий"</span
           >
@@ -618,6 +631,8 @@
         </div>
       </div>
     </footer>
+
+    
     <div class="overlay hidden" id="video-player">
       <div class="popup video-popup">
         <button class="popup__close video-popup__close" title="Закрыть">
@@ -633,9 +648,12 @@
         ></iframe>
       </div>
     </div>
-
+    <script
+    src="https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+    crossorigin="anonymous"></script>
     <script src="js/svg-injector.min.js"></script>
-    <script src="js/glide.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>

@@ -29,27 +29,31 @@
     &::before {
       left: 10%;
     }
-    &__list {
+    nav {
+      display: block;
+    }
+    ul {
       display: flex;
       flex-direction: column;
       align-items: center;
       padding: 0;
       margin: 0;
       list-style: none;
-      &__item {
+      li {
         margin: 0 0 2.5rem;
         &:last-child {
           margin-bottom: 0;
         }
+        a {
+          font-weight: 500;
+          font-size: 1.25rem;
+          color: #fff;
+          text-transform: uppercase;
+        }
       }
     }
-    &__link {
-      font-weight: 500;
-      font-size: 1.25rem;
-      color: #fff;
-      text-transform: uppercase;
-    }
-    .nav-link {
+    
+    a {
       color: #fff;
       text-decoration: none;
       transition: color 0.1s ease-in-out;
@@ -83,12 +87,15 @@
     a {
       display: inline-block;
       margin-right: 1rem;
+      &:last-child {
+        margin-right: 0;
+      }
     }
   }
   &-small {
     font-size: 1.25rem;
     color: $text-dark;
-
+    text-align: center;
     &__line {
       height: 2rem;
       width: 2px;
@@ -99,6 +106,48 @@
     a {
       color: inherit;
       text-decoration: none;
+    }
+  }
+}
+
+
+@media (max-width: $sm-screen) {
+  .footer {
+    .lang {
+      margin-left: 5rem;
+    }
+    &-small__line {
+      height: 1px;
+      width: 10rem;
+      margin: 0.5rem 0;
+    }
+    &-menu {
+      padding: 4rem 0;
+      &::after,
+      &::before {
+        content: "";
+        position: absolute;
+        width: 50%;
+        height: 1px;
+        background: #fff;
+        top: auto;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      &::after {
+        top: 2rem;
+      }
+      &::before {
+        bottom: 2rem;
+      }
+    }
+    &-contacts {
+      &__title {
+        text-align: center;
+      }
+      &__list {
+        text-align: center;
+      }
     }
   }
 }

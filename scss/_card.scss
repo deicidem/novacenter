@@ -11,8 +11,8 @@
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
+    width: 101%;
+    height: 101%;
     transition: 0.3s ease-in-out;
     will-change: transform;
     &::after {
@@ -25,6 +25,7 @@
       bottom: 0;
     }
     img {
+      width: 100%;
       height: 100%;
       object-fit: cover;
     }
@@ -45,5 +46,22 @@
   }
   &:hover &-image {
     transform: scale(1.1) translateZ(0px);
+  }
+}
+
+@media (max-width: $sm-screen) {
+  .card_large {
+    &::after {
+      padding-bottom: calc((100% - 3rem) / 2);
+    }
+  }
+}
+
+@media (max-width: $xs-screen) {
+  .card {
+    margin: 0 auto;
+    &::after {
+      padding-bottom: 60%;
+    }
   }
 }
