@@ -2,22 +2,38 @@
   max-width: 1600px;
   margin: 10rem auto;
   padding: 4rem 0;
+  position: relative;
+  z-index: 1;
   &:first-child {
     margin-top: 0;
   }
   &_blue {
     background: #d1d9e8;
+    color: $text-dark;
   }
   &_dark-blue {
     background: #335472;
+    color: #fff;
   }
   &_gray {
     background: #e7e7e7;
+    color: $text-dark;
+  }
+  &-background {
+    position: absolute;
+    opacity: 60%;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    &_right {
+      left: auto;
+      right: 0;
+    }
   }
   &-title {
     margin: 0;
     font-size: 2.25rem;
-    font-weight: 500;
+    font-weight: 400;
     position: relative;
     display: flex;
     align-items: flex-end;

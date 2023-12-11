@@ -65,3 +65,37 @@
     }
   }
 }
+
+
+.satellite-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 0;
+  background-color: $active;
+  border: 2px solid #fff;
+  box-shadow: 0.25rem 0.25rem 0.6rem rgba(#000, 0.2);
+  &__image {
+    width: 100%;
+    height: auto;
+    transition: 0.3s ease-in-out;
+    will-change: transform;
+    padding-top: 1rem;
+    padding-left: 5rem;
+    padding-right: 4rem;
+  }
+  &__link {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 1rem 1.5rem;
+    bottom: 0;
+    line-height: 1.25;
+    .link__icon {
+      flex-shrink: 0;
+    }
+  }
+  &:hover &-image {
+    transform: scale(1.1) translateZ(0px);
+  }
+}
+

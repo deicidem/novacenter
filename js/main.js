@@ -6,16 +6,20 @@ document.addEventListener("DOMContentLoaded", () => {
   setupVideo();
   setupGoTop();
   setupSvg();
+  setupTabs();
+  setupImageCompare();
 });
 
 class HeroSlider {
   constructor(sliderSelector, slidesSelector) {
     this.slider = document.querySelector(sliderSelector);
-    this.slides = this.slider.querySelectorAll(slidesSelector);
-    this.currentSlideIndex = 0;
-    this.totalSlides = this.slides.length;
-    this.timer = 0;
-    this.setActiveSlide(this.currentSlideIndex);
+    if (this.slider) {
+      this.slides = this.slider.querySelectorAll(slidesSelector);
+      this.currentSlideIndex = 0;
+      this.totalSlides = this.slides.length;
+      this.timer = 0;
+      this.setActiveSlide(this.currentSlideIndex);
+    }
   }
 
   setActiveSlide(activeSlideIndex) {
@@ -191,17 +195,19 @@ class NewsCardComponent extends HTMLElement {
     let title = this.getAttribute("data-title") || "";
     let date = this.getAttribute("data-date") || "";
     this.innerHTML = `
-    <div class="news-card">
+    <div class="content-card">
       <img
-        class="news-card__image"
+        class="content-card__image"
         src="${imageSrc}"
         alt=""
       />
-      <div class="news-card__content">
-        <div class="news-card__date">${date}</div>
-        <h4 class="news-card__title">
-        ${title}
-        </h4>
+      <div class="content-card__content">
+        <div class="content-card__content__wrapper">
+          <div class="content-card__small">${date}</div>
+          <h4 class="content-card__title">
+          ${title}
+          </h4>
+        </div>
         <a href="${href}" class="link">
           Узнать больше
           <span class="link__icon">
@@ -333,5 +339,81 @@ function setupGoTop() {
 
   document.querySelector(".scroll-to-top").addEventListener("click", () => {
     window.scrollTo(0, 0);
+  });
+}
+
+function setupTabs() {
+  const hash = $(location).attr("hash");
+  const $tabs = $("a.tabs-item");
+  const $nextTabLink = $("#next-tab");
+
+  if (
+    $tabs.filter(`[href='${hash}']`).length == 0 ||
+    hash == "" ||
+    hash == "#"
+  ) {
+    $($tabs[0]).addClass("tabs-item_active");
+    $nextTabLink.attr("href", $($tabs[1]).attr("href"));
+    $nextTabLink.find(".link__text").text($($tabs[1]).text());
+    $(".tabs-content > .tab").addClass("tab_hidden");
+    $(`${$($tabs[0]).attr("href")}`).removeClass("tab_hidden");
+    // $(location).attr("hash", $($tabs[0]).attr("href"));
+  } else {
+    $tab = $tabs.filter(`[href='${hash}']`).first();
+    $tab.addClass("tabs-item_active");
+    $nextTab = null;
+    for (let i = 0; i < $tabs.length; i++) {
+      $el = $($tabs[i]);
+      if ($el.attr("href") == $tab.attr("href")) {
+        if (i + 1 == $tabs.length) {
+          $nextTab = $($tabs[0]);
+        } else {
+          $nextTab = $($tabs[i + 1]);
+        }
+        break;
+      }
+    }
+
+    $(".tabs-content > .tab").addClass("tab_hidden");
+    $(`${$tab.attr("href")}`).removeClass("tab_hidden");
+
+    $nextTabLink.attr("href", $nextTab.attr("href"));
+    $nextTabLink.find(".link__text").text($nextTab.text());
+  }
+
+  $tabs.on("click", function (e) {
+    $tabs.removeClass("tabs-item_active");
+    $(this).addClass("tabs-item_active");
+
+    $(".tabs-content > .tab").addClass("tab_hidden");
+    $(`${$(this).attr("href")}`).removeClass("tab_hidden");
+
+    $nextTab = null;
+    for (let i = 0; i < $tabs.length; i++) {
+      $el = $($tabs[i]);
+      if ($el.attr("href") == $(this).attr("href")) {
+        if (i + 1 == $tabs.length) {
+          $nextTab = $($tabs[0]);
+        } else {
+          $nextTab = $($tabs[i + 1]);
+        }
+        break;
+      }
+    }
+    $nextTabLink.attr("href", $nextTab.attr("href"));
+    $nextTabLink.find(".link__text").text($nextTab.text());
+  });
+}
+
+function setupImageCompare() {
+  const viewers = document.querySelectorAll(".image-compare");
+
+  viewers.forEach((element) => {
+    let view = new ImageCompare(element, {
+      controlColor: "#0076E4",
+      controlShadow: false,
+      addCircle: true,
+      addCircleBlur: false,
+    }).mount();
   });
 }

@@ -6,7 +6,12 @@
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
     <link rel="stylesheet" href="assets/fonts/Roboto/font.css" />
     <link rel="stylesheet" href="css/normalize.min.css" />
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+    <link type="text/css" href="https://unpkg.com/image-compare-viewer/dist/image-compare-viewer.min.css">
 
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/style.css" />
@@ -219,7 +224,7 @@
 
       <section class="section section_dark-blue video">
         <img
-          class="video-background"
+          class="section-background"
           src="assets/images/video/IMC_bg.png"
           alt=""
         />
@@ -266,7 +271,7 @@
               </p>
             </div>
           </div>
-          <div class="row row-cols-md-3 row-cols-sm-2 row-cols-1 g-md-4 g-5">
+          <div class="row row-cols-md-3 row-cols-sm-2 row-cols-1 g-md-5 g-4">
             <div class="col">
               <card-component
                 data-src="assets/images/cards/selhoz.png"
@@ -308,7 +313,7 @@
       </section>
       <section class="section section_dark-blue video">
         <img
-          class="video-background"
+          class="section-background"
           src="assets/images/video/monitoring_bg.png"
           alt=""
         />
@@ -353,7 +358,7 @@
               </p>
             </div>
           </div>
-          <div class="row g-md-4 g-5">
+          <div class="row g-md-5 g-4">
             <div class="col-md-4 col-sm-6 col-12">
               <card-component
                 data-src="assets/images/cards/selhoz.png"
@@ -515,34 +520,90 @@
             </div>
           </div>
           <div class="news-slider">
-              <news-card-component
-                class="p-3"
-                data-src="assets/images/news.png"
-                data-date="30.08.2023"
-                data-href="#"
-                data-title="Станция Чандраян-3 прислала первые замеры лунной температуры"
-              ></news-card-component>
-              <news-card-component
-                class="p-3"
-                data-src="assets/images/news.png"
-                data-date="30.08.2023"
-                data-href="#"
-                data-title="Станция Чандраян-3 прислала первые замеры лунной температуры"
-              ></news-card-component>
-              <news-card-component
-                class="p-3"
-                data-src="assets/images/news.png"
-                data-date="30.08.2023"
-                data-href="#"
-                data-title="Станция Чандраян-3 прислала первые замеры лунной температуры"
-              ></news-card-component>
-              <news-card-component
-                class="p-3"
-                data-src="assets/images/news.png"
-                data-date="30.08.2023"
-                data-href="#"
-                data-title="Станция Чандраян-3 прислала первые замеры лунной температуры"
-              ></news-card-component>
+            <div class="content-card m-3">
+              <img
+                class="content-card__image"
+                src="assets/images/news.png"
+                alt=""
+              />
+              <div class="content-card__content">
+                <div class="content-card__content__wrapper">
+                  <div class="content-card__small">30.08.2023</div>
+                  <h4 class="content-card__title">
+                    Станция Чандраян-3 прислала первые замеры лунной температуры
+                  </h4>
+                </div>
+                <a href="#" class="link">
+                  Узнать больше
+                  <span class="link__icon">
+                    <img class="svg" src="assets/icons/arrow.svg" alt="" />
+                  </span>
+                </a>
+              </div>
+            </div>
+            <div class="content-card m-3">
+              <img
+                class="content-card__image"
+                src="assets/images/news.png"
+                alt=""
+              />
+              <div class="content-card__content">
+                <div class="content-card__content__wrapper">
+                  <div class="content-card__small">30.08.2023</div>
+                  <h4 class="content-card__title">
+                    Станция Чандраян-3 прислала первые замеры лунной температуры
+                  </h4>
+                </div>
+                <a href="#" class="link">
+                  Узнать больше
+                  <span class="link__icon">
+                    <img class="svg" src="assets/icons/arrow.svg" alt="" />
+                  </span>
+                </a>
+              </div>
+            </div>
+            <div class="content-card m-3">
+              <img
+                class="content-card__image"
+                src="assets/images/news.png"
+                alt=""
+              />
+              <div class="content-card__content">
+                <div class="content-card__content__wrapper">
+                  <div class="content-card__small">30.08.2023</div>
+                  <h4 class="content-card__title">
+                    Станция Чандраян-3 прислала первые замеры лунной температуры
+                  </h4>
+                </div>
+                <a href="#" class="link">
+                  Узнать больше
+                  <span class="link__icon">
+                    <img class="svg" src="assets/icons/arrow.svg" alt="" />
+                  </span>
+                </a>
+              </div>
+            </div>
+            <div class="content-card m-3">
+              <img
+                class="content-card__image"
+                src="assets/images/news.png"
+                alt=""
+              />
+              <div class="content-card__content">
+                <div class="content-card__content__wrapper">
+                  <div class="content-card__small">30.08.2023</div>
+                  <h4 class="content-card__title">
+                    Станция Чандраян-3 прислала первые замеры лунной температуры
+                  </h4>
+                </div>
+                <a href="#" class="link">
+                  Узнать больше
+                  <span class="link__icon">
+                    <img class="svg" src="assets/icons/arrow.svg" alt="" />
+                  </span>
+                </a>
+              </div>
+            </div>
           </div>
           <div class="row mt-4">
             <div class="col d-flex justify-content-center">
@@ -562,8 +623,8 @@
     </main>
 
     <footer class="footer">
-      <div class="footer-main">
-        <div class="container outer-container">
+      <div class="footer-main outer-container">
+        <div class="container ">
           <div class="row">
             <div class="col-md-4 col-12 d-flex justify-content-md-between flex-md-column justify-content-center">
               <div class="logo logo_white">
@@ -648,12 +709,19 @@
         ></iframe>
       </div>
     </div>
+
+    
+    <script src="https://unpkg.com/image-compare-viewer/dist/image-compare-viewer.min.js"></script>
     <script
-    src="https://code.jquery.com/jquery-3.7.1.min.js"
-    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
-    crossorigin="anonymous"></script>
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
     <script src="js/svg-injector.min.js"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+    ></script>
     <script src="js/main.js"></script>
   </body>
 </html>
