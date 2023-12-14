@@ -196,9 +196,11 @@ function setupSlider() {
 
 function setupGoTop() {
   $('a[href^="#"]').on('click', function(event) {
+    let targetId = $(this).attr('href');
+    if (targetId == "#") return;
     event.preventDefault();
 
-    let targetId = $(this).attr('href');
+
     let targetElement = $(targetId);
 
     if (targetElement.length) {
@@ -229,6 +231,7 @@ function setupTabs() {
 
   function scrollToBase() {
     const $tabsBase = $("#tabs");
+    if ($tabsBase.length == 0) return;
     const $header = $('.header');
     let headerHeight = $header.outerHeight();
     let offset = $tabsBase.offset().top - headerHeight - 50;

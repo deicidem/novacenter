@@ -1,11 +1,39 @@
 * {
 	box-sizing: border-box;
 	font-family: "Roboto", sans-serif;
+	min-width: 0;
 }
 body {
 	background: #f6f6f6;
 }
+h3 {
+	color: inherit;
+	font-weight: 400;
+	font-size: 2.25rem;
+}
+p {
+	color: inherit;
+	font-size: 1.5rem;
+}
 
+img {
+	max-width: 100%;
+	object-fit: cover;
+	vertical-align: middle;
+}
+h4 {
+	font-size: 1.75rem;
+	margin: 1.5rem 0;
+}
+ul {
+	font-size: 1.5rem;
+	list-style-type: "—";
+	list-style-position: "outside";
+	margin: 0.5rem 0;
+	li {
+		padding-left: 0.5rem;
+	}
+}
 .w-5 {
 	width: 5rem;
 }
@@ -18,11 +46,6 @@ body {
 .main {
 	position: relative;
 	margin-top: 10.25rem;
-}
-
-img {
-	max-width: 100%;
-	object-fit: cover;
 }
 
 .slider-buttons {
@@ -47,15 +70,6 @@ img {
 	align-items: center;
 }
 
-h3 {
-	color: inherit;
-	font-weight: 400;
-	font-size: 2.25rem;
-}
-p {
-	color: inherit;
-	font-size: 1.5rem;
-}
 .lang {
 	display: flex;
 	align-items: center;
@@ -77,18 +91,6 @@ p {
 	}
 }
 
-h4 {
-	font-size: 1.75rem;
-	margin: 1.5rem 0;
-}
-ul {
-	font-size: 1.5rem;
-	list-style-type: "—";
-	list-style-position: "outside";
-	li {
-		padding-left: 0.5rem;
-	}
-}
 .image-layers {
 	width: 100%;
 	display: flex;
