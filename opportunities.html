@@ -1,776 +1,916 @@
 <!DOCTYPE html>
 <html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- <script src="https://cdn.tailwindcss.com"></script> -->
+		<link rel="stylesheet" href="assets/fonts/Roboto/font.css" />
+		<link rel="stylesheet" href="css/normalize.min.css" />
+		<link
+			rel="stylesheet"
+			type="text/css"
+			href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+		/>
+		<link rel="stylesheet" type="text/css" href="css/image-compage-viewer.min.css" />
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <!-- <script src="https://cdn.tailwindcss.com"></script> -->
-  <link rel="stylesheet" href="assets/fonts/Roboto/font.css" />
-  <link rel="stylesheet" href="css/normalize.min.css" />
-  <link
-    rel="stylesheet"
-    type="text/css"
-    href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
-  />
-  <link rel="stylesheet"
-  type="text/css" href="https://unpkg.com/image-compare-viewer/dist/image-compare-viewer.min.css">
+		<link rel="stylesheet" href="css/bootstrap.min.css" />
+		<link rel="stylesheet" href="css/style.css" />
+		<title>Центр инновационных технологий</title>
+	</head>
+	<body>
+		<header class="header">
+			<div class="container outer-container">
+				<div class="header-container">
+					<a href="#" class="logo">
+						<span class="logo__image">
+							<img class="svg" src="assets/icons/logo.svg" alt="" />
+						</span>
+						<span class="logo__line"></span>
+						<span class="logo__text">
+							центр <br />
+							инновационных <br />
+							технологий
+						</span>
+					</a>
+					<div class="header-menu_wrapper mobile-hidden">
+						<nav class="header-menu">
+							<ul class="header-menu__list">
+								<li class="header-menu__list__item">
+									<a class="header-menu__link nav-link" href="IMC.html">IMC</a>
+									<nav class="header-submenu">
+										<ul class="header-submenu__list">
+											<li class="header-submenu__list__item">
+												<a href="IMC.html" class="header-submenu__link nav-link">
+													О программном комплексе
+												</a>
+											</li>
+											<li class="header-submenu__list__item">
+												<a href="#" class="header-submenu__link nav-link"> Как купить? </a>
+											</li>
+											<li class="header-submenu__list__item">
+												<a href="opportunities.html" class="header-submenu__link nav-link">
+													Основные возможности
+												</a>
+											</li>
+											<li class="header-submenu__list__item">
+												<a href="#" class="header-submenu__link nav-link"> Версии и цены </a>
+											</li>
+											<li class="header-submenu__list__item">
+												<a href="#" class="header-submenu__link nav-link"> Регистрация IMC </a>
+											</li>
+										</ul>
+									</nav>
+								</li>
+								<li class="header-menu__list__item">
+									<a class="header-menu__link nav-link" href="#">Обработка</a>
+								</li>
+								<li class="header-menu__list__item">
+									<a class="header-menu__link nav-link" href="#">Обучение</a>
+								</li>
+								<li class="header-menu__list__item">
+									<a class="header-menu__link nav-link" href="#">Сервисы</a>
+								</li>
+								<li class="header-menu__list__item">
+									<a class="header-menu__link nav-link" href="#">О нас</a>
+								</li>
+								<li class="header-menu__list__item">
+									<a class="header-menu__link nav-link" href="#">Контакты</a>
+								</li>
+							</ul>
+						</nav>
+						<div class="header-search"></div>
+					</div>
+					<div class="header-aside">
+						<div class="lang"><span class="lang_active">RU</span>/<span>EN</span></div>
+						<div class="header-menu-button">
+							<span></span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
 
-  <link rel="stylesheet" href="css/bootstrap.min.css" />
-  <link rel="stylesheet" href="css/style.css" />
-  <title>Центр инновационных технологий</title>
-</head>
+		<main class="main">
+			<section>
+				<div class="section section_gray page-hero">
+					<div class="container">
+						<div class="row g-5">
+							<div
+								class="col-md-6 col-12 d-flex flex-column justify-content-center align-items-md-start align-items-center"
+							>
+								<h1 class="page-hero__title">Основные возможности</h1>
+								<h2 class="page-hero__subtitle">Основные возможности программного комплекса</h2>
+							</div>
+							<div class="col-md-6 col-12">
+								<div class="page-hero__images">
+									<img src="assets/images/opportunities/1.png" alt="" />
+									<img src="assets/images/opportunities/2.png" alt="" />
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
 
-<body>
-  <header class="header">
-    <div class="container outer-container">
-      <div class="header-container">
-        <a href="#" class="logo">
-          <span class="logo__image">
-            <img class="svg" src="assets/icons/logo.svg" alt="" />
-          </span>
-          <span class="logo__line"></span>
-          <span class="logo__text">
-            центр <br />
-            инновационных <br />
-            технологий
-          </span>
-        </a>
-        <div class="header-menu_wrapper mobile-hidden">
-          <nav class="header-menu">
-            <ul class="header-menu__list">
-              <li class="header-menu__list__item">
-                <a class="header-menu__link nav-link" href="#">IMC</a>
-                <nav class="header-submenu">
-                  <ul class="header-submenu__list">
-                    <li class="header-submenu__list__item">
-                      <a href="#" class="header-submenu__link nav-link">
-                        О программном комплексе
-                      </a>
-                    </li>
-                    <li class="header-submenu__list__item">
-                      <a href="#" class="header-submenu__link nav-link">
-                        Как купить?
-                      </a>
-                    </li>
-                    <li class="header-submenu__list__item">
-                      <a href="#" class="header-submenu__link nav-link">
-                        Основные возможности
-                      </a>
-                    </li>
-                    <li class="header-submenu__list__item">
-                      <a href="#" class="header-submenu__link nav-link">
-                        Версии и цены
-                      </a>
-                    </li>
-                    <li class="header-submenu__list__item">
-                      <a href="#" class="header-submenu__link nav-link">
-                        Регистрация IMC
-                      </a>
-                    </li>
-                  </ul>
-                </nav>
-              </li>
-              <li class="header-menu__list__item">
-                <a class="header-menu__link nav-link" href="#">Обработка</a>
-              </li>
-              <li class="header-menu__list__item">
-                <a class="header-menu__link nav-link" href="#">Обучение</a>
-              </li>
-              <li class="header-menu__list__item">
-                <a class="header-menu__link nav-link" href="#">Сервисы</a>
-              </li>
-              <li class="header-menu__list__item">
-                <a class="header-menu__link nav-link" href="#">О нас</a>
-              </li>
-              <li class="header-menu__list__item">
-                <a class="header-menu__link nav-link" href="#">Контакты</a>
-              </li>
-            </ul>
-          </nav>
-          <div class="header-search"></div>
-        </div>
-        <div class="header-aside">
-          <div class="lang">
-            <span class="lang_active">RU</span>/<span>EN</span>
-          </div>
-          <div class="header-menu-button">
-            <span></span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </header>
+			<div class="tabs container outer-container" id="tabs">
+				<div class="row row-cols-sm-6 row-cols-6 g-sm-5 g-4">
+					<div class="col">
+						<a class="tabs-item" href="#proccessing">
+							<img
+								class="tabs-item__image svg"
+								src="assets/icons/opportunities_tabs/1.svg"
+								alt=""
+							/>
+							<span class="tabs-item__title">Обработка данных космической съемки</span>
+							<img class="svg tabs-item__arrow" src="assets/icons/small-arrow.svg" alt="" />
+						</a>
+					</div>
+					<div class="col">
+						<a class="tabs-item" href="#thematic">
+							<img
+								class="tabs-item__image svg"
+								src="assets/icons/opportunities_tabs/2.svg"
+								alt=""
+							/>
+							<span class="tabs-item__title"
+								>Тематическая <br />
+								обработка</span
+							>
+							<img class="svg tabs-item__arrow" src="assets/icons/small-arrow.svg" alt="" />
+						</a>
+					</div>
+					<div class="col">
+						<a class="tabs-item" href="#vector">
+							<img
+								class="tabs-item__image svg"
+								src="assets/icons/opportunities_tabs/3.svg"
+								alt=""
+							/>
+							<span class="tabs-item__title"
+								>Работа <br />
+								с векторами</span
+							>
+							<img class="svg tabs-item__arrow" src="assets/icons/small-arrow.svg" alt="" />
+						</a>
+					</div>
+					<div class="col">
+						<a class="tabs-item" href="#catalog">
+							<img
+								class="tabs-item__image svg"
+								src="assets/icons/opportunities_tabs/4.svg"
+								alt=""
+							/>
+							<span class="tabs-item__title"
+								>Катологизация<br />
+								данных</span
+							>
+							<img class="svg tabs-item__arrow" src="assets/icons/small-arrow.svg" alt="" />
+						</a>
+					</div>
+					<div class="col">
+						<a class="tabs-item" href="#automat">
+							<img
+								class="tabs-item__image svg"
+								src="assets/icons/opportunities_tabs/5.svg"
+								alt=""
+							/>
+							<span class="tabs-item__title"
+								>Автоматизация<br />
+								процессов</span
+							>
+							<img class="svg tabs-item__arrow" src="assets/icons/small-arrow.svg" alt="" />
+						</a>
+					</div>
+					<div class="col">
+						<a class="tabs-item" href="#report">
+							<img
+								class="tabs-item__image svg"
+								src="assets/icons/opportunities_tabs/6.svg"
+								alt=""
+							/>
+							<span class="tabs-item__title"
+								>Создание<br />
+								отчетов</span
+							>
+							<img class="svg tabs-item__arrow" src="assets/icons/small-arrow.svg" alt="" />
+						</a>
+					</div>
+				</div>
+			</div>
 
-  <main class="main">
-    <section>
-      <div class="section section_gray page-hero">
-        <div class="container">
-          <div class="row g-5">
-            <div
-              class="col-md-6 col-12 d-flex flex-column justify-content-center align-items-md-start align-items-center">
-              <h1 class="page-hero__title">Основные возможности</h1>
-              <h2 class="page-hero__subtitle">
-                Основные возможности программного комплекса
-              </h2>
-            </div>
-            <div class="col-md-6 col-12">
-              <div class="page-hero__images">
-                <img src="assets/images/opportunities/1.png" alt="" />
-                <img src="assets/images/opportunities/2.png" alt="" />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+			<div class="tabs-content">
+				<div id="proccessing" class="tab">
+					<section class="section section_dark-blue">
+						<img
+							src="assets/images/opportunities/processing/satellite.png"
+							alt=""
+							class="section-background"
+						/>
+						<div class="container">
+							<h2 class="section-title section-title_white">Обработка данных космической съемки</h2>
 
-    <div class="tabs container outer-container" id="tabs">
-      <div class="row row-cols-sm-6 row-cols-6 g-sm-5 g-4">
-        <div class="col">
-          <a class="tabs-item" href="#proccessing">
-            <img class="tabs-item__image svg" src="assets/icons/opportunities_tabs/1.svg" alt="" />
-            <span class="tabs-item__title">Обработка данных космической съемки</span>
-            <img class="svg tabs-item__arrow" src="assets/icons/small-arrow.svg" alt="" />
-          </a>
-        </div>
-        <div class="col">
-          <a class="tabs-item" href="#thematic">
-            <img class="tabs-item__image svg" src="assets/icons/opportunities_tabs/2.svg" alt="" />
-            <span class="tabs-item__title">Тематическая <br />
-              обработка</span>
-            <img class="svg tabs-item__arrow" src="assets/icons/small-arrow.svg" alt="" />
-          </a>
-        </div>
-        <div class="col">
-          <a class="tabs-item" href="#vector">
-            <img class="tabs-item__image svg" src="assets/icons/opportunities_tabs/3.svg" alt="" />
-            <span class="tabs-item__title">Работа <br />
-              с векторами</span>
-            <img class="svg tabs-item__arrow" src="assets/icons/small-arrow.svg" alt="" />
-          </a>
-        </div>
-        <div class="col">
-          <a class="tabs-item" href="#catalog">
-            <img class="tabs-item__image svg" src="assets/icons/opportunities_tabs/4.svg" alt="" />
-            <span class="tabs-item__title">Катологизация<br />
-              данных</span>
-            <img class="svg tabs-item__arrow" src="assets/icons/small-arrow.svg" alt="" />
-          </a>
-        </div>
-        <div class="col">
-          <a class="tabs-item" href="#automat">
-            <img class="tabs-item__image svg" src="assets/icons/opportunities_tabs/5.svg" alt="" />
-            <span class="tabs-item__title">Автоматизация<br />
-              процессов</span>
-            <img class="svg tabs-item__arrow" src="assets/icons/small-arrow.svg" alt="" />
-          </a>
-        </div>
-        <div class="col">
-          <a class="tabs-item" href="#report">
-            <img class="tabs-item__image svg" src="assets/icons/opportunities_tabs/6.svg" alt="" />
-            <span class="tabs-item__title">Создание<br />
-              отчетов</span>
-            <img class="svg tabs-item__arrow" src="assets/icons/small-arrow.svg" alt="" />
-          </a>
-        </div>
-      </div>
-    </div>
+							<div class="row justify-content-between">
+								<div class="col-xl-6 col-md-7 col-12">
+									<h4>Открытие снимков различных космических аппаратов:</h4>
+									<p>
+										Aist2D, EO-1, FORMOSat 2, Gaofen-2, GeoEye-1, IKONOS 2, Kanopus-B, Kanopus-1,
+										Kanopus-2, Kanopus-3, Landsat 1, Landsat 2, Landsat 3, Landsat 4, Landsat 5,
+										Landsat 6, Landsat 7, Landsat 8, Landsat 9, Meteor-M2, PlanetScope, Pleiades-1A,
+										Pleiades-1B, QuickBird-2, RapidEye, Resurs-DK1, Resurs-P №1, Resurs-P №2,
+										Resurs-P №3, Sentinel-2, Spot 5, Spot 6, Spot 7, Triplesat 1, Triplesat 2,
+										Triplesat 3, VNREDSat 1A, WorldView-1, WorldView-2, WorldView-3. Cosmo-SkyMED
+										h5, Cosmo-SkyMED XML, TerrraSAR-X/TanDEM-X passport, Radarsat-2 Passport,
+										Seninel 1A,B, SLC converted data, RCM manifest
+									</p>
+								</div>
+								<div class="col-xl-4 col-md-5 col-12">
+									<div class="row g-5">
+										<div class="col-md-12 col-sm-6">
+											<div class="satellite-card h-100">
+												<img
+													src="assets/images/opportunities/processing/resurs.svg"
+													alt=""
+													class="svg satellite-card__image"
+												/>
+												<a href="" class="link link_white satellite-card__link">
+													<span>
+														Первичная обработка <br />
+														материалов <span class="text-nowrap"> с КА «Ресурс-П»</span>
+													</span>
+													<span class="link__icon">
+														<img class="svg" src="assets/icons/arrow.svg" alt="" />
+													</span>
+												</a>
+											</div>
+										</div>
+										<div class="col-md-12 col-sm-6">
+											<div class="satellite-card h-100">
+												<img
+													src="assets/images/opportunities/processing/kanopus.svg"
+													alt=""
+													class="svg satellite-card__image"
+												/>
+												<a href="" class="link link_white satellite-card__link">
+													<span
+														>Первичная обработка <br />
+														материалов <span class="text-nowrap"> с КА «Канопус-В»</span></span
+													>
+													<span class="link__icon">
+														<img class="svg" src="assets/icons/arrow.svg" alt="" />
+													</span>
+												</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</section>
 
-    <div class="tabs-content">
-      <div id="proccessing" class="tab">
-        <section class="section section_dark-blue">
-          <img src="assets/images/opportunities/processing/satellite.png" alt="" class="section-background" />
-          <div class="container">
-            <h2 class="section-title section-title_white">
-              Обработка данных космической съемки
-            </h2>
+					<section class="section section_gray">
+						<div class="container">
+							<h2 class="section-title">Первичная обработка</h2>
+							<div class="row align-items-center g-5">
+								<div class="col-md-6 col-12">
+									<h4>Сведение каналов</h4>
+									<p>
+										В программном комплексе IMC есть возможность устранить смещение между каналами
+										мультиспектральных данных. Устранение смещения происходит путем привязки
+										спектральных каналов к панхроматическому.
+									</p>
+									<p>На изображении показан снимок до и после сведения каналов.</p>
+								</div>
+								<div class="col-md-6 col-12">
+									<div class="image-compare">
+										<img src="assets/images/opportunities/processing/chanels_before.png" alt="" />
+										<img src="assets/images/opportunities/processing/chanels_after.png" alt="" />
+									</div>
+								</div>
+							</div>
+							<div class="row align-items-center g-5 mt-1">
+								<div class="col-md-6 col-12 order-md-1 order-2">
+									<div class="image-compare">
+										<img src="assets/images/opportunities/processing/geo_before.png" alt="" />
+										<img src="assets/images/opportunities/processing/geo_after.png" alt="" />
+									</div>
+								</div>
+								<div class="col-md-6 col-12 order-md-2 order-1">
+									<h4>Уточнение геопривязки</h4>
+									<p>
+										В программном комплексе IMC можно проводить уточнение привязки маршрута путем
+										вычисления погрешности привязки по нескольким микрокадрам.
+									</p>
+									<p>На изображении показан снимок до и после уточнения геопривязки.</p>
+								</div>
+							</div>
+						</div>
+					</section>
 
-            <div class="row justify-content-between">
-              <div class="col-xl-6 col-md-7 col-12">
-                <h4>Открытие снимков различных космических аппаратов:</h4>
-                <p>
-                  Aist2D, EO-1, FORMOSat 2, Gaofen-2, GeoEye-1, IKONOS 2,
-                  Kanopus-B, Kanopus-1, Kanopus-2, Kanopus-3, Landsat 1,
-                  Landsat 2, Landsat 3, Landsat 4, Landsat 5, Landsat 6,
-                  Landsat 7, Landsat 8, Landsat 9, Meteor-M2, PlanetScope,
-                  Pleiades-1A, Pleiades-1B, QuickBird-2, RapidEye, Resurs-DK1,
-                  Resurs-P №1, Resurs-P №2, Resurs-P №3, Sentinel-2, Spot 5,
-                  Spot 6, Spot 7, Triplesat 1, Triplesat 2, Triplesat 3,
-                  VNREDSat 1A, WorldView-1, WorldView-2, WorldView-3.
-                  Cosmo-SkyMED h5, Cosmo-SkyMED XML, TerrraSAR-X/TanDEM-X
-                  passport, Radarsat-2 Passport, Seninel 1A,B, SLC converted
-                  data, RCM manifest
-                </p>
-              </div>
-              <div class="col-xl-4 col-md-5 col-12">
-                <div class="row  g-5">
-                  <div class="col-md-12 col-sm-6">
-                    <div class="satellite-card h-100">
-                      <img src="assets/images/opportunities/processing/resurs.svg" alt=""
-                        class="svg satellite-card__image" />
-                      <a href="" class="link link_white satellite-card__link">
-                        <span>
-                          Первичная обработка <br /> материалов <span class="text-nowrap"> с КА «Ресурс-П»</span>
-                        </span>
-                        <span class="link__icon">
-                          <img class="svg" src="assets/icons/arrow.svg" alt="" />
-                        </span>
-                      </a>
-                    </div>
-                  </div>
-                  <div class="col-md-12 col-sm-6">
-                    <div class="satellite-card h-100">
-                      <img src="assets/images/opportunities/processing/kanopus.svg" alt=""
-                        class="svg satellite-card__image" />
-                      <a href="" class="link link_white satellite-card__link">
-                        <span>Первичная обработка <br /> материалов <span class="text-nowrap"> с КА
-                            «Канопус-В»</span></span>
-                        <span class="link__icon">
-                          <img class="svg" src="assets/icons/arrow.svg" alt="" />
-                        </span>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-        </section>
+					<section class="section section_blue">
+						<div class="container">
+							<h2 class="section-title">Предварительная обработка</h2>
+							<div class="row g-5">
+								<div class="col-lg-7 col-12">
+									<h4>Предварительная обработка в ПК IMC включает в себя:</h4>
+									<ul>
+										<li>чтение паспорта снимка;</li>
+										<li>формирование композитного изображения;</li>
+										<li>назначение цветовых каналов;</li>
+										<li>атмосферную коррекцию изображения;</li>
+										<li>удаление неинформативных полей.</li>
+									</ul>
+									<h4>Чтение паспорта снимка</h4>
+									<p>
+										Паспорт снимка содержится в наборе исходных данных в текстовом формате или
+										формате XML. В ПК IMC данные из паспорта считываются автоматически с последующим
+										формированием композитного изображения.
+									</p>
+									<p>
+										Также автоматически заполняется информация о каналах изображения: диапазоны длин
+										волн, ширина диапазонов, коэффициент усиления, сдвиг. И метаданные: наименование
+										КА, время/дата съемки, тип сенсора, тип слоя, разрешение, облачность
+									</p>
+								</div>
+								<div class="col-lg-5 col-12">
+									<div class="image-layers">
+										<img
+											src="assets/images/opportunities/processing/pred_proc_1.png"
+											alt=""
+											class="image-layers__top"
+										/>
+										<img
+											src="assets/images/opportunities/processing/pred_proc_2.png"
+											alt=""
+											class="image-layers__bottom"
+										/>
+									</div>
+								</div>
+							</div>
+						</div>
+					</section>
 
-        <section class="section section_gray">
-          <div class="container">
-            <h2 class="section-title">
-              Первичная обработка
-            </h2>
-            <div class="row align-items-center g-5">
-              <div class="col-md-6 col-12">
-                <h4>Сведение каналов</h4>
-                <p>В программном комплексе IMC есть возможность устранить смещение между каналами мультиспектральных
-                  данных.
-                  Устранение смещения происходит путем привязки спектральных
-                  каналов к панхроматическому.
+					<section class="section section_gray">
+						<div class="container">
+							<h2 class="section-title">Предварительная обработка</h2>
+							<div class="row align-items-center g-5">
+								<div class="col-md-6 col-12">
+									<h4>Атмосферная корекция</h4>
+									<p>
+										Вся метаинформация используется в последующей обработке и анализе данных ДЗЗ.
+									</p>
+									<p>
+										Перед тематической обработкой проводится атмосферная коррекция по графику
+										пропускания атмосферы, который можно выбрать из предложенного списка или
+										загрузить необходимый.
+									</p>
+									<p>На изображении показан снимок до и после атмосферной коррекции.</p>
+								</div>
+								<div class="col-md-6 col-12">
+									<div class="image-compare">
+										<img src="assets/images/opportunities/processing/atmo_before.png" alt="" />
+										<img src="assets/images/opportunities/processing/atmo_after.png" alt="" />
+									</div>
+								</div>
+							</div>
+							<div class="row align-items-center g-5 mt-1">
+								<div class="col-md-6 col-12 order-md-1 order-2">
+									<img src="assets/images/opportunities/processing/pansharp.png" alt="" />
+								</div>
+								<div class="col-md-6 col-12 order-md-2 order-1">
+									<h4>Паншарпенинг</h4>
+									<p>
+										Паншарпенинг - это формирование комплексированного изображения в естественных
+										цветах с разрешением панхроматического изображения.
+									</p>
+									<p>
+										На изображении слева направо показаны: панхроматический снимок,
+										мультиспектральное изображение, результат паншарпенинга.
+									</p>
+								</div>
+							</div>
+						</div>
+					</section>
 
-                </p>
-                <p>На изображении показан снимок до и после сведения каналов.</p>
-              </div>
-              <div class="col-md-6 col-12">
-                <div class="image-compare">
-                  <img src="assets/images/opportunities/processing/chanels_before.png" alt="">
-                  <img src="assets/images/opportunities/processing/chanels_after.png" alt="">
-                </div>
-              </div>
-            </div>
-            <div class="row align-items-center g-5 mt-1">
+					<section class="section section_blue">
+						<div class="container">
+							<h2 class="section-title">Предварительная обработка</h2>
+							<div class="row align-items-center g-5">
+								<div class="col-md-6 col-12">
+									<h4>Формирование бесшовной мозаики</h4>
+									<p>
+										Исходные маршруты могут отличаться и по цвету, и по геопривязке, и по линейному
+										разрешению на местности. Данный же инструмент уточняет геопривязку для всех
+										маршрутов, производит цветокоррекцию и проводит границу между маршрутами таким
+										образом, чтобы она была незаметной.
+									</p>
+									<p>
+										На изображении приведен пример формирования бесшовной мозайки из нескольких
+										маршрутов.
+									</p>
+								</div>
+								<div class="col-md-6 col-12">
+									<img src="assets/images/opportunities/processing/moz.png" alt="" />
+								</div>
+							</div>
+							<div class="row align-items-center g-5 mt-1">
+								<div class="col-md-6 col-12 order-md-1 order-2">
+									<div class="image-compare">
+										<img src="assets/images/opportunities/processing/qual_before.png" alt="" />
+										<img src="assets/images/opportunities/processing/qual_after.png" alt="" />
+									</div>
+								</div>
+								<div class="col-md-6 col-12 order-md-2 order-1">
+									<h4>Повышение линейного разрешения</h4>
+									<p>
+										В программном комплексе IMC есть возможность повышения линейного разрешения
+										снимков и оценка качества исходных материалов.
+									</p>
+									<p>
+										Слева изображен исходный снимок, который имеет разрешение 1 м. В результате
+										обработки удалось повысить разрешение до 0,57 м.
+									</p>
+								</div>
+							</div>
+						</div>
+					</section>
+				</div>
 
-              <div class="col-md-6 col-12  order-md-1 order-2">
-                <div class="image-compare">
-                  <img src="assets/images/opportunities/processing/geo_before.png" alt="">
-                  <img src="assets/images/opportunities/processing/geo_after.png" alt="">
-                </div>
-              </div>
-              <div class="col-md-6 col-12 order-md-2 order-1"><h4>Уточнение геопривязки</h4>
-                <p>В программном комплексе IMC можно проводить уточнение привязки маршрута путем вычисления погрешности
-                  привязки по нескольким микрокадрам.
+				<div id="thematic" class="tab tab_hidden">
+					<section class="section section_dark-blue">
+						<img
+							src="assets/images/opportunities/thematic/background.png"
+							alt=""
+							class="section-background section-background_right h-100"
+						/>
+						<div class="container">
+							<h2 class="section-title section-title_white">Тематическая обработка</h2>
+							<div class="row justify-content-between">
+								<div class="col-xl-6 col-lg-9 col-md-12 col-12">
+									<p class="mb-20">
+										Методы тематической обработки спутниковых снимков позволяют детально изучать
+										изображения и получать векторные слои с атрибутивной информацией, в том числе и
+										в автоматическом режиме. В программном комплексе IMAGE MEDIA CENTER реализован
+										широкий спектр инструментов для тематической обработки спутниковых снимков.
+									</p>
+								</div>
+							</div>
+						</div>
+					</section>
 
-                </p>
-                <p>На изображении показан снимок до и после уточнения геопривязки.</p>
-              </div>
-            </div>
-          </div>
-        </section>
+					<section class="section section_gray">
+						<div class="container">
+							<h2 class="section-title">Тематическая обработка</h2>
+							<div class="row align-items-center g-5">
+								<div class="col-md-6 col-12">
+									<h4 class="mt-0">Анализ изображений в псевдоцветах</h4>
+									<p class="mb-0">Анализ изображений в псевдоцветах включает:</p>
+									<ul class="mt-0">
+										<li>применение различных комбинаций цветовых каналов;</li>
+										<li>метод наибольшего подобия;</li>
+										<li>использование цветовых пространств (RGB, CMYK, Lab, HLS, HSB).</li>
+									</ul>
+									<p>
+										На изображении показано исходное изображение слева - в естественных цветах,
+										справа - полученное в псевдоцветах.
+									</p>
+								</div>
+								<div class="col-md-6 col-12">
+									<div class="image-compare">
+										<img src="assets/images/opportunities/thematic/pseudo_before.png" alt="" />
+										<img src="assets/images/opportunities/thematic/pseudo_after.png" alt="" />
+									</div>
+								</div>
+							</div>
+							<div class="row align-items-center g-5 mt-1">
+								<div class="col-md-6 col-12 order-md-1 order-2">
+									<div class="image-compare">
+										<img src="assets/images/opportunities/thematic/index_before.png" alt="" />
+										<img src="assets/images/opportunities/thematic/index_after.png" alt="" />
+									</div>
+								</div>
+								<div class="col-md-6 col-12 order-md-2 order-1">
+									<h4 class="mt-0">Формирование и анализ индексных изображений</h4>
+									<p>
+										Значение яркости каждого пиксела индексного изображения формируется путем
+										проведения математических операций, в которых в качестве параметров используются
+										значения яркости каждого пиксела из разных каналов снимка.
+									</p>
+									<p class="mb-0">
+										В зависимости от цели исследования используются различные индексы:
+									</p>
+									<ul>
+										<li>вегетационные индексы;</li>
+										<li>почвенные индексы;</li>
+										<li>водные индексы;</li>
+										<li>снежные индексы;</li>
+										<li>пользовательские индексы.</li>
+									</ul>
+									<p>
+										Для формирования индексных изображений в ПК IMC реализован инструмент
+										"Калькулятор каналов", который позволяет пользователю составлять любые
+										математические формулы с использованием каналов изображения.
+									</p>
+								</div>
+							</div>
+						</div>
+					</section>
 
-        <section class="section section_blue">
-          <div class="container">
-            <h2 class="section-title">
-              Предварительная обработка
-            </h2>
-            <div class="row  g-5">
-              <div class="col-lg-7 col-12">
-                <h4>Предварительная обработка в ПК IMC включает в себя:</h4>
-                <ul>
-                  <li>чтение паспорта снимка;</li>
-                  <li>формирование композитного изображения;</li>
-                  <li>назначение цветовых каналов;</li>
-                  <li>атмосферную коррекцию изображения;</li>
-                  <li>удаление неинформативных полей.</li>
-                </ul>
-                <h4>Чтение паспорта снимка</h4>
-                <p>Паспорт снимка содержится в наборе исходных данных в текстовом формате или формате XML. В ПК IMC данные из паспорта считываются автоматически с последующим формированием композитного изображения.
-                  </p>
-                <p>Также автоматически заполняется информация о каналах изображения: диапазоны длин волн, ширина диапазонов, коэффициент усиления, сдвиг. И метаданные: наименование КА, время/дата съемки, тип сенсора, тип слоя, разрешение, облачность</p>
-              </div>
-              <div class="col-lg-5 col-12">
-                <div class="image-layers">
-                  <img src="assets/images/opportunities/processing/pred_proc_1.png" alt="" class="image-layers__top">
-                  <img src="assets/images/opportunities/processing/pred_proc_2.png" alt="" class="image-layers__bottom">
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
+					<section class="section section_blue">
+						<div class="container">
+							<h2 class="section-title">Тематическая обработка</h2>
+							<div class="row align-items-center g-5">
+								<div class="col-md-6 col-12">
+									<h4 class="mt-0">
+										Кластеризация (классификация без обучения с учетом k-средних)
+									</h4>
+									<p class="mb-0">Классификацию без обучения применяют:</p>
+									<ul>
+										<li>если заранее неизвестно какие объекты есть на снимке;</li>
+										<li>на снимке большое количество объектов (более 30) со сложными границами;</li>
+										<li>
+											также можно применять, как предварительный этап перед классификацией с
+											обучением.
+										</li>
+									</ul>
+									<p>
+										Для контролируемой классификации используются эталонные области, которые
+										определяет оператор исходя из их принадлежности определенному классу объектов.
+										Для последующего распознавания в качестве обучающих выборок используются
+										значения пикселей эталонных областей в различных спектральных диапазонах. Таким
+										образом, каждый пиксель изображения относится к определенному классу на
+										основании последовательного сравнения со всеми созданными эталонами. При
+										контролируемой классификации сначала определяются информационные классы, а
+										затем, на их основе, спектральные.
+									</p>
+								</div>
+								<div class="col-md-6 col-12">
+									<div class="image-compare">
+										<img src="assets/images/opportunities/thematic/no-learn_before.png" alt="" />
+										<img src="assets/images/opportunities/thematic/no-learn_after.png" alt="" />
+									</div>
+								</div>
+							</div>
+							<div class="row align-items-center g-5 mt-1">
+								<div class="col-md-6 col-12 order-md-1 order-2">
+									<div class="image-compare">
+										<img src="assets/images/opportunities/thematic/learn_before.png" alt="" />
+										<img src="assets/images/opportunities/thematic/learn_after.png" alt="" />
+									</div>
+								</div>
+								<div class="col-md-6 col-12 order-md-2 order-1">
+									<h4 class="mt-0">Классификация с обучением</h4>
+									<p>
+										Для контролируемой классификации используются эталонные области, которые
+										определяет оператор исходя из их принадлежности определенному классу объектов.
+										Для последующего распознавания в качестве обучающих выборок используются
+										значения пикселей эталонных областей в различных спектральных диапазонах. Таким
+										образом, каждый пиксель изображения относится к определенному классу на
+										основании последовательного сравнения со всеми созданными эталонами. При
+										контролируемой классификации сначала определяются информационные классы, а
+										затем, на их основе, спектральные.
+									</p>
+								</div>
+							</div>
+						</div>
+					</section>
 
-        <section class="section section_gray">
-          <div class="container">
-            <h2 class="section-title">
-              Предварительная обработка
-            </h2>
-            <div class="row align-items-center g-5">
-              <div class="col-md-6 col-12">
-                <h4>Атмосферная корекция</h4>
-                <p>Вся метаинформация используется в последующей обработке и анализе данных ДЗЗ.</p>
-                <p>
-                  Перед тематической обработкой проводится атмосферная коррекция по графику пропускания атмосферы, который можно выбрать из предложенного списка или загрузить необходимый.
-                </p>
-                <p>На изображении показан снимок до и после атмосферной коррекции.</p>
-              </div>
-              <div class="col-md-6 col-12">
-                <div class="image-compare">
-                  <img src="assets/images/opportunities/processing/atmo_before.png" alt="">
-                  <img src="assets/images/opportunities/processing/atmo_after.png" alt="">
-                </div>
-              </div>
-            </div>
-            <div class="row align-items-center g-5 mt-1">
+					<section class="section section_gray">
+						<div class="container">
+							<h2 class="section-title">Тематическая обработка</h2>
+							<div class="row align-items-center g-5">
+								<div class="col-md-6 col-12">
+									<h4 class="mt-0">Спектральный анализ</h4>
+									<p class="mb-0">
+										Основными величинами, подлежащими изменению при спектральном анализе, являются
+										длина волны, интенсивность отраженного сигнала и пространственная координата
+										исследуемой поверхности. В ПК IMC реализованы следующие методы спектрального
+										анализа:
+									</p>
+									<ul>
+										<li>корреляция с/без учета амплитуды;</li>
+										<li>двоичное кодирование;</li>
+										<li>спектрально-угловое картирование;</li>
+										<li>ортогональная проекция подпространства.</li>
+									</ul>
+									<p>
+										На изображении показана тематическая карта побережья, созданная с помощью
+										спектрального анализа.
+									</p>
+								</div>
+								<div class="col-md-6 col-12">
+									<img src="assets/images/opportunities/thematic/spectr.png" alt="" />
+								</div>
+							</div>
+						</div>
+					</section>
+				</div>
 
-              <div class="col-md-6 col-12 order-md-1 order-2">
-                  <img src="assets/images/opportunities/processing/pansharp.png" alt="">
-              </div>
-              <div class="col-md-6 col-12 order-md-2 order-1"><h4>Паншарпенинг</h4>
-                <p>Паншарпенинг - это формирование комплексированного изображения в естественных цветах с разрешением панхроматического изображения.</p>
-                <p>На изображении слева направо показаны: панхроматический снимок, мультиспектральное изображение, результат паншарпенинга.</p>
-              </div>
-            </div>
-          </div>
-        </section>
+				<div id="vector" class="tab tab_hidden">
+					<section class="section section_blue">
+						<div class="container">
+							<h2 class="section-title">Работа с векторами</h2>
+							<div class="row align-items-center g-5">
+								<div class="col-md-6 col-12">
+									<h4>Работа с векторными данными</h4>
+									<p>
+										Работа с векторными данными в рамках ПК IMC включает в себя создание и
+										назначение стилей отображения векторных объектов, а также формирование
+										классификаторов с учетом типов объектов, масштаба отображения и набора
+										атрибутивных данных.Функционал ПК IMC позволяет создавать векторные объекты
+										любой сложности (маркеры, линии, полигоны, составные объекты).
+									</p>
+									<p>
+										Векторные слои могут быть сохранены в международных форматах SHP и TAB, а также
+										во внутреннем формате IMF, который позволяет хранить растровые и векторные слои
+										с атрибутивной информацией в едином документе.
+									</p>
+								</div>
+								<div class="col-md-6 col-12">
+									<img src="assets/images/opportunities/processing/moz.png" alt="" />
+								</div>
+							</div>
+							<div class="row align-items-center g-5 mt-1">
+								<div class="col-md-6 col-12 order-md-1 order-2">
+									<div class="image-compare">
+										<img src="assets/images/opportunities/processing/qual_before.png" alt="" />
+										<img src="assets/images/opportunities/processing/qual_after.png" alt="" />
+									</div>
+								</div>
+								<div class="col-md-6 col-12 order-md-2 order-1">
+									<h4>Условные знаки в IMC</h4>
+									<p>В IMC возможно создание и редактирование любых стилей условных знаков.</p>
+									<p class="mb-0">
+										Программный комплекс позволяет редактировать условные знаки по многим
+										параметрам, таких как:
+									</p>
+									<ul>
+										<li>цвет;</li>
+										<li>угол поворота;</li>
+										<li>размер;</li>
+										<li>дополнительные параметры в виде свечения, тени, обводки и д.р.</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</section>
+				</div>
 
-        <section class="section section_blue">
-          <div class="container">
-            <h2 class="section-title">
-              Предварительная обработка
-            </h2>
-            <div class="row align-items-center g-5">
-              <div class="col-md-6 col-12">
-                <h4>Формирование бесшовной мозаики</h4>
-                <p>Исходные маршруты могут отличаться и по цвету, и по геопривязке, 
-                  и по линейному разрешению на местности. Данный же инструмент уточняет геопривязку для всех маршрутов, производит цветокоррекцию и проводит границу между маршрутами таким образом, чтобы она была незаметной.
-                </p>
-                <p>На изображении приведен пример формирования бесшовной мозайки из нескольких маршрутов.</p>
-              </div>
-              <div class="col-md-6 col-12">
-                  <img src="assets/images/opportunities/processing/moz.png" alt="">
-              </div>
-            </div>
-            <div class="row align-items-center g-5 mt-1">
+				<div id="catalog" class="tab tab_hidden">
+					<section class="section section_blue">
+						<div class="container">
+							<h2 class="section-title">Предварительная обработка</h2>
+							<div class="row align-items-center g-5">
+								<div class="col-md-6 col-12">
+									<h4>Формирование бесшовной мозаики</h4>
+									<p>
+										Исходные маршруты могут отличаться и по цвету, и по геопривязке, и по линейному
+										разрешению на местности. Данный же инструмент уточняет геопривязку для всех
+										маршрутов, производит цветокоррекцию и проводит границу между маршрутами таким
+										образом, чтобы она была незаметной.
+									</p>
+									<p>
+										На изображении приведен пример формирования бесшовной мозайки из нескольких
+										маршрутов.
+									</p>
+								</div>
+								<div class="col-md-6 col-12">
+									<img src="assets/images/opportunities/processing/moz.png" alt="" />
+								</div>
+							</div>
+							<div class="row align-items-center g-5 mt-1">
+								<div class="col-md-6 col-12 order-md-1 order-2">
+									<div class="image-compare">
+										<img src="assets/images/opportunities/processing/qual_before.png" alt="" />
+										<img src="assets/images/opportunities/processing/qual_after.png" alt="" />
+									</div>
+								</div>
+								<div class="col-md-6 col-12 order-md-2 order-1">
+									<h4>Повышение линейного разрешения</h4>
+									<p>
+										В программном комплексе IMC есть возможность повышения линейного разрешения
+										снимков и оценка качества исходных материалов.
+									</p>
+									<p>
+										Слева изображен исходный снимок, который имеет разрешение 1 м. В результате
+										обработки удалось повысить разрешение до 0,57 м.
+									</p>
+								</div>
+							</div>
+						</div>
+					</section>
+				</div>
 
-              <div class="col-md-6 col-12  order-md-1 order-2">
-                <div class="image-compare">
-                  <img src="assets/images/opportunities/processing/qual_before.png" alt="">
-                  <img src="assets/images/opportunities/processing/qual_after.png" alt="">
-                </div>
-              </div>
-              <div class="col-md-6 col-12 order-md-2 order-1"><h4>Повышение линейного разрешения</h4>
-                <p>В программном комплексе IMC есть возможность повышения линейного разрешения снимков и оценка качества исходных материалов.</p>
-                <p>Слева изображен исходный снимок, который имеет разрешение 1 м.
-                  В результате обработки удалось повысить разрешение до 0,57 м.</p>
-              </div>
-            </div>
-          </div>
-        </section>
-      </div>
+				<div id="automat" class="tab tab_hidden">
+					<section class="section section_blue">
+						<div class="container">
+							<h2 class="section-title">Предварительная обработка</h2>
+							<div class="row align-items-center g-5">
+								<div class="col-md-6 col-12">
+									<h4>Формирование бесшовной мозаики</h4>
+									<p>
+										Исходные маршруты могут отличаться и по цвету, и по геопривязке, и по линейному
+										разрешению на местности. Данный же инструмент уточняет геопривязку для всех
+										маршрутов, производит цветокоррекцию и проводит границу между маршрутами таким
+										образом, чтобы она была незаметной.
+									</p>
+									<p>
+										На изображении приведен пример формирования бесшовной мозайки из нескольких
+										маршрутов.
+									</p>
+								</div>
+								<div class="col-md-6 col-12">
+									<img src="assets/images/opportunities/processing/moz.png" alt="" />
+								</div>
+							</div>
+							<div class="row align-items-center g-5 mt-1">
+								<div class="col-md-6 col-12 order-md-1 order-2">
+									<div class="image-compare">
+										<img src="assets/images/opportunities/processing/qual_before.png" alt="" />
+										<img src="assets/images/opportunities/processing/qual_after.png" alt="" />
+									</div>
+								</div>
+								<div class="col-md-6 col-12 order-md-2 order-1">
+									<h4>Повышение линейного разрешения</h4>
+									<p>
+										В программном комплексе IMC есть возможность повышения линейного разрешения
+										снимков и оценка качества исходных материалов.
+									</p>
+									<p>
+										Слева изображен исходный снимок, который имеет разрешение 1 м. В результате
+										обработки удалось повысить разрешение до 0,57 м.
+									</p>
+								</div>
+							</div>
+						</div>
+					</section>
+				</div>
 
-      <div id="thematic" class="tab tab_hidden">
-        <section class="section section_dark-blue">
-          <img src="assets/images/opportunities/thematic/background.png" alt="" class="section-background section-background_right h-100" />
-          <div class="container">
-            <h2 class="section-title section-title_white">
-              Тематическая обработка
-            </h2>
-            <div class="row justify-content-between">
-              <div class="col-xl-6 col-lg-9 col-md-12 col-12">
-                <p class="mb-20">
-                  Методы тематической обработки спутниковых снимков позволяют детально изучать изображения и получать векторные слои с атрибутивной информацией, в том числе и в автоматическом режиме. В программном комплексе IMAGE MEDIA CENTER реализован широкий спектр инструментов для тематической обработки спутниковых снимков.
-                </p>
-              </div>
-            </div>
-        </section>
+				<div id="report" class="tab tab_hidden">
+					<section class="section section_blue">
+						<div class="container">
+							<h2 class="section-title">Предварительная обработка</h2>
+							<div class="row align-items-center g-5">
+								<div class="col-md-6 col-12">
+									<h4>Формирование бесшовной мозаики</h4>
+									<p>
+										Исходные маршруты могут отличаться и по цвету, и по геопривязке, и по линейному
+										разрешению на местности. Данный же инструмент уточняет геопривязку для всех
+										маршрутов, производит цветокоррекцию и проводит границу между маршрутами таким
+										образом, чтобы она была незаметной.
+									</p>
+									<p>
+										На изображении приведен пример формирования бесшовной мозайки из нескольких
+										маршрутов.
+									</p>
+								</div>
+								<div class="col-md-6 col-12">
+									<img src="assets/images/opportunities/processing/moz.png" alt="" />
+								</div>
+							</div>
+							<div class="row align-items-center g-5 mt-1">
+								<div class="col-md-6 col-12 order-md-1 order-2">
+									<div class="image-compare">
+										<img src="assets/images/opportunities/processing/qual_before.png" alt="" />
+										<img src="assets/images/opportunities/processing/qual_after.png" alt="" />
+									</div>
+								</div>
+								<div class="col-md-6 col-12 order-md-2 order-1">
+									<h4>Повышение линейного разрешения</h4>
+									<p>
+										В программном комплексе IMC есть возможность повышения линейного разрешения
+										снимков и оценка качества исходных материалов.
+									</p>
+									<p>
+										Слева изображен исходный снимок, который имеет разрешение 1 м. В результате
+										обработки удалось повысить разрешение до 0,57 м.
+									</p>
+								</div>
+							</div>
+						</div>
+					</section>
+				</div>
 
-        <section class="section section_gray">
-          <div class="container">
-            <h2 class="section-title">
-              Тематическая обработка
-            </h2>
-            <div class="row align-items-center g-5">
-              <div class="col-md-6 col-12">
-                <h4 class="mt-0">Анализ изображений в псевдоцветах</h4>
-                <p class="mb-0">Анализ изображений в псевдоцветах включает:</p>
-                <ul class="mt-0">
-                  <li>применение различных комбинаций цветовых каналов;</li>
-                  <li>метод наибольшего подобия;</li>
-                  <li>использование цветовых пространств (RGB, CMYK, Lab, HLS, HSB).</li>
-                </ul>
-                <p>На изображении показано исходное изображение слева - в естественных цветах, справа -  полученное в псевдоцветах.</p>
-              </div>
-              <div class="col-md-6 col-12">
-                <div class="image-compare">
-                  <img src="assets/images/opportunities/thematic/pseudo_before.png" alt="">
-                  <img src="assets/images/opportunities/thematic/pseudo_after.png" alt="">
-                </div>
-              </div>
-            </div>
-            <div class="row align-items-center g-5 mt-1">
+				<div class="tabs__links">
+					<a title="Далее" href="#" id="next-tab" class="link link_blue tabs__link">
+						<span class="link__text"></span>
+						<span class="link__icon">
+							<img class="svg" src="assets/icons/arrow.svg" alt="" />
+						</span>
+					</a>
+					<a href="#tabs" id="home-tab" class="link link_blue tabs__link">
+						К разделам
+						<span class="link__icon">
+							<img class="svg" src="assets/icons/arrow.svg" alt="" />
+						</span>
+					</a>
+				</div>
+			</div>
 
-              <div class="col-md-6 col-12  order-md-1 order-2">
-                <div class="image-compare">
-                  <img src="assets/images/opportunities/thematic/index_before.png" alt="">
-                  <img src="assets/images/opportunities/thematic/index_after.png" alt="">
-                </div>
-              </div>
-              <div class="col-md-6 col-12 order-md-2 order-1">
-                <h4 class="mt-0">Формирование и анализ индексных изображений</h4>
-                <p>Значение яркости каждого пиксела индексного изображения формируется путем проведения математических операций, в которых в качестве параметров используются значения яркости каждого пиксела из разных каналов снимка. </p> 
-                <p class="mb-0">В зависимости от цели исследования используются различные индексы:</p>
-                <ul>
-                  <li>вегетационные индексы;</li>
-                  <li>почвенные индексы;</li>
-                  <li>водные индексы;</li>
-                  <li>снежные индексы;</li>
-                  <li>пользовательские индексы.</li>
-                </ul>
-                <p> Для формирования индексных изображений в ПК IMC реализован инструмент "Калькулятор каналов", который позволяет пользователю составлять любые математические формулы с использованием каналов изображения.</p>
-              </div>
-            </div>
-          </div>
-        </section>
+			<button title="Вверх" class="arrow-button arrow-button_top scroll-to-top">
+				<img class="svg" src="assets/icons/arrow.svg" alt="" />
+			</button>
+		</main>
 
-        <section class="section section_blue">
-          <div class="container">
-            <h2 class="section-title">
-              Тематическая обработка
-            </h2>
-            <div class="row align-items-center g-5">
-              <div class="col-md-6 col-12">
-                <h4 class="mt-0">Кластеризация (классификация без обучения 
-                  с учетом k-средних)</h4>
-                <p class="mb-0">Классификацию без обучения применяют:</p>
-                <ul>
-                  <li>если заранее неизвестно какие объекты есть на снимке;</li>
-                  <li>на снимке большое количество объектов (более 30) со сложными границами;</li>
-                  <li>также можно применять, как предварительный этап перед классификацией с обучением.</li>
-                </ul>
-                <p>Для контролируемой классификации используются эталонные области, которые определяет оператор исходя из их принадлежности определенному классу объектов. Для последующего распознавания в качестве обучающих выборок используются значения пикселей эталонных областей в различных спектральных диапазонах. Таким образом, каждый пиксель изображения относится к определенному классу на основании последовательного сравнения со всеми созданными эталонами. При контролируемой классификации сначала определяются информационные классы, а затем, на их основе, спектральные.</p>
-              </div>
-              <div class="col-md-6 col-12">
-                <div class="image-compare">
-                  <img src="assets/images/opportunities/thematic/no-learn_before.png" alt="">
-                  <img src="assets/images/opportunities/thematic/no-learn_after.png" alt="">
-                </div>
-              </div>
-            </div>
-            <div class="row align-items-center g-5 mt-1">
+		<footer class="footer">
+			<div class="footer-main">
+				<div class="container outer-container">
+					<div class="row">
+						<div
+							class="col-md-4 col-12 d-flex justify-content-md-between flex-md-column justify-content-center"
+						>
+							<div class="logo logo_white">
+								<div class="logo__image">
+									<img src="assets/icons/logo.svg" class="svg" alt="" />
+								</div>
+								<span class="logo__line"></span>
+								<div class="logo__text">
+									центр <br />
+									инновационных <br />
+									технологий
+								</div>
+							</div>
+							<div class="lang lang_white"><span class="lang_active">RU</span>/<span>EN</span></div>
+						</div>
+						<div class="col-md-4 col-12">
+							<nav class="footer-menu">
+								<ul class="footer-menu__list">
+									<li class="footer-menu__list__item">
+										<a href="" class="footer-menu__link nav-link">IMC</a>
+									</li>
+									<li class="footer-menu__list__item">
+										<a href="" class="footer-menu__link nav-link">Обработка</a>
+									</li>
+									<li class="footer-menu__list__item">
+										<a href="" class="footer-menu__link nav-link">Обучение</a>
+									</li>
+									<li class="footer-menu__list__item">
+										<a href="" class="footer-menu__link nav-link">Сервисы</a>
+									</li>
+									<li class="footer-menu__list__item">
+										<a href="" class="footer-menu__link nav-link">О нас</a>
+									</li>
+								</ul>
+							</nav>
+						</div>
+						<div
+							class="col-md-4 col-12 d-flex justify-content-between flex-column align-items-md-start align-items-center"
+						>
+							<div>
+								<div class="footer-contacts__title">Контакты</div>
+								<ul class="footer-contacts__list">
+									<li>
+										<a href="">+7 (499) 198 61-66</a>
+									</li>
+									<li><a href="">contacts@novacenter.ru</a></li>
+									<li><a href="">129329, Москва, ул. Вересковая, 10/9</a></li>
+								</ul>
+							</div>
+							<div class="footer-social">
+								<a title="rutube" href=""><img src="assets/icons/rutube.svg" alt="" /></a>
+								<a title="youtube" href=""><img src="assets/icons/rutube.svg" alt="" /></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="footer-small">
+				<div
+					class="container d-flex justify-content-center flex-md-row flex-column align-items-center"
+				>
+					<span>© Copyright 2010-2023 ООО "Центр Инновационных Технологий"</span>
+					<span class="footer-small__line"></span>
+					<a href="">Политика обработки персональных данных</a>
+				</div>
+			</div>
+		</footer>
 
-              <div class="col-md-6 col-12  order-md-1 order-2">
-                <div class="image-compare">
-                  <img src="assets/images/opportunities/thematic/learn_before.png" alt="">
-                  <img src="assets/images/opportunities/thematic/learn_after.png" alt="">
-                </div>
-              </div>
-              <div class="col-md-6 col-12 order-md-2 order-1">
-                
-                <h4 class="mt-0">Классификация с обучением</h4>
-                <p>Для контролируемой классификации используются эталонные области, которые определяет оператор исходя из их принадлежности определенному классу объектов. Для последующего распознавания в качестве обучающих выборок используются значения пикселей эталонных областей в различных спектральных диапазонах. Таким образом, каждый пиксель изображения относится к определенному классу на основании последовательного сравнения со всеми созданными эталонами. При контролируемой классификации сначала определяются информационные классы, а затем, на их основе, спектральные.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
+		<div class="overlay hidden" id="video-player">
+			<div class="popup video-popup">
+				<button class="popup__close video-popup__close" title="Закрыть">
+					<img src="assets/icons/cross.svg" class="svg" alt="" />
+				</button>
+				<iframe
+					width="1280"
+					height="720"
+					title="YouTube video player"
+					frameborder="0"
+					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+					allowfullscreen
+				></iframe>
+			</div>
+		</div>
 
-        <section class="section section_gray">
-          <div class="container">
-            <h2 class="section-title">
-              Тематическая обработка
-            </h2>
-            <div class="row align-items-center g-5">
-              <div class="col-md-6 col-12">
-                <h4 class="mt-0">Спектральный анализ</h4>
-                <p class="mb-0">Основными величинами, подлежащими изменению при спектральном анализе, являются длина волны, интенсивность отраженного сигнала и пространственная координата исследуемой поверхности. В ПК IMC реализованы следующие методы спектрального анализа:</p>
-                   <ul>
-                    <li>корреляция с/без учета амплитуды;</li>
-                    <li>двоичное кодирование;</li>
-                    <li>спектрально-угловое картирование;</li>
-                    <li>ортогональная проекция подпространства.</li>
-                   </ul>
-                <p>На изображении показана тематическая карта побережья, созданная с помощью спектрального анализа.</p>
-              </div>
-              <div class="col-md-6 col-12">
-                  <img src="assets/images/opportunities/thematic/spectr.png" alt="">
-              </div>
-            </div>
-          </div>
-        </section>
-      </div>
-
-      <div id="vector" class="tab tab_hidden">
-        <section class="section section_blue">
-          <div class="container">
-            <h2 class="section-title">
-              Работа с векторами
-            </h2>
-            <div class="row align-items-center g-5">
-              <div class="col-md-6 col-12">
-                <h4>Работа с векторными данными</h4>
-                <p>Работа с векторными данными в рамках ПК IMC включает в себя создание и назначение стилей отображения векторных объектов, а также формирование классификаторов с учетом типов объектов, масштаба отображения и набора атрибутивных данных.Функционал ПК IMC позволяет создавать векторные объекты любой сложности (маркеры, линии, полигоны, составные объекты).
-                </p>
-                <p>Векторные слои могут быть сохранены в международных форматах SHP и TAB, а также во внутреннем формате IMF, который позволяет хранить растровые и векторные слои с атрибутивной информацией в едином документе.</p>
-              </div>
-              <div class="col-md-6 col-12">
-                  <img src="assets/images/opportunities/processing/moz.png" alt="">
-              </div>
-            </div>
-            <div class="row align-items-center g-5 mt-1">
-
-              <div class="col-md-6 col-12  order-md-1 order-2">
-                <div class="image-compare">
-                  <img src="assets/images/opportunities/processing/qual_before.png" alt="">
-                  <img src="assets/images/opportunities/processing/qual_after.png" alt="">
-                </div>
-              </div>
-              <div class="col-md-6 col-12 order-md-2 order-1"><h4>Условные знаки в IMC</h4>
-                <p>В IMC возможно создание и редактирование любых стилей условных знаков.</p>
-                <p class="mb-0">Программный комплекс позволяет редактировать условные знаки по многим параметрам, таких как:</p>
-                <ul>
-                  <li>цвет;</li>
-                  <li>угол поворота;</li>
-                  <li>размер;</li>
-                  <li>дополнительные параметры в виде свечения, тени, обводки и д.р.</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </section>
-      </div>
-
-      <div id="catalog" class="tab tab_hidden">
-        <section class="section section_blue">
-          <div class="container">
-            <h2 class="section-title">
-              Предварительная обработка
-            </h2>
-            <div class="row align-items-center g-5">
-              <div class="col-md-6 col-12">
-                <h4>Формирование бесшовной мозаики</h4>
-                <p>Исходные маршруты могут отличаться и по цвету, и по геопривязке, 
-                  и по линейному разрешению на местности. Данный же инструмент уточняет геопривязку для всех маршрутов, производит цветокоррекцию и проводит границу между маршрутами таким образом, чтобы она была незаметной.
-                </p>
-                <p>На изображении приведен пример формирования бесшовной мозайки из нескольких маршрутов.</p>
-              </div>
-              <div class="col-md-6 col-12">
-                  <img src="assets/images/opportunities/processing/moz.png" alt="">
-              </div>
-            </div>
-            <div class="row align-items-center g-5 mt-1">
-
-              <div class="col-md-6 col-12  order-md-1 order-2">
-                <div class="image-compare">
-                  <img src="assets/images/opportunities/processing/qual_before.png" alt="">
-                  <img src="assets/images/opportunities/processing/qual_after.png" alt="">
-                </div>
-              </div>
-              <div class="col-md-6 col-12 order-md-2 order-1"><h4>Повышение линейного разрешения</h4>
-                <p>В программном комплексе IMC есть возможность повышения линейного разрешения снимков и оценка качества исходных материалов.</p>
-                <p>Слева изображен исходный снимок, который имеет разрешение 1 м.
-                  В результате обработки удалось повысить разрешение до 0,57 м.</p>
-              </div>
-            </div>
-          </div>
-        </section>
-      </div>
-      
-      <div id="automat" class="tab tab_hidden">
-        <section class="section section_blue">
-          <div class="container">
-            <h2 class="section-title">
-              Предварительная обработка
-            </h2>
-            <div class="row align-items-center g-5">
-              <div class="col-md-6 col-12">
-                <h4>Формирование бесшовной мозаики</h4>
-                <p>Исходные маршруты могут отличаться и по цвету, и по геопривязке, 
-                  и по линейному разрешению на местности. Данный же инструмент уточняет геопривязку для всех маршрутов, производит цветокоррекцию и проводит границу между маршрутами таким образом, чтобы она была незаметной.
-                </p>
-                <p>На изображении приведен пример формирования бесшовной мозайки из нескольких маршрутов.</p>
-              </div>
-              <div class="col-md-6 col-12">
-                  <img src="assets/images/opportunities/processing/moz.png" alt="">
-              </div>
-            </div>
-            <div class="row align-items-center g-5 mt-1">
-
-              <div class="col-md-6 col-12  order-md-1 order-2">
-                <div class="image-compare">
-                  <img src="assets/images/opportunities/processing/qual_before.png" alt="">
-                  <img src="assets/images/opportunities/processing/qual_after.png" alt="">
-                </div>
-              </div>
-              <div class="col-md-6 col-12 order-md-2 order-1"><h4>Повышение линейного разрешения</h4>
-                <p>В программном комплексе IMC есть возможность повышения линейного разрешения снимков и оценка качества исходных материалов.</p>
-                <p>Слева изображен исходный снимок, который имеет разрешение 1 м.
-                  В результате обработки удалось повысить разрешение до 0,57 м.</p>
-              </div>
-            </div>
-          </div>
-        </section>
-      </div>
-
-      <div id="report" class="tab tab_hidden">
-        <section class="section section_blue">
-          <div class="container">
-            <h2 class="section-title">
-              Предварительная обработка
-            </h2>
-            <div class="row align-items-center g-5">
-              <div class="col-md-6 col-12">
-                <h4>Формирование бесшовной мозаики</h4>
-                <p>Исходные маршруты могут отличаться и по цвету, и по геопривязке, 
-                  и по линейному разрешению на местности. Данный же инструмент уточняет геопривязку для всех маршрутов, производит цветокоррекцию и проводит границу между маршрутами таким образом, чтобы она была незаметной.
-                </p>
-                <p>На изображении приведен пример формирования бесшовной мозайки из нескольких маршрутов.</p>
-              </div>
-              <div class="col-md-6 col-12">
-                  <img src="assets/images/opportunities/processing/moz.png" alt="">
-              </div>
-            </div>
-            <div class="row align-items-center g-5 mt-1">
-
-              <div class="col-md-6 col-12  order-md-1 order-2">
-                <div class="image-compare">
-                  <img src="assets/images/opportunities/processing/qual_before.png" alt="">
-                  <img src="assets/images/opportunities/processing/qual_after.png" alt="">
-                </div>
-              </div>
-              <div class="col-md-6 col-12 order-md-2 order-1"><h4>Повышение линейного разрешения</h4>
-                <p>В программном комплексе IMC есть возможность повышения линейного разрешения снимков и оценка качества исходных материалов.</p>
-                <p>Слева изображен исходный снимок, который имеет разрешение 1 м.
-                  В результате обработки удалось повысить разрешение до 0,57 м.</p>
-              </div>
-            </div>
-          </div>
-        </section>
-      </div>
-
-      <div class="tabs__links">
-        <a title="Далее" href="#" id="next-tab" class="link link_blue tabs__link">
-          <span class="link__text"></span>
-          <span class="link__icon">
-            <img class="svg" src="assets/icons/arrow.svg" alt="" />
-          </span>
-        </a>
-        <a href="#tabs" id="home-tab" class="link link_blue tabs__link">
-          К разделам
-          <span class="link__icon">
-            <img class="svg" src="assets/icons/arrow.svg" alt="" />
-          </span>
-  </a>
-      </div>
-    </div>
-
-    <button title="Вверх" class="arrow-button arrow-button_top scroll-to-top">
-      <img class="svg" src="assets/icons/arrow.svg" alt="" />
-    </button>
-  </main>
-
-  <footer class="footer">
-    <div class="footer-main">
-      <div class="container outer-container">
-        <div class="row">
-          <div class="col-md-4 col-12 d-flex justify-content-md-between flex-md-column justify-content-center">
-            <div class="logo logo_white">
-              <div class="logo__image">
-                <img src="assets/icons/logo.svg" class="svg" alt="" />
-              </div>
-              <span class="logo__line"></span>
-              <div class="logo__text">
-                центр <br />
-                инновационных <br />
-                технологий
-              </div>
-            </div>
-            <div class="lang lang_white">
-              <span class="lang_active">RU</span>/<span>EN</span>
-            </div>
-          </div>
-          <div class="col-md-4 col-12">
-            <nav class="footer-menu">
-              <ul class="footer-menu__list">
-                <li class="footer-menu__list__item">
-                  <a href="" class="footer-menu__link nav-link">IMC</a>
-                </li>
-                <li class="footer-menu__list__item">
-                  <a href="" class="footer-menu__link nav-link">Обработка</a>
-                </li>
-                <li class="footer-menu__list__item">
-                  <a href="" class="footer-menu__link nav-link">Обучение</a>
-                </li>
-                <li class="footer-menu__list__item">
-                  <a href="" class="footer-menu__link nav-link">Сервисы</a>
-                </li>
-                <li class="footer-menu__list__item">
-                  <a href="" class="footer-menu__link nav-link">О нас</a>
-                </li>
-              </ul>
-            </nav>
-          </div>
-          <div
-            class="col-md-4 col-12 d-flex justify-content-between flex-column align-items-md-start align-items-center">
-            <div>
-              <div class="footer-contacts__title">Контакты</div>
-              <ul class="footer-contacts__list">
-                <li>
-                  <a href="">+7 (499) 198 61-66</a>
-                </li>
-                <li><a href="">contacts@novacenter.ru</a></li>
-                <li><a href="">129329, Москва, ул. Вересковая, 10/9</a></li>
-              </ul>
-            </div>
-            <div class="footer-social">
-              <a href=""><img src="assets/icons/rutube.svg" alt="" /></a>
-              <a href=""><img src="assets/icons/rutube.svg" alt="" /></a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="footer-small">
-      <div class="container d-flex justify-content-center flex-md-row flex-column align-items-center">
-        <span>© Copyright 2010-2023 ООО "Центр Инновационных Технологий"</span>
-        <span class="footer-small__line"></span>
-        <a href="">Политика обработки персональных данных</a>
-      </div>
-    </div>
-  </footer>
-
-  <div class="overlay hidden" id="video-player">
-    <div class="popup video-popup">
-      <button class="popup__close video-popup__close" title="Закрыть">
-        <img src="assets/icons/cross.svg" class="svg" alt="" />
-      </button>
-      <iframe width="1280" height="720" title="YouTube video player" frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowfullscreen></iframe>
-    </div>
-  </div>
-
-
-   <script src="https://unpkg.com/image-compare-viewer/dist/image-compare-viewer.min.js"></script>
-    <script
-      src="https://code.jquery.com/jquery-3.7.1.min.js"
-      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
-      crossorigin="anonymous"
-    ></script>
-    <script src="js/svg-injector.min.js"></script>
-    <script
-      type="text/javascript"
-      src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
-    ></script>
-    <script src="js/main.js"></script>
-</body>
-
+		<script src="https://unpkg.com/image-compare-viewer/dist/image-compare-viewer.min.js"></script>
+		<script
+			src="https://code.jquery.com/jquery-3.7.1.min.js"
+			integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+			crossorigin="anonymous"
+		></script>
+		<script src="js/svg-injector.min.js"></script>
+		<script
+			type="text/javascript"
+			src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+		></script>
+		<script src="js/main.js"></script>
+	</body>
 </html>

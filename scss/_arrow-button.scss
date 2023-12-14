@@ -1,75 +1,76 @@
 .arrow-button {
-  width: 4rem;
-  height: 4rem;
-  border: 2px solid $active;
-  border-radius: 50%;
-  background: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  z-index: 1;
-  padding: 0;
-  &::after {
-    content: "";
-    width: 0;
-    height: 0;
-    top: 50%;
-    left: 50%;
-    transition: 0.2s ease-in-out transform;
-    transform: translate(-50%, -50%);
-    position: absolute;
-    background: #fff;
-    border-radius: 50%;
-    z-index: -1;
-  }
-  svg {
-    width: 50%;
-    height: 50%;
-    path {
-      fill: $active;
-    }
-  }
-  &:not(:disabled):not(.slick-disabled):hover {
-    &:after {
-      width: 100%;
-      height: 100%;
-    }
-  }
-  &:disabled, &.slick-disabled {
-    border-color: #939393;
-    &:hover {
-      cursor: no-drop;
-    }
-    svg path {
-      fill: #939393;
-    }
-  }
+	width: 4rem;
+	height: 4rem;
+	border: 2px solid $primary;
+	border-radius: 50%;
+	background: none;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	z-index: 1;
+	padding: 0;
+	&::after {
+		content: "";
+		width: 0;
+		height: 0;
+		top: 50%;
+		left: 50%;
+		transition: 0.2s ease-in-out transform;
+		transform: translate(-50%, -50%);
+		position: absolute;
+		background: #fff;
+		border-radius: 50%;
+		z-index: -1;
+	}
+	svg {
+		width: 50%;
+		height: 50%;
+		path {
+			fill: $primary;
+		}
+	}
+	&:not(:disabled):not(.slick-disabled):hover {
+		&:after {
+			width: 100%;
+			height: 100%;
+		}
+	}
+	&:disabled,
+	&.slick-disabled {
+		border-color: #939393;
+		&:hover {
+			cursor: no-drop;
+		}
+		svg path {
+			fill: #939393;
+		}
+	}
 
-  &_left {
-    svg {
-      transform: rotate(180deg);
-    }
-  }
-  &_top {
-    svg {
-      transform: rotate(-90deg);
-    }
-  }
+	&_left {
+		svg {
+			transform: rotate(180deg);
+		}
+	}
+	&_top {
+		svg {
+			transform: rotate(-90deg);
+		}
+	}
 }
 
 .scroll-to-top {
-  position: fixed;
-  bottom: 3rem;
-  right: 3rem;
-  display: none;
-  &.active {
-    display: flex;
-  }
+	position: fixed;
+	bottom: 3rem;
+	right: 3rem;
+	display: none;
+	&.active {
+		display: flex;
+	}
 }
 
 @media (max-width: $sm-screen) {
-  .arrow-button {
-    padding: 0;
-  }
+	.arrow-button {
+		padding: 0;
+	}
 }

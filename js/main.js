@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", () => {
-  defineCustomComponents();
   setupHeroSlider();
   setupSlider();
   setupNavMenu();
@@ -166,80 +165,7 @@ function setupVideo() {
   }
 }
 
-class CardComponent extends HTMLElement {
-  connectedCallback() {
-    let href = this.getAttribute("data-href") || "#";
-    let imageSrc = this.getAttribute("data-src") || "";
-    let title = this.getAttribute("data-title") || "";
-    let large = this.getAttribute("data-large");
-    this.innerHTML = `
-    <div class="card ${large != null ? "card_large" : ""}">
-    <div class="card-image">
-      <img src="${imageSrc}" alt="" />
-    </div>
-    <a href="${href}" class="link link_white card-link">
-      ${title}
-      <span class="link__icon">
-        <img class="svg" src="assets/icons/arrow.svg" alt="" />
-      </span>
-    </a>
-  </div>
-    `;
-  }
-}
-
-class NewsCardComponent extends HTMLElement {
-  connectedCallback() {
-    let href = this.getAttribute("data-href") || "#";
-    let imageSrc = this.getAttribute("data-src") || "";
-    let title = this.getAttribute("data-title") || "";
-    let date = this.getAttribute("data-date") || "";
-    this.innerHTML = `
-    <div class="content-card">
-      <img
-        class="content-card__image"
-        src="${imageSrc}"
-        alt=""
-      />
-      <div class="content-card__content">
-        <div class="content-card__content__wrapper">
-          <div class="content-card__small">${date}</div>
-          <h4 class="content-card__title">
-          ${title}
-          </h4>
-        </div>
-        <a href="${href}" class="link">
-          Узнать больше
-          <span class="link__icon">
-            <img class="svg" src="assets/icons/arrow.svg" alt="" />
-          </span>
-        </a>
-      </div>
-    </div>
-    `;
-  }
-}
-
-function defineCustomComponents() {
-  customElements.define("card-component", CardComponent);
-  customElements.define("news-card-component", NewsCardComponent);
-}
-
 function setupSlider() {
-  // new Glide(".glide", {
-  //   type: "carousel",
-  //   startAt: 0,
-  //   perView: 3,
-  //   gap: 24,
-  //   breakpoints: {
-  //     768: {
-  //       perView: 2,
-  //     },
-  //     576: {
-  //       perView: 1,
-  //     },
-  //   },
-  // }).mount();
   const prevArrow = $(".news-slider")
     .parents(".section")
     .find(".arrow-button_left");
@@ -248,7 +174,7 @@ function setupSlider() {
     .find(".arrow-button_right");
   $(".news-slider").slick({
     slidesToShow: 3,
-    infinite: false,
+    infinite: true,
     prevArrow,
     nextArrow,
     responsive: [
@@ -269,76 +195,18 @@ function setupSlider() {
 }
 
 function setupGoTop() {
-  // first add raf shim
-  // http://www.paulirish.com/2011/requestanimationframe-for-smart-animating/
-  window.requestAnimFrame = (function () {
-    return (
-      window.requestAnimationFrame ||
-      window.webkitRequestAnimationFrame ||
-      window.mozRequestAnimationFrame ||
-      function (callback) {
-        window.setTimeout(callback, 1000 / 60);
-      }
-    );
-  })();
+  $('a[href^="#"]').on('click', function(event) {
+    event.preventDefault();
 
-  // main function
-  function scrollToY(scrollTargetY, speed, easing) {
-    // scrollTargetY: the target scrollY property of the window
-    // speed: time in pixels per second
-    // easing: easing equation to use
+    let targetId = $(this).attr('href');
+    let targetElement = $(targetId);
 
-    var scrollY = window.scrollY || document.documentElement.scrollTop,
-      scrollTargetY = scrollTargetY || 0,
-      speed = speed || 2000,
-      easing = easing || "easeOutSine",
-      currentTime = 0;
-
-    // min time .1, max time .8 seconds
-    var time = Math.max(
-      0.1,
-      Math.min(Math.abs(scrollY - scrollTargetY) / speed, 0.8)
-    );
-
-    // easing equations from https://github.com/danro/easing-js/blob/master/easing.js
-    var easingEquations = {
-      easeOutSine: function (pos) {
-        return Math.sin(pos * (Math.PI / 2));
-      },
-      easeInOutSine: function (pos) {
-        return -0.5 * (Math.cos(Math.PI * pos) - 1);
-      },
-      easeInOutQuint: function (pos) {
-        if ((pos /= 0.5) < 1) {
-          return 0.5 * Math.pow(pos, 5);
-        }
-        return 0.5 * (Math.pow(pos - 2, 5) + 2);
-      },
-    };
-
-    // add animation loop
-    function tick() {
-      currentTime += 1 / 60;
-
-      var p = currentTime / time;
-      var t = easingEquations[easing](p);
-
-      if (p < 1) {
-        requestAnimFrame(tick);
-
-        window.scrollTo(0, scrollY + (scrollTargetY - scrollY) * t);
-      } else {
-        console.log("scroll done");
-        window.scrollTo(0, scrollTargetY);
-      }
+    if (targetElement.length) {
+      let headerHeight = $('.header').outerHeight();
+      let offset = targetElement.offset().top - headerHeight - 50;
+      console.log(offset);
+      $('html, body').scrollTop(offset);
     }
-
-    // call it once to get started
-    tick();
-  }
-
-  document.querySelector(".scroll-to-top").addEventListener("click", () => {
-    window.scrollTo(0, 0);
   });
 }
 
@@ -347,61 +215,45 @@ function setupTabs() {
   const $tabs = $("a.tabs-item");
   const $nextTabLink = $("#next-tab");
 
-  if (
-    $tabs.filter(`[href='${hash}']`).length == 0 ||
-    hash == "" ||
-    hash == "#"
-  ) {
-    $($tabs[0]).addClass("tabs-item_active");
-    $nextTabLink.attr("href", $($tabs[1]).attr("href"));
-    $nextTabLink.find(".link__text").text($($tabs[1]).text());
+
+  function setNextTab(tabIndex) {
+    const $nextTab = $tabs.eq((tabIndex + 1) % $tabs.length);
+    $nextTabLink.attr("href", $nextTab.attr("href")).find(".link__text").text($nextTab.text());
+  }
+
+  function showTab($tab) {
     $(".tabs-content > .tab").addClass("tab_hidden");
-    $(`${$($tabs[0]).attr("href")}`).removeClass("tab_hidden");
-    // $(location).attr("hash", $($tabs[0]).attr("href"));
+    $($tab.attr("href")).removeClass("tab_hidden");
+    scrollToBase();
+  }
+
+  function scrollToBase() {
+    const $tabsBase = $("#tabs");
+    const $header = $('.header');
+    let headerHeight = $header.outerHeight();
+    let offset = $tabsBase.offset().top - headerHeight - 50;
+    $('html, body').scrollTop(offset);
+  }
+
+  if (!hash || $tabs.filter(`[href='${hash}']`).length === 0) {
+    const $firstTab = $tabs.eq(0);
+    $firstTab.addClass("tabs-item_active");
+    setNextTab(0);
+    showTab($firstTab);
   } else {
-    $tab = $tabs.filter(`[href='${hash}']`).first();
-    $tab.addClass("tabs-item_active");
-    $nextTab = null;
-    for (let i = 0; i < $tabs.length; i++) {
-      $el = $($tabs[i]);
-      if ($el.attr("href") == $tab.attr("href")) {
-        if (i + 1 == $tabs.length) {
-          $nextTab = $($tabs[0]);
-        } else {
-          $nextTab = $($tabs[i + 1]);
-        }
-        break;
-      }
-    }
-
-    $(".tabs-content > .tab").addClass("tab_hidden");
-    $(`${$tab.attr("href")}`).removeClass("tab_hidden");
-
-    $nextTabLink.attr("href", $nextTab.attr("href"));
-    $nextTabLink.find(".link__text").text($nextTab.text());
+    const $currentTab = $tabs.filter(`[href='${hash}']`).first();
+    $currentTab.addClass("tabs-item_active");
+    showTab($currentTab);
+    setNextTab($tabs.index($currentTab));
   }
 
   $tabs.on("click", function (e) {
+    const $clickedTab = $(this);
     $tabs.removeClass("tabs-item_active");
-    $(this).addClass("tabs-item_active");
+    $clickedTab.addClass("tabs-item_active");
 
-    $(".tabs-content > .tab").addClass("tab_hidden");
-    $(`${$(this).attr("href")}`).removeClass("tab_hidden");
-
-    $nextTab = null;
-    for (let i = 0; i < $tabs.length; i++) {
-      $el = $($tabs[i]);
-      if ($el.attr("href") == $(this).attr("href")) {
-        if (i + 1 == $tabs.length) {
-          $nextTab = $($tabs[0]);
-        } else {
-          $nextTab = $($tabs[i + 1]);
-        }
-        break;
-      }
-    }
-    $nextTabLink.attr("href", $nextTab.attr("href"));
-    $nextTabLink.find(".link__text").text($nextTab.text());
+    showTab($clickedTab);
+    setNextTab($tabs.index($clickedTab));
   });
 }
 

@@ -1,8 +1,10 @@
 <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <g id="Iconly/Light/Arrow---Down-2">
-    <g id="Arrow---Down-2">
-      <path id="Stroke-1" d="M11 6L6 1L1 6" stroke="#335472" stroke-linecap="round"
-        stroke-linejoin="round" />
-    </g>
-  </g>
+<g clip-path="url(#clip0_2201_322)">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M5.64645 0.646447C5.84171 0.451184 6.15829 0.451184 6.35355 0.646447L11.3536 5.64645C11.5488 5.84171 11.5488 6.15829 11.3536 6.35355C11.1583 6.54882 10.8417 6.54882 10.6464 6.35355L6 1.70711L1.35355 6.35355C1.15829 6.54882 0.841709 6.54882 0.646447 6.35355C0.451184 6.15829 0.451184 5.84171 0.646447 5.64645L5.64645 0.646447Z" fill="#335472"/>
+</g>
+<defs>
+<clipPath id="clip0_2201_322">
+<rect width="12" height="7" fill="white"/>
+</clipPath>
+</defs>
 </svg>
