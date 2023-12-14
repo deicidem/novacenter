@@ -9,11 +9,11 @@ body {
 h3 {
 	color: inherit;
 	font-weight: 400;
-	font-size: 2.25rem;
+	font-size: 2rem;
 }
 p {
 	color: inherit;
-	font-size: 1.5rem;
+	font-size: 1.25rem;
 }
 
 img {
@@ -22,11 +22,11 @@ img {
 	vertical-align: middle;
 }
 h4 {
-	font-size: 1.75rem;
-	margin: 1.5rem 0;
+	font-size: 1.5rem;
+	margin: 1.25rem 0;
 }
 ul {
-	font-size: 1.5rem;
+	font-size: 1.25rem;
 	list-style-type: "—";
 	list-style-position: "outside";
 	margin: 0.5rem 0;
@@ -34,24 +34,21 @@ ul {
 		padding-left: 0.5rem;
 	}
 }
-.w-5 {
-	width: 5rem;
+.w-4 {
+	width: 4rem;
 }
-.mb-20 {
-	margin-bottom: 20rem;
-}
-.mb-2rem {
-	margin-bottom: 2rem;
+.mb-16 {
+	margin-bottom: 16rem;
 }
 .main {
 	position: relative;
-	margin-top: 10.25rem;
+	margin-top: 8rem;
 }
 
 .slider-buttons {
 	display: flex;
 	.arrow-button:first-child {
-		margin-right: 1rem;
+		margin-right: 0.75rem;
 	}
 }
 
@@ -73,7 +70,7 @@ ul {
 .lang {
 	display: flex;
 	align-items: center;
-	font-size: 1.25rem;
+	font-size: 1rem;
 	font-weight: 500;
 	color: #969696;
 	&__text {
@@ -143,16 +140,13 @@ ul {
 	}
 }
 @media (max-width: $xxl-screen) {
-	html {
-		font-size: 85%;
-	}
 	.outer-container {
 		max-width: 1340px;
 	}
 }
 @media (max-width: $xl-screen) {
 	html {
-		font-size: 70%;
+		font-size: 75%;
 	}
 	.outer-container {
 		max-width: 1100px;
@@ -160,7 +154,7 @@ ul {
 }
 @media (max-width: $lg-screen) {
 	html {
-		font-size: 70%;
+		font-size: 75%;
 	}
 	.main {
 		padding: 0 2rem;
@@ -172,12 +166,7 @@ ul {
 }
 @media (max-width: $md-screen) {
 	html {
-		font-size: 60%;
-	}
-}
-@media (max-width: 420px) {
-	html {
-		font-size: 50%;
+		font-size: 62.5%;
 	}
 }
 // @media (min-width: 1600px) {

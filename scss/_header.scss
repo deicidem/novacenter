@@ -3,7 +3,7 @@
 	width: 100%;
 	top: 0;
 	background: #f6f6f6;
-	padding: 2rem 0;
+	padding: 1.5rem 0;
 	z-index: 100;
 	&-container {
 		display: flex;
@@ -24,11 +24,11 @@
 			& > li {
 				padding: 0;
 				margin: 0;
-				margin-right: 2rem;
+				margin-right: 1.5rem;
 				position: relative;
 				& > a {
 					font-weight: 500;
-					font-size: 1.25rem;
+					font-size: 1rem;
 					color: $primary_dark;
 					text-transform: uppercase;
 				}
@@ -55,11 +55,11 @@
 		display: none;
 		position: absolute;
 		background: #f6f6f6;
-		left: -2.5rem;
+		left: -2rem;
 		top: 100%;
 		box-shadow: 0px 21px 46px rgba(#969696, 0.1);
 		ul {
-			padding: 2.5rem 3.7rem;
+			padding: 2rem 3rem;
 			margin: 0;
 			list-style: none;
 			li {
@@ -70,7 +70,9 @@
 			}
 		}
 		a {
-			font-size: 1.25rem;
+			display: flex;
+			align-items: center;
+			font-size: 1rem;
 			text-decoration: none;
 			color: $primary_dark;
 			white-space: nowrap;
@@ -108,7 +110,7 @@
 	&-lang {
 		display: flex;
 		align-items: center;
-		font-size: 1.25rem;
+		font-size: 1rem;
 		font-weight: 500;
 		color: #969696;
 		&_active {
@@ -141,9 +143,9 @@
 				height: 100vh;
 				display: flex;
 				flex-direction: column;
-				padding: 4rem;
+				padding: 3.5rem;
 				min-width: 30%;
-				margin-top: 10.25rem;
+				margin-top: 8rem;
 				transition: 0.3s ease-in-out;
 				&.mobile-hidden {
 					transform: translateX(100%);
@@ -159,16 +161,16 @@
 				}
 			}
 			&__link {
-				font-size: 1.5rem;
+				font-size: 1.25rem;
 				display: flex;
 				justify-content: space-between;
 				align-items: center;
 			}
 			&-button {
 				position: relative;
-				width: 3rem;
-				height: 3rem;
-				margin-left: 2rem;
+				width: 2.5rem;
+				height: 2.5rem;
+				margin-left: 1.5rem;
 				z-index: 10001;
 				span {
 					position: absolute;
@@ -215,12 +217,12 @@
 			height: 0;
 			overflow: hidden;
 			&__list {
-				padding: 2rem;
+				padding: 1.5rem;
 				box-shadow: none;
 				background: none;
 			}
 			&__link {
-				font-size: 1.5rem;
+				font-size: 1.25rem;
 			}
 		}
 		&-menu__list__item.active &-submenu {
