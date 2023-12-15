@@ -80,12 +80,8 @@
 		&:last-child() {
 			margin-right: 0;
 		}
-		&#next-tab {
-			.link__icon {
-				transform: rotate(45deg);
-			}
-		}
-		&#home-tab {
+
+		&.link_up {
 			color: $primary-dark;
 			.link__icon {
 				transform: rotate(-45deg);
@@ -102,6 +98,11 @@
 						fill: $primary-dark;
 					}
 				}
+			}
+		}
+		&.link_down {
+			.link__icon {
+				transform: rotate(45deg);
 			}
 		}
 	}

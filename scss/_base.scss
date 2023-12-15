@@ -126,6 +126,29 @@ ul {
 	stroke: #fff;
 }
 
+.color-blocks {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	&-item {
+		display: flex;
+		align-items: center;
+		margin-right: 1rem;
+		margin-bottom: 1rem;
+	}
+}
+
+.color-block {
+	&__color {
+		width: 3rem;
+		height: 1.5rem;
+	}
+	&__text {
+		margin-left: 0.5rem;
+		display: inline-block;
+	}
+}
+
 @media (min-width: $xxl-screen) {
 	.container {
 		max-width: 1440px;

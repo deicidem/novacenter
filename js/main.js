@@ -223,13 +223,9 @@ function setupTabs() {
 		return $("#tabs").length > 0;
 	}
 
-	/**
-	 * Shows the tab content corresponding to the given tab ID.
-	 * @param {jQuery} $tabId - The jQuery object representing the tab content element.
-	 */
-	function showTabContent($tabId) {
+	function showTabContent(tabId) {
 		$(".tabs-content > .tab").addClass("tab_hidden");
-		$tabId.removeClass("tab_hidden");
+		$(tabId).removeClass("tab_hidden");
 	}
 
 	/**

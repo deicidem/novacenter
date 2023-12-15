@@ -506,7 +506,10 @@
 								<div
 									class="col d-md-block d-flex flex-column align-items-center justify-content-center"
 								>
-									<h2 class="section-title mb-5">Анализ изображений в псевдоцветах</h2>
+									<h2 class="section-title mb-5">
+										Анализ изображений <br />
+										в псевдоцветах
+									</h2>
 									<p>Анализ изображений в псевдоцветах включает:</p>
 									<ul>
 										<li>применение различных комбинаций цветовых каналов;</li>
@@ -547,7 +550,10 @@
 								<div
 									class="col d-md-block d-flex flex-column align-items-center justify-content-center"
 								>
-									<h2 class="section-title mb-5">Формирование и анализ индексных изображений</h2>
+									<h2 class="section-title mb-5">
+										Формирование и анализ <br />
+										индексных изображений
+									</h2>
 									<p>
 										Значение яркости каждого пиксела индексного изображения формируется путем
 										проведения математических операций, в которых в качестве параметров используются
@@ -612,8 +618,37 @@
 									</div>
 									<div class="caption">
 										<div class="color-blocks">
-											<span>
-												<span class="color-block" style="background: #00ffff"></span> - морская вода
+											<span class="color-blocks-item">
+												<span class="color-block__color" style="background: #00ffff"></span>
+												<span class="color-block__text"> - морская вода </span>
+											</span>
+											<span class="color-blocks-item">
+												<span class="color-block__color" style="background: #2fbf69"></span>
+												<span class="color-block__text"> - смешение воды</span>
+											</span>
+											<span class="color-blocks-item">
+												<span class="color-block__color" style="background: #415c83"></span>
+												<span class="color-block__text"> - вода </span>
+											</span>
+											<span class="color-blocks-item">
+												<span class="color-block__color" style="background: #ff7fcb"></span>
+												<span class="color-block__text"> - песок </span>
+											</span>
+											<span class="color-blocks-item">
+												<span class="color-block__color" style="background: #99ff7f"></span>
+												<span class="color-block__text"> - взвеси </span>
+											</span>
+											<span class="color-blocks-item">
+												<span class="color-block__color" style="background: #ffb23f"></span>
+												<span class="color-block__text"> - почва </span>
+											</span>
+											<span class="color-blocks-item">
+												<span class="color-block__color" style="background: #99bf00"></span>
+												<span class="color-block__text"> - болота </span>
+											</span>
+											<span class="color-blocks-item">
+												<span class="color-block__color" style="background: #bf5f5f"></span>
+												<span class="color-block__text"> - глубинные участки </span>
 											</span>
 										</div>
 										В ПК IMC есть возможность применения классификации без обучения для решения
@@ -626,92 +661,79 @@
 							<div class="row mb-5 row-cols-md-2 row-cols-1 g-md-4 g-5">
 								<div class="col">
 									<div class="image-compare">
-										<img src="assets/images/opportunities/thematic/index_before.png" alt="" />
-										<img src="assets/images/opportunities/thematic/index_after.png" alt="" />
+										<img src="assets/images/opportunities/thematic/learn_before.png" alt="" />
+										<img src="assets/images/opportunities/thematic/learn_after.png" alt="" />
 									</div>
 									<div class="caption">
-										В ПК IMC есть возможность расчета индексов для решения разных тематических
-										задач. С помощью вегетационного индекса можно отделить растительность от других
-										объектов. Слева - исходных снимок с КА Santinel - 2, справа - индексное
-										изображение.
+										<div class="color-blocks">
+											<span class="color-blocks-item">
+												<span class="color-block__color" style="background: #263319"></span>
+												<span class="color-block__text"> - деревья</span>
+											</span>
+											<span class="color-blocks-item">
+												<span class="color-block__color" style="background: #2c4b29"></span>
+												<span class="color-block__text"> - кустарники</span>
+											</span>
+											<span class="color-blocks-item">
+												<span class="color-block__color" style="background: #446935"></span>
+												<span class="color-block__text"> - трава</span>
+											</span>
+											<span class="color-blocks-item">
+												<span class="color-block__color" style="background: #2f3568"></span>
+												<span class="color-block__text"> - вода </span>
+											</span>
+											<span class="color-blocks-item">
+												<span class="color-block__color" style="background: #483021"></span>
+												<span class="color-block__text"> - почва </span>
+											</span>
+											<span class="color-blocks-item">
+												<span class="color-block__color" style="background: #e6d7b3"></span>
+												<span class="color-block__text"> - песок </span>
+											</span>
+											<span class="color-blocks-item">
+												<span class="color-block__color" style="background: #4f4d4e"></span>
+												<span class="color-block__text"> - проезжая часть </span>
+											</span>
+											<span class="color-blocks-item">
+												<span class="color-block__color" style="background: #44483d"></span>
+												<span class="color-block__text"> - ж/д пути </span>
+											</span>
+											<span class="color-blocks-item">
+												<span class="color-block__color" style="background: #cacaca"></span>
+												<span class="color-block__text"> - здания </span>
+											</span>
+										</div>
+										С помощью классификации с обучением можно создавать тематические карты
+										подстилающих поверхностей в ПК IMC.
 									</div>
 								</div>
 								<div
 									class="col d-md-block d-flex flex-column align-items-center justify-content-center"
 								>
-									<h2 class="section-title mb-5">Формирование и анализ индексных изображений</h2>
-									<p>
-										Значение яркости каждого пиксела индексного изображения формируется путем
-										проведения математических операций, в которых в качестве параметров используются
-										значения яркости каждого пиксела из разных каналов снимка.
-									</p>
-									<p>В зависимости от цели исследования используются различные индексы:</p>
-									<ul>
-										<li>вегетационные индексы;</li>
-										<li>почвенные индексы;</li>
-										<li>водные индексы;</li>
-										<li>снежные индексы;</li>
-										<li>пользовательские индексы.</li>
-									</ul>
-									<p>
-										Для формирования индексных изображений в ПК IMC реализован инструмент
-										"Калькулятор каналов", который позволяет пользователю составлять любые
-										математические формулы с использованием каналов изображения.
-									</p>
-								</div>
-							</div>
-							<h2 class="section-title">Тематическая обработка</h2>
-							<div class="row align-items-center g-5">
-								<div class="col-md-6 col-12">
-									<h4 class="mt-0">
-										Кластеризация (классификация без обучения с учетом k-средних)
-									</h4>
-									<p class="mb-0">Классификацию без обучения применяют:</p>
-									<ul>
-										<li>если заранее неизвестно какие объекты есть на снимке;</li>
-										<li>на снимке большое количество объектов (более 30) со сложными границами;</li>
-										<li>
-											также можно применять, как предварительный этап перед классификацией с
-											обучением.
-										</li>
-									</ul>
+									<h2 class="section-title mb-5">
+										Классификация <br />
+										с обучением
+									</h2>
 									<p>
 										Для контролируемой классификации используются эталонные области, которые
 										определяет оператор исходя из их принадлежности определенному классу объектов.
 										Для последующего распознавания в качестве обучающих выборок используются
-										значения пикселей эталонных областей в различных спектральных диапазонах. Таким
-										образом, каждый пиксель изображения относится к определенному классу на
-										основании последовательного сравнения со всеми созданными эталонами. При
-										контролируемой классификации сначала определяются информационные классы, а
-										затем, на их основе, спектральные.
+										значения пикселей эталонных областей в различных спектральных диапазонах.
 									</p>
-								</div>
-								<div class="col-md-6 col-12">
-									<div class="image-compare">
-										<img src="assets/images/opportunities/thematic/no-learn_before.png" alt="" />
-										<img src="assets/images/opportunities/thematic/no-learn_after.png" alt="" />
-									</div>
-								</div>
-							</div>
-							<div class="row align-items-center g-5 mt-1">
-								<div class="col-md-6 col-12 order-md-1 order-2">
-									<div class="image-compare">
-										<img src="assets/images/opportunities/thematic/learn_before.png" alt="" />
-										<img src="assets/images/opportunities/thematic/learn_after.png" alt="" />
-									</div>
-								</div>
-								<div class="col-md-6 col-12 order-md-2 order-1">
-									<h4 class="mt-0">Классификация с обучением</h4>
 									<p>
-										Для контролируемой классификации используются эталонные области, которые
-										определяет оператор исходя из их принадлежности определенному классу объектов.
-										Для последующего распознавания в качестве обучающих выборок используются
-										значения пикселей эталонных областей в различных спектральных диапазонах. Таким
-										образом, каждый пиксель изображения относится к определенному классу на
+										Таким образом, каждый пиксель изображения относится к определенному классу на
 										основании последовательного сравнения со всеми созданными эталонами. При
 										контролируемой классификации сначала определяются информационные классы, а
 										затем, на их основе, спектральные.
 									</p>
+									<p>
+										После набора классов в ПК IMC есть возможность выбрать способ классификации:
+									</p>
+									<ul>
+										<li>метод наименьшего расстояния;</li>
+										<li>метод наибольшего подобия;</li>
+										<li>классификация по расстоянию Махаланобиса.</li>
+									</ul>
 								</div>
 							</div>
 						</div>
@@ -719,29 +741,89 @@
 
 					<section class="section section_gray">
 						<div class="container">
-							<h2 class="section-title">Тематическая обработка</h2>
-							<div class="row align-items-center g-5">
-								<div class="col-md-6 col-12">
-									<h4 class="mt-0">Спектральный анализ</h4>
-									<p class="mb-0">
+							<div class="row mb-5 row-cols-md-2 row-cols-1 g-md-4 g-5">
+								<div
+									class="col d-md-block d-flex flex-column align-items-center justify-content-center"
+								>
+									<h2 class="section-title mb-5">Спектральный анализ</h2>
+									<p>
 										Основными величинами, подлежащими изменению при спектральном анализе, являются
 										длина волны, интенсивность отраженного сигнала и пространственная координата
-										исследуемой поверхности. В ПК IMC реализованы следующие методы спектрального
-										анализа:
+										исследуемой поверхности.
 									</p>
+									<p>В ПК IMC реализованы следующие методы спектрального анализа:</p>
 									<ul>
 										<li>корреляция с/без учета амплитуды;</li>
 										<li>двоичное кодирование;</li>
 										<li>спектрально-угловое картирование;</li>
 										<li>ортогональная проекция подпространства.</li>
 									</ul>
-									<p>
-										На изображении показана тематическая карта побережья, созданная с помощью
-										спектрального анализа.
-									</p>
 								</div>
-								<div class="col-md-6 col-12">
-									<img src="assets/images/opportunities/thematic/spectr.png" alt="" />
+								<div class="col">
+									<div class="image-compare">
+										<img src="assets/images/opportunities/thematic/spectr_before.png" alt="" />
+										<img src="assets/images/opportunities/thematic/spectr_after.png" alt="" />
+									</div>
+									<div class="caption">
+										<div class="color-blocks">
+											<span class="color-blocks-item">
+												<span class="color-block__color" style="background: #3c7c34"></span>
+												<span class="color-block__text"> - хвойный лес</span>
+											</span>
+											<span class="color-blocks-item">
+												<span class="color-block__color" style="background: #6dcf70"></span>
+												<span class="color-block__text"> - вспаханное поле</span>
+											</span>
+											<span class="color-blocks-item">
+												<span class="color-block__color" style="background: #a0eaa2"></span>
+												<span class="color-block__text"> - трава</span>
+											</span>
+											<span class="color-blocks-item">
+												<span class="color-block__color" style="background: #af8f51"></span>
+												<span class="color-block__text"> - грунт </span>
+											</span>
+											<span class="color-blocks-item">
+												<span class="color-block__color" style="background: #e3cf75"></span>
+												<span class="color-block__text"> - поля </span>
+											</span>
+											<span class="color-blocks-item">
+												<span class="color-block__color" style="background: #e4a19a"></span>
+												<span class="color-block__text"> - посевы </span>
+											</span>
+										</div>
+										Спектральный анализ может быть полезен для выявления объектов, классификации
+										данных по их спектральным характеристикам наземных объектов. Например, одной из
+										самых распространенных задач, который решает ПК IMC - классификация
+										растительности по породному составу.
+									</div>
+								</div>
+							</div>
+							<div class="row mb-5 row-cols-md-2 row-cols-1 g-md-4 g-5">
+								<div class="col">
+									<img src="assets/images/opportunities/thematic/texture.png" alt="" />
+									<div class="caption">
+										С помощью текстурного анализа в ПК IMC, можно определить некоторые
+										характеристики рассматриваемого объекта. Так например на снимке можно выделить
+										разные породы растительности. Первый - исходный снимок, второй - текстурный
+										анализ, третий - результат анализа, в результате обработки были отделены высокие
+										деревья от кустарников.
+									</div>
+								</div>
+								<div
+									class="col d-md-block d-flex flex-column align-items-center justify-content-center"
+								>
+									<h2 class="section-title mb-5">Текстурный анализ</h2>
+									<p>
+										В программном комплексе IMC есть возможность решения ряда тематических задач с
+										помощью текстурного анализа - совокупности методов качественного и
+										количественного определения характеристик объектов, процессов и явлений на
+										земной поверхности и в атмосфере, основанная на исследовании их структурных
+										особенностей на данных ДЗЗ.
+									</p>
+									<p>
+										Под текстурой понимается набор признаков изображения, характеризующих его
+										степень однородности, изотропности, регулярности.
+									</p>
 								</div>
 							</div>
 						</div>
@@ -749,18 +831,25 @@
 				</div>
 
 				<div id="vector" class="tab tab_hidden">
-					<section class="section section_blue">
+					<section class="section section_dark-blue">
 						<div class="container">
-							<h2 class="section-title">Работа с векторами</h2>
-							<div class="row align-items-center g-5">
-								<div class="col-md-6 col-12">
-									<h4>Работа с векторными данными</h4>
+							<div class="row mb-5 row-cols-md-2 row-cols-1 g-md-4 g-5">
+								<div
+									class="col d-md-block d-flex flex-column align-items-center justify-content-center"
+								>
+									<h2 class="section-title section-title_white mb-5">
+										Работа <br />
+										с векторными данными
+									</h2>
 									<p>
 										Работа с векторными данными в рамках ПК IMC включает в себя создание и
 										назначение стилей отображения векторных объектов, а также формирование
 										классификаторов с учетом типов объектов, масштаба отображения и набора
-										атрибутивных данных.Функционал ПК IMC позволяет создавать векторные объекты
-										любой сложности (маркеры, линии, полигоны, составные объекты).
+										атрибутивных данных.
+									</p>
+									<p>
+										Функционал ПК IMC позволяет создавать векторные объекты любой сложности
+										(маркеры, линии, полигоны, составные объекты).
 									</p>
 									<p>
 										Векторные слои могут быть сохранены в международных форматах SHP и TAB, а также
@@ -768,21 +857,30 @@
 										с атрибутивной информацией в едином документе.
 									</p>
 								</div>
-								<div class="col-md-6 col-12">
-									<img src="assets/images/opportunities/processing/moz.png" alt="" />
-								</div>
-							</div>
-							<div class="row align-items-center g-5 mt-1">
-								<div class="col-md-6 col-12 order-md-1 order-2">
-									<div class="image-compare">
-										<img src="assets/images/opportunities/processing/qual_before.png" alt="" />
-										<img src="assets/images/opportunities/processing/qual_after.png" alt="" />
+								<div class="col">
+									<!-- TODO Картинки -->
+									<img src="assets/images/opportunities/vector/vector.png" alt="" />
+									<div class="caption">
+										В ПК IMC есть возможность создавать карты с векторными наборами данных. На
+										изображении - векторная карта побережья, снимок с КА Landsat - 8, Краснодарский
+										край.
 									</div>
 								</div>
-								<div class="col-md-6 col-12 order-md-2 order-1">
-									<h4>Условные знаки в IMC</h4>
+							</div>
+							<div class="row mb-5 row-cols-md-2 row-cols-1 g-md-4 g-5">
+								<div class="col">
+									<img src="assets/images/opportunities/vector/symbols.png" alt="" />
+									<div class="caption">
+										Созданная векторная карта в ПК IMC с применением условных знаков, снимок с КА
+										Landsat - 8, Мурманская область.
+									</div>
+								</div>
+								<div
+									class="col d-md-block d-flex flex-column align-items-center justify-content-center"
+								>
+									<h2 class="section-title section-title_white mb-5">Условные знаки</h2>
 									<p>В IMC возможно создание и редактирование любых стилей условных знаков.</p>
-									<p class="mb-0">
+									<p>
 										Программный комплекс позволяет редактировать условные знаки по многим
 										параметрам, таких как:
 									</p>
@@ -790,8 +888,157 @@
 										<li>цвет;</li>
 										<li>угол поворота;</li>
 										<li>размер;</li>
-										<li>дополнительные параметры в виде свечения, тени, обводки и д.р.</li>
+										<li>Дополнительные парамексы.</li>
 									</ul>
+								</div>
+							</div>
+						</div>
+					</section>
+
+					<section class="section section_gray">
+						<div class="container">
+							<div class="row mb-5 row-cols-md-2 row-cols-1 g-md-4 g-5">
+								<div
+									class="col d-md-block d-flex flex-column align-items-center justify-content-center"
+								>
+									<h2 class="section-title mb-5">Буферные зоны</h2>
+									<p>
+										В программном комплексе IMC есть возможность добавления буферных зон по
+										нормативам в зависимости от задачи пользователя.
+									</p>
+									<p>
+										Можно создавать векторные буферные зоны для охранной зоны линий электропередач,
+										железнодорожных путей, автостоянок, газопроводов и т.д., в зависимости от
+										решаемой конкретной задачи, а так же есть инструментарий для создания
+										пользовательской буферной зоны со значениями, задаваемыми оператором и
+										возможность построения буферных зон пересекающихся объектов.
+									</p>
+								</div>
+								<div class="col">
+									<img src="assets/images/opportunities/vector/buffer.png" alt="" />
+									<div class="caption">
+										Буферные зоны могут помочь при решении задачи мониторинга охранной зоны линий
+										электропередач. В ПК IMC есть возможность создания буферных зон по нормативу для
+										охранных зон ЛЭП в зависимости от напряжения.
+									</div>
+								</div>
+							</div>
+							<div class="row mb-5 row-cols-md-2 row-cols-1 g-md-4 g-5">
+								<div class="col">
+									<img src="assets/images/opportunities/vector/topology.png" alt="" />
+									<div class="caption">
+										<div class="color-blocks">
+											<span class="color-blocks-item">
+												<span class="color-block__color" style="background: #6bd2fe"></span>
+												<span class="color-block__color" style="background: #b491ff"></span>
+												<span class="color-block__color" style="background: #00b8ad"></span>
+												<span class="color-block__text"> - векторные объекты</span>
+											</span>
+											<span class="color-blocks-item">
+												<span class="color-block__color" style="background: #ff4949"></span>
+												<span class="color-block__text"> - результат проверки топологии</span>
+											</span>
+										</div>
+										1) Результат проверки топологии – найденное самопересечение. 2) Результат
+										проверки топологии – найденное перекрытие. 3) Результат проверки топологии –
+										поиск пустот. 4) Результат проверки топологии – поиск висячих узлов в заданном
+										радиусе. 5) Результат проверки топологии – фильтрация пустот
+									</div>
+								</div>
+								<div
+									class="col d-md-block d-flex flex-column align-items-center justify-content-center"
+								>
+									<h2 class="section-title mb-5">Проверка топологии</h2>
+									<p>
+										Проверка топологии может выполняться как для всех объектов редактируемого
+										векторного слоя, так и для текущей выборки векторных объектов. По результатам
+										проверки создается новый векторный слой с детектированными ошибками.
+									</p>
+									<p>Проверка топологии может включать в себя:</p>
+									<p>
+										1) Поиск самопересечений полигонов: в результате проверки создается векторный
+										слой с точками в местах самопересечений полигонов.
+									</p>
+									<p>
+										2) Поиск перекрытий полигонов: в результате проверки создается векторный слой с
+										полигональными объектами, детектирующими перекрытия полигонов.
+									</p>
+									<p>
+										3) Поиск пустот между полигонами: в результате проверки создается векторный слой
+										с полигональными объектами, детектирующими пустоты между полигонами.
+									</p>
+									<p>
+										4) Поиск висячих узлов: в результате проверки создается векторный слой с
+										точечными объектами, детектирующими узлы, расположенные на расстоянии, меньше
+										заданного пользователем относительно других линейных объектов слоя.
+									</p>
+									<p>
+										5) Секция «Фильтрация объектов по площади» позволяет отфильтровать объекты,
+										площадь которых меньше заданной.
+									</p>
+								</div>
+							</div>
+						</div>
+					</section>
+
+					<section class="section section_blue">
+						<div class="container">
+							<div class="row mb-5 row-cols-md-2 row-cols-1 g-md-4 g-5">
+								<div
+									class="col d-md-block d-flex flex-column align-items-center justify-content-center"
+								>
+									<h2 class="section-title mb-5">
+										Ранжирование плотности <br />
+										векторных объектов
+									</h2>
+									<p>
+										Объекты полигональной темы изображаются точками, число которых, умноженное на
+										вес точки, соответствует значению выбранного для отображения на карте атрибута.
+										Используется для демонстрации распределения какого-либо явления по площади.
+									</p>
+									<p>
+										Инструмент предназначен для составления карт плотности точечных объектов
+										векторного слоя. По окончании работы алгоритма создается растровый слой со
+										значениями плотности.
+									</p>
+								</div>
+								<div class="col">
+									<div class="image-compare">
+										<img src="assets/images/opportunities/vector/density_before.png" alt="" />
+										<img src="assets/images/opportunities/vector/density_after.png" alt="" />
+									</div>
+									<div class="caption">
+										На изображении, выполненная с помощью алгоритма ранжирования плотности объектов,
+										карта плотности точек для векторного слоя построек на территории приморского
+										города Краснодарского края.
+									</div>
+								</div>
+							</div>
+							<div class="row mb-5 row-cols-md-2 row-cols-1 g-md-4 g-5">
+								<div class="col">
+									<img src="assets/images/opportunities/vector/table.png" alt="" />
+									<div class="caption">
+										Результат проведения тематической обработки для решения задачи: выявление очагов
+										пожара на снимке с КА Landsat - 8, представлен в виде атрибутивной таблицы с
+										площадями очагов и их координатами.
+									</div>
+								</div>
+								<div
+									class="col d-md-block d-flex flex-column align-items-center justify-content-center"
+								>
+									<h2 class="section-title mb-5">Работа с таблицей атрибутов</h2>
+									<p>
+										В ПК IMC есть возможность создания и редактирования атрибутивных таблиц для
+										векторных объектов. Таблица может служить для подсчета результатов данных
+										проведенной обработки. Можно создавать символьные, числовые, логические и другие
+										поля, а также составлять математические выражения, например, для подсчета
+										площади векторных объектов.
+									</p>
+									<p>
+										В ПК IMC есть возможность редактировать и выполнять поиск по атрибутам с помощью
+										SQL - запросов.
+									</p>
+									<p>Атрибутивную информация возможно сохранить в формате .csv.</p>
 								</div>
 							</div>
 						</div>
@@ -934,13 +1181,18 @@
 				</div>
 
 				<div class="tabs__links">
-					<a title="Далее" href="#" id="next-tab-link" class="link link_blue tabs__link">
+					<a title="Далее" href="#" id="next-tab-link" class="link link_blue link_down tabs__link">
 						<span class="link__text"></span>
 						<span class="link__icon">
 							<img class="svg" src="assets/icons/arrow.svg" alt="" />
 						</span>
 					</a>
-					<a href="#tabs" id="home-tab" id="tabs-base-link" class="link link_blue tabs__link">
+					<a
+						href="#tabs"
+						id="home-tab"
+						id="tabs-base-link"
+						class="link link_blue link_up tabs__link"
+					>
 						К разделам
 						<span class="link__icon">
 							<img class="svg" src="assets/icons/arrow.svg" alt="" />
