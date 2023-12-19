@@ -259,9 +259,21 @@ function setupTabs() {
 		$tabLinks.removeClass("tabs-item_active");
 		$tab.addClass("tabs-item_active");
 
+		horizontalScrollToTab($tab);
 		showTabContent($tabId);
 		setNextTabIndex(tabIndex);
 		setNextTabLinkText();
+	}
+
+	function horizontalScrollToTab($tab) {
+		let tabsWidth = $("#tabs").width();
+		let tabWidth = $tab.width();
+		let offset = $tab.offset().left - $("#tabs").offset().left - tabsWidth / 2 + tabWidth / 2;
+		$.smoothScroll({
+			direction: "left",
+			scrollElement: $("#tabs"),
+			offset: offset,
+		});
 	}
 
 	/**

@@ -691,19 +691,11 @@ ul li {
 }
 
 .tabs {
+  overflow: auto;
   margin-bottom: 6.5rem;
   position: relative;
   padding: 0;
   padding-bottom: 1.75rem;
-}
-.tabs::after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 2px;
-  background: rgba(51, 84, 114, 0.3);
-  bottom: 0;
-  left: 0;
 }
 .tabs-content {
   position: relative;
@@ -717,12 +709,11 @@ ul li {
   position: relative;
 }
 .tabs-item::after {
-  display: none;
   content: "";
   position: absolute;
   width: 100%;
   height: 2px;
-  background: #07959e;
+  background: rgba(51, 84, 114, 0.3);
   bottom: -1.75rem;
   left: 0;
 }
@@ -748,7 +739,7 @@ ul li {
   z-index: 10;
 }
 .tabs-item_active::after {
-  display: block;
+  background: #07959e;
 }
 .tabs-item_active > .tabs-item__image path {
   fill: #07959e;
@@ -798,10 +789,6 @@ ul li {
 }
 
 @media screen and (max-width: 768px) {
-  .tabs {
-    overflow-x: scroll;
-    overflow-y: visible;
-  }
   .tabs-item {
     width: 10rem;
   }
@@ -1202,6 +1189,9 @@ ul li {
   }
   .footer-menu::before {
     bottom: 2rem;
+  }
+  .footer-menu ul li {
+    margin-bottom: 1.25rem;
   }
   .footer-contacts__title {
     text-align: center;
