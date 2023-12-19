@@ -79,7 +79,7 @@
 		}
 	}
 
-	&-menu > ul > li:has(.header-submenu) > a {
+	&-menu > ul > li.header-menu__list__item_has-submenu > a {
 		&::after {
 			content: "";
 			position: relative;
@@ -134,38 +134,76 @@
 		}
 
 		&-menu {
+			width: 100%;
+			padding-top: 1rem;
 			&_wrapper {
 				position: fixed;
 				right: 0;
 				top: 0;
-				background: #fff;
+				background: #f6f6f6;
 				z-index: 1000;
 				height: 100vh;
 				display: flex;
 				flex-direction: column;
-				padding: 3.5rem;
-				min-width: 30%;
+				width: 100%;
 				margin-top: 8rem;
 				transition: 0.3s ease-in-out;
 				&.mobile-hidden {
 					transform: translateX(100%);
 				}
 			}
-			&__list {
+			ul {
 				width: 100%;
 				flex-direction: column;
 				align-items: flex-start;
-				&__item {
-					margin: 1rem 0;
+				li {
+					margin: 0;
 					width: 100%;
+					a {
+						padding: 1.5rem 2rem;
+						font-size: 1.5rem;
+						display: flex;
+						justify-content: space-between;
+						align-items: center;
+						border-top: 1px solid $primary;
+						text-transform: uppercase;
+						font-weight: 500;
+					}
+					& > a {
+						&::after {
+							width: 2rem;
+							height: 2rem;
+						}
+					}
+					&:last-child {
+						a {
+							border-bottom: 1px solid $primary;
+						}
+					}
+					&.active.header-menu__list__item_has-submenu {
+						& > a {
+							border-bottom: 1px solid $primary;
+						}
+					}
+					ul {
+						padding: 1rem 1rem 1rem 4rem;
+						li {
+							a {
+								padding: 0.5rem 0;
+								text-transform: initial;
+								font-weight: 400;
+								border: none;
+							}
+							&:last-child {
+								a {
+									border: none;
+								}
+							}
+						}
+					}
 				}
 			}
-			&__link {
-				font-size: 1.25rem;
-				display: flex;
-				justify-content: space-between;
-				align-items: center;
-			}
+
 			&-button {
 				position: relative;
 				width: 2.5rem;
@@ -208,6 +246,12 @@
 						transform: rotate(-135deg);
 					}
 				}
+			}
+		}
+		&-menu > ul > li.header-menu__list__item_has-submenu > a {
+			&::after {
+				width: 1.5rem;
+				height: 1.5rem;
 			}
 		}
 		&-submenu {
