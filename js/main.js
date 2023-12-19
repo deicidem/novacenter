@@ -77,6 +77,10 @@ function setupNavMenu() {
 
 	$navLinks.each(function () {
 		const $link = $(this);
+
+		if ($link.has("ul").length > 0) {
+			$link.addClass("header-menu__list__item_has-submenu");
+		}
 		let timer = null;
 
 		$link.on("touchstart click mouseover", function (e) {
