@@ -7,6 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	setupSvg();
 	setupTabs();
 	setupImageCompare();
+	setupImageViewer();
 });
 
 class HeroSlider {
@@ -107,10 +108,9 @@ function setupNavMenu() {
 }
 
 function setupSvg() {
-	let SVGs = document.querySelectorAll(".svg");
-	SVGInjector(SVGs);
+	const svgElements = document.querySelectorAll(".svg");
+	SVGInjector(svgElements);
 }
-
 function setupVideo() {
 	let $buttons = $("button[data-video-href]");
 	let $videoPlayer = $("#video-player");
@@ -323,4 +323,12 @@ function setupImageCompare() {
 			addCircleBlur: false,
 		}).mount();
 	});
+}
+function setupImageViewer() {
+	const images = document.querySelectorAll(".image-viewer");
+	if (images.length > 0) {
+		images.forEach((image) => {
+			new Viewer(image);
+		});
+	}
 }

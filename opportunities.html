@@ -12,6 +12,7 @@
 			href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
 		/>
 		<link rel="stylesheet" type="text/css" href="css/image-compage-viewer.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/viewer.min.css" />
 
 		<link rel="stylesheet" href="css/bootstrap-grid.min.css" />
 		<link rel="stylesheet" href="css/bootstrap-utilities.min.css" />
@@ -114,7 +115,7 @@
 			</section>
 
 			<div class="tabs container outer-container" id="tabs">
-				<div class="row row-cols-sm-6 row-cols-6 g-sm-5 g-4">
+				<div class="row row-cols-sm-6 row-cols-auto flex-sm-wrap flex-nowrap g-sm-5 g-4">
 					<div class="col">
 						<a class="tabs-item" href="#proccessing">
 							<img
@@ -211,7 +212,7 @@
 							<h2 class="section-title section-title_white">Обработка данных космической съемки</h2>
 
 							<div class="row justify-content-between">
-								<div class="col-xl-6 col-md-7 col-12">
+								<div class="col-xl-6 col-md-7 col-12 m-md-0 mb-5">
 									<h4>Открытие снимков различных космических аппаратов:</h4>
 									<p>
 										Aist2D, EO-1, FORMOSat 2, Gaofen-2, GeoEye-1, IKONOS 2, Kanopus-B, Kanopus-1,
@@ -270,7 +271,7 @@
 
 					<section class="section section_gray">
 						<div class="container">
-							<div class="row mb-5 row-cols-md-2 row-cols-1 g-md-4 g-5">
+							<div class="row mb-5 row-cols-md-2 row-cols-1 g-4">
 								<div
 									class="col d-md-block d-flex flex-column align-items-center justify-content-center"
 								>
@@ -283,8 +284,16 @@
 								</div>
 								<div class="col">
 									<div class="image-compare">
-										<img src="assets/images/opportunities/processing/chanels_before.png" alt="" />
-										<img src="assets/images/opportunities/processing/chanels_after.png" alt="" />
+										<img
+											class="image-viewer"
+											src="assets/images/opportunities/processing/chanels_before.png"
+											alt=""
+										/>
+										<img
+											class="image-viewer"
+											src="assets/images/opportunities/processing/chanels_after.png"
+											alt=""
+										/>
 									</div>
 									<div class="caption">
 										Устранение не сведения каналов в ПК IMC. Снимок с КА “Канопус-В”, Москва,
@@ -292,9 +301,14 @@
 									</div>
 								</div>
 							</div>
-							<div class="row mb-5 row-cols-md-2 row-cols-1 g-md-4 g-5">
-								<div class="col">
-									<img src="assets/images/opportunities/processing/geo.png" alt="" />
+
+							<div class="row row-cols-md-2 row-cols-1 g-4">
+								<div class="col order-md-1 order-2">
+									<img
+										class="image-viewer"
+										src="assets/images/opportunities/processing/geo.png"
+										alt=""
+									/>
 									<div class="caption">
 										Приведен пример уточнения привязки снимков в программном комплексе IMC. Исходные
 										данные: маршруты с КА “Канопус-В”. Нагляднее всего расхождение маршрутов видно
@@ -304,7 +318,7 @@
 									</div>
 								</div>
 								<div
-									class="col d-md-block d-flex flex-column align-items-center justify-content-center"
+									class="col order-md-2 order-1 d-md-block d-flex flex-column align-items-center justify-content-center"
 								>
 									<h2 class="section-title mb-5">Уточнение геопривязки</h2>
 									<p>
@@ -369,7 +383,7 @@
 
 					<section class="section section_gray">
 						<div class="container">
-							<div class="row mb-5 row-cols-md-2 row-cols-1 g-md-4 g-5">
+							<div class="row mb-5 row-cols-md-2 row-cols-1 g-4">
 								<div
 									class="col d-md-block d-flex flex-column align-items-center justify-content-center"
 								>
@@ -395,8 +409,16 @@
 								</div>
 								<div class="col">
 									<div class="image-compare">
-										<img src="assets/images/opportunities/processing/atmo_before.png" alt="" />
-										<img src="assets/images/opportunities/processing/atmo_after.png" alt="" />
+										<img
+											class="image-viewer"
+											src="assets/images/opportunities/processing/atmo_before.png"
+											alt=""
+										/>
+										<img
+											class="image-viewer"
+											src="assets/images/opportunities/processing/atmo_after.png"
+											alt=""
+										/>
 									</div>
 									<div class="caption">
 										Атмосферная коррекция на снимке Landsat - 8, проведенная в ПК IMC по графику
@@ -405,9 +427,13 @@
 									</div>
 								</div>
 							</div>
-							<div class="row mb-5 row-cols-md-2 row-cols-1 g-md-4 g-5">
-								<div class="col">
-									<img src="assets/images/opportunities/processing/pansharp.png" alt="" />
+							<div class="row row-cols-md-2 row-cols-1 g-4">
+								<div class="col order-md-1 order-2">
+									<img
+										class="image-viewer"
+										src="assets/images/opportunities/processing/pansharp.png"
+										alt=""
+									/>
 									<div class="caption">
 										Процесс паншарпенинга на снимке с КА “Канопус - В”, выполненный в IMC. Слева
 										направо показаны: панхроматический снимок (2 м), мультиспектральное изображение
@@ -415,7 +441,7 @@
 									</div>
 								</div>
 								<div
-									class="col d-md-block d-flex flex-column align-items-center justify-content-center"
+									class="col order-md-2 order-1 d-md-block d-flex flex-column align-items-center justify-content-center"
 								>
 									<h2 class="section-title mb-5">Паншарпенинг</h2>
 									<p>
@@ -432,7 +458,7 @@
 
 					<section class="section section_blue">
 						<div class="container">
-							<div class="row mb-5 row-cols-md-2 row-cols-1 g-md-4 g-5">
+							<div class="row mb-5 row-cols-md-2 row-cols-1 g-4">
 								<div
 									class="col d-md-block d-flex flex-column align-items-center justify-content-center"
 								>
@@ -445,19 +471,35 @@
 								</div>
 								<div class="col">
 									<div class="image-compare">
-										<img src="assets/images/opportunities/processing/qual_before.png" alt="" />
-										<img src="assets/images/opportunities/processing/qual_after.png" alt="" />
+										<img
+											class="image-viewer"
+											src="assets/images/opportunities/processing/qual_before.png"
+											alt=""
+										/>
+										<img
+											class="image-viewer"
+											src="assets/images/opportunities/processing/qual_after.png"
+											alt=""
+										/>
 									</div>
 									<div class="caption">
 										Устранение шумов и царапин на архивном снимке в программном комплексе IMC.
 									</div>
 								</div>
 							</div>
-							<div class="row mb-5 row-cols-md-2 row-cols-1 g-md-4 g-5">
-								<div class="col">
+							<div class="row row-cols-md-2 row-cols-1 g-4">
+								<div class="col order-md-1 order-2">
 									<div class="image-compare">
-										<img src="assets/images/opportunities/processing/qual_before.png" alt="" />
-										<img src="assets/images/opportunities/processing/qual_after.png" alt="" />
+										<img
+											class="image-viewer"
+											src="assets/images/opportunities/processing/qual_before.png"
+											alt=""
+										/>
+										<img
+											class="image-viewer"
+											src="assets/images/opportunities/processing/qual_after.png"
+											alt=""
+										/>
 									</div>
 									<div class="caption">
 										Материалы аппаратуры «Геотон-Л1». Слева изображен исходный снимок, который имеет
@@ -465,7 +507,7 @@
 									</div>
 								</div>
 								<div
-									class="col d-md-block d-flex flex-column align-items-center justify-content-center"
+									class="col order-md-2 order-1 d-md-block d-flex flex-column align-items-center justify-content-center"
 								>
 									<h2 class="section-title mb-5">Повышение линейного разрешения</h2>
 									<p>
@@ -502,7 +544,7 @@
 
 					<section class="section section_gray">
 						<div class="container">
-							<div class="row mb-5 row-cols-md-2 row-cols-1 g-md-4 g-5">
+							<div class="row mb-5 row-cols-md-2 row-cols-1 g-4">
 								<div
 									class="col d-md-block d-flex flex-column align-items-center justify-content-center"
 								>
@@ -524,8 +566,16 @@
 								<div class="col">
 									<!-- TODO Картинки -->
 									<div class="image-compare">
-										<img src="assets/images/opportunities/thematic/pseudo_before.png" alt="" />
-										<img src="assets/images/opportunities/thematic/pseudo_after.png" alt="" />
+										<img
+											class="image-viewer"
+											src="assets/images/opportunities/thematic/pseudo_before.png"
+											alt=""
+										/>
+										<img
+											class="image-viewer"
+											src="assets/images/opportunities/thematic/pseudo_after.png"
+											alt=""
+										/>
 									</div>
 									<div class="caption">
 										Одна из тематических задач, которую можно решить с помощью ПК IMC - выявление
@@ -534,11 +584,19 @@
 									</div>
 								</div>
 							</div>
-							<div class="row mb-5 row-cols-md-2 row-cols-1 g-md-4 g-5">
-								<div class="col">
+							<div class="row row-cols-md-2 row-cols-1 g-4">
+								<div class="col order-md-1 order-2">
 									<div class="image-compare">
-										<img src="assets/images/opportunities/thematic/index_before.png" alt="" />
-										<img src="assets/images/opportunities/thematic/index_after.png" alt="" />
+										<img
+											class="image-viewer"
+											src="assets/images/opportunities/thematic/index_before.png"
+											alt=""
+										/>
+										<img
+											class="image-viewer"
+											src="assets/images/opportunities/thematic/index_after.png"
+											alt=""
+										/>
 									</div>
 									<div class="caption">
 										В ПК IMC есть возможность расчета индексов для решения разных тематических
@@ -548,7 +606,7 @@
 									</div>
 								</div>
 								<div
-									class="col d-md-block d-flex flex-column align-items-center justify-content-center"
+									class="col order-md-2 order-1 d-md-block d-flex flex-column align-items-center justify-content-center"
 								>
 									<h2 class="section-title mb-5">
 										Формирование и анализ <br />
@@ -579,7 +637,7 @@
 
 					<section class="section section_blue">
 						<div class="container">
-							<div class="row mb-5 row-cols-md-2 row-cols-1 g-md-4 g-5">
+							<div class="row mb-5 row-cols-md-2 row-cols-1 g-4">
 								<div
 									class="col d-md-block d-flex flex-column align-items-center justify-content-center"
 								>
@@ -613,8 +671,16 @@
 								</div>
 								<div class="col">
 									<div class="image-compare">
-										<img src="assets/images/opportunities/thematic/no-learn_before.png" alt="" />
-										<img src="assets/images/opportunities/thematic/no-learn_after.png" alt="" />
+										<img
+											class="image-viewer"
+											src="assets/images/opportunities/thematic/no-learn_before.png"
+											alt=""
+										/>
+										<img
+											class="image-viewer"
+											src="assets/images/opportunities/thematic/no-learn_after.png"
+											alt=""
+										/>
 									</div>
 									<div class="caption">
 										<div class="color-blocks">
@@ -658,11 +724,19 @@
 									</div>
 								</div>
 							</div>
-							<div class="row mb-5 row-cols-md-2 row-cols-1 g-md-4 g-5">
-								<div class="col">
+							<div class="row row-cols-md-2 row-cols-1 g-4">
+								<div class="col order-md-1 order-2">
 									<div class="image-compare">
-										<img src="assets/images/opportunities/thematic/learn_before.png" alt="" />
-										<img src="assets/images/opportunities/thematic/learn_after.png" alt="" />
+										<img
+											class="image-viewer"
+											src="assets/images/opportunities/thematic/learn_before.png"
+											alt=""
+										/>
+										<img
+											class="image-viewer"
+											src="assets/images/opportunities/thematic/learn_after.png"
+											alt=""
+										/>
 									</div>
 									<div class="caption">
 										<div class="color-blocks">
@@ -708,7 +782,7 @@
 									</div>
 								</div>
 								<div
-									class="col d-md-block d-flex flex-column align-items-center justify-content-center"
+									class="col order-md-2 order-1 d-md-block d-flex flex-column align-items-center justify-content-center"
 								>
 									<h2 class="section-title mb-5">
 										Классификация <br />
@@ -741,7 +815,7 @@
 
 					<section class="section section_gray">
 						<div class="container">
-							<div class="row mb-5 row-cols-md-2 row-cols-1 g-md-4 g-5">
+							<div class="row mb-5 row-cols-md-2 row-cols-1 g-4">
 								<div
 									class="col d-md-block d-flex flex-column align-items-center justify-content-center"
 								>
@@ -761,8 +835,16 @@
 								</div>
 								<div class="col">
 									<div class="image-compare">
-										<img src="assets/images/opportunities/thematic/spectr_before.png" alt="" />
-										<img src="assets/images/opportunities/thematic/spectr_after.png" alt="" />
+										<img
+											class="image-viewer"
+											src="assets/images/opportunities/thematic/spectr_before.png"
+											alt=""
+										/>
+										<img
+											class="image-viewer"
+											src="assets/images/opportunities/thematic/spectr_after.png"
+											alt=""
+										/>
 									</div>
 									<div class="caption">
 										<div class="color-blocks">
@@ -798,9 +880,13 @@
 									</div>
 								</div>
 							</div>
-							<div class="row mb-5 row-cols-md-2 row-cols-1 g-md-4 g-5">
-								<div class="col">
-									<img src="assets/images/opportunities/thematic/texture.png" alt="" />
+							<div class="row row-cols-md-2 row-cols-1 g-4">
+								<div class="col order-md-1 order-2">
+									<img
+										class="image-viewer"
+										src="assets/images/opportunities/thematic/texture.png"
+										alt=""
+									/>
 									<div class="caption">
 										С помощью текстурного анализа в ПК IMC, можно определить некоторые
 										характеристики рассматриваемого объекта. Так например на снимке можно выделить
@@ -810,7 +896,7 @@
 									</div>
 								</div>
 								<div
-									class="col d-md-block d-flex flex-column align-items-center justify-content-center"
+									class="col order-md-2 order-1 d-md-block d-flex flex-column align-items-center justify-content-center"
 								>
 									<h2 class="section-title mb-5">Текстурный анализ</h2>
 									<p>
@@ -833,7 +919,7 @@
 				<div id="vector" class="tab tab_hidden">
 					<section class="section section_dark-blue">
 						<div class="container">
-							<div class="row mb-5 row-cols-md-2 row-cols-1 g-md-4 g-5">
+							<div class="row mb-5 row-cols-md-2 row-cols-1 g-4">
 								<div
 									class="col d-md-block d-flex flex-column align-items-center justify-content-center"
 								>
@@ -859,7 +945,11 @@
 								</div>
 								<div class="col">
 									<!-- TODO Картинки -->
-									<img src="assets/images/opportunities/vector/vector.png" alt="" />
+									<img
+										class="image-viewer"
+										src="assets/images/opportunities/vector/vector.png"
+										alt=""
+									/>
 									<div class="caption">
 										В ПК IMC есть возможность создавать карты с векторными наборами данных. На
 										изображении - векторная карта побережья, снимок с КА Landsat - 8, Краснодарский
@@ -867,16 +957,20 @@
 									</div>
 								</div>
 							</div>
-							<div class="row mb-5 row-cols-md-2 row-cols-1 g-md-4 g-5">
-								<div class="col">
-									<img src="assets/images/opportunities/vector/symbols.png" alt="" />
+							<div class="row row-cols-md-2 row-cols-1 g-4">
+								<div class="col order-md-1 order-2">
+									<img
+										class="image-viewer"
+										src="assets/images/opportunities/vector/symbols.png"
+										alt=""
+									/>
 									<div class="caption">
 										Созданная векторная карта в ПК IMC с применением условных знаков, снимок с КА
 										Landsat - 8, Мурманская область.
 									</div>
 								</div>
 								<div
-									class="col d-md-block d-flex flex-column align-items-center justify-content-center"
+									class="col order-md-2 order-1 d-md-block d-flex flex-column align-items-center justify-content-center"
 								>
 									<h2 class="section-title section-title_white mb-5">Условные знаки</h2>
 									<p>В IMC возможно создание и редактирование любых стилей условных знаков.</p>
@@ -897,7 +991,7 @@
 
 					<section class="section section_gray">
 						<div class="container">
-							<div class="row mb-5 row-cols-md-2 row-cols-1 g-md-4 g-5">
+							<div class="row mb-5 row-cols-md-2 row-cols-1 g-4">
 								<div
 									class="col d-md-block d-flex flex-column align-items-center justify-content-center"
 								>
@@ -915,7 +1009,11 @@
 									</p>
 								</div>
 								<div class="col">
-									<img src="assets/images/opportunities/vector/buffer.png" alt="" />
+									<img
+										class="image-viewer"
+										src="assets/images/opportunities/vector/buffer.png"
+										alt=""
+									/>
 									<div class="caption">
 										Буферные зоны могут помочь при решении задачи мониторинга охранной зоны линий
 										электропередач. В ПК IMC есть возможность создания буферных зон по нормативу для
@@ -923,9 +1021,13 @@
 									</div>
 								</div>
 							</div>
-							<div class="row mb-5 row-cols-md-2 row-cols-1 g-md-4 g-5">
-								<div class="col">
-									<img src="assets/images/opportunities/vector/topology.png" alt="" />
+							<div class="row row-cols-md-2 row-cols-1 g-4">
+								<div class="col order-md-1 order-2">
+									<img
+										class="image-viewer"
+										src="assets/images/opportunities/vector/topology.png"
+										alt=""
+									/>
 									<div class="caption">
 										<div class="color-blocks">
 											<span class="color-blocks-item">
@@ -946,7 +1048,7 @@
 									</div>
 								</div>
 								<div
-									class="col d-md-block d-flex flex-column align-items-center justify-content-center"
+									class="col order-md-2 order-1 d-md-block d-flex flex-column align-items-center justify-content-center"
 								>
 									<h2 class="section-title mb-5">Проверка топологии</h2>
 									<p>
@@ -983,7 +1085,7 @@
 
 					<section class="section section_blue">
 						<div class="container">
-							<div class="row mb-5 row-cols-md-2 row-cols-1 g-md-4 g-5">
+							<div class="row mb-5 row-cols-md-2 row-cols-1 g-4">
 								<div
 									class="col d-md-block d-flex flex-column align-items-center justify-content-center"
 								>
@@ -1004,8 +1106,16 @@
 								</div>
 								<div class="col">
 									<div class="image-compare">
-										<img src="assets/images/opportunities/vector/density_before.png" alt="" />
-										<img src="assets/images/opportunities/vector/density_after.png" alt="" />
+										<img
+											class="image-viewer"
+											src="assets/images/opportunities/vector/density_before.png"
+											alt=""
+										/>
+										<img
+											class="image-viewer"
+											src="assets/images/opportunities/vector/density_after.png"
+											alt=""
+										/>
 									</div>
 									<div class="caption">
 										На изображении, выполненная с помощью алгоритма ранжирования плотности объектов,
@@ -1014,9 +1124,13 @@
 									</div>
 								</div>
 							</div>
-							<div class="row mb-5 row-cols-md-2 row-cols-1 g-md-4 g-5">
-								<div class="col">
-									<img src="assets/images/opportunities/vector/table.png" alt="" />
+							<div class="row row-cols-md-2 row-cols-1 g-4">
+								<div class="col order-md-1 order-2">
+									<img
+										class="image-viewer"
+										src="assets/images/opportunities/vector/table.png"
+										alt=""
+									/>
 									<div class="caption">
 										Результат проведения тематической обработки для решения задачи: выявление очагов
 										пожара на снимке с КА Landsat - 8, представлен в виде атрибутивной таблицы с
@@ -1024,7 +1138,7 @@
 									</div>
 								</div>
 								<div
-									class="col d-md-block d-flex flex-column align-items-center justify-content-center"
+									class="col order-md-2 order-1 d-md-block d-flex flex-column align-items-center justify-content-center"
 								>
 									<h2 class="section-title mb-5">Работа с таблицей атрибутов</h2>
 									<p>
@@ -1046,44 +1160,73 @@
 				</div>
 
 				<div id="catalog" class="tab tab_hidden">
-					<section class="section section_blue">
+					<section class="section section_gray">
 						<div class="container">
-							<h2 class="section-title">Предварительная обработка</h2>
-							<div class="row align-items-center g-5">
-								<div class="col-md-6 col-12">
-									<h4>Формирование бесшовной мозаики</h4>
+							<div class="row mb-5 row-cols-md-2 row-cols-1 g-4">
+								<div
+									class="col d-md-block d-flex flex-column align-items-center justify-content-center"
+								>
+									<h2 class="section-title mb-5">
+										Совмещение космических снимков <br />
+										с сервисами WMS, WFS
+									</h2>
 									<p>
-										Исходные маршруты могут отличаться и по цвету, и по геопривязке, и по линейному
-										разрешению на местности. Данный же инструмент уточняет геопривязку для всех
-										маршрутов, производит цветокоррекцию и проводит границу между маршрутами таким
-										образом, чтобы она была незаметной.
+										В IMC есть возможность добавления в документ веб-слоя на базе данных WMS и WFS.
 									</p>
 									<p>
-										На изображении приведен пример формирования бесшовной мозайки из нескольких
-										маршрутов.
+										WMS сервис позволяет загружать векторные данные, которые содержат информацию о
+										границах государств и административном делении, данных рельефа, об объектах
+										природы, топографические данные, данные об энергетических ресурсах и д.р.
+									</p>
+									<p>
+										WFS сервис позволяет загружать векторные данные, которые содержат обобщенную
+										информацию о демографии различных стран и всего Мира, границах государств и
+										административном делении, данные рельефа, топографические данные, данные об
+										энергетических ресурсах.
 									</p>
 								</div>
-								<div class="col-md-6 col-12">
-									<img src="assets/images/opportunities/processing/moz.png" alt="" />
-								</div>
-							</div>
-							<div class="row align-items-center g-5 mt-1">
-								<div class="col-md-6 col-12 order-md-1 order-2">
-									<div class="image-compare">
-										<img src="assets/images/opportunities/processing/qual_before.png" alt="" />
-										<img src="assets/images/opportunities/processing/qual_after.png" alt="" />
+								<div class="col">
+									<img
+										class="image-viewer"
+										src="assets/images/opportunities/catalog/union.png"
+										alt=""
+									/>
+									<div class="caption">
+										На изображении фрагмент маршрута с КА Канопус - В, совмещенный с веб-слоем на
+										основе данных с сервиса WMS.
 									</div>
 								</div>
-								<div class="col-md-6 col-12 order-md-2 order-1">
-									<h4>Повышение линейного разрешения</h4>
+							</div>
+							<div class="row row-cols-md-2 row-cols-1 g-4">
+								<div class="col order-md-1 order-2">
+									<img
+										class="image-viewer"
+										src="assets/images/opportunities/catalog/catalog.png"
+										alt=""
+									/>
+									<div class="caption">
+										Созданная база данных космических снимков и маршрутов с разных космических
+										аппаратов на территорию Российской Федерации.
+									</div>
+								</div>
+								<div
+									class="col order-md-2 order-1 d-md-block d-flex flex-column align-items-center justify-content-center"
+								>
+									<h2 class="section-title mb-5">Каталогизация данных</h2>
 									<p>
-										В программном комплексе IMC есть возможность повышения линейного разрешения
-										снимков и оценка качества исходных материалов.
+										В IMC возможно формирование и хранение базы данных, содержащих маршруты съемки и
+										отдельные снимки, а так же функции поиска информации в электронном каталоге,
+										обеспечивающие выборку информации по искомым значениям.
 									</p>
-									<p>
-										Слева изображен исходный снимок, который имеет разрешение 1 м. В результате
-										обработки удалось повысить разрешение до 0,57 м.
-									</p>
+									<p>Параметры поиска:</p>
+									<ul>
+										<li>маршрут;</li>
+										<li>тип КА;</li>
+										<li>аппаратура;</li>
+										<li>дата съемки;</li>
+										<li>территория;</li>
+										<li>описание;</li>
+									</ul>
 								</div>
 							</div>
 						</div>
@@ -1109,14 +1252,26 @@
 									</p>
 								</div>
 								<div class="col-md-6 col-12">
-									<img src="assets/images/opportunities/processing/moz.png" alt="" />
+									<img
+										class="image-viewer"
+										src="assets/images/opportunities/processing/moz.png"
+										alt=""
+									/>
 								</div>
 							</div>
 							<div class="row align-items-center g-5 mt-1">
 								<div class="col-md-6 col-12 order-md-1 order-2">
 									<div class="image-compare">
-										<img src="assets/images/opportunities/processing/qual_before.png" alt="" />
-										<img src="assets/images/opportunities/processing/qual_after.png" alt="" />
+										<img
+											class="image-viewer"
+											src="assets/images/opportunities/processing/qual_before.png"
+											alt=""
+										/>
+										<img
+											class="image-viewer"
+											src="assets/images/opportunities/processing/qual_after.png"
+											alt=""
+										/>
 									</div>
 								</div>
 								<div class="col-md-6 col-12 order-md-2 order-1">
@@ -1138,41 +1293,58 @@
 				<div id="report" class="tab tab_hidden">
 					<section class="section section_blue">
 						<div class="container">
-							<h2 class="section-title">Предварительная обработка</h2>
-							<div class="row align-items-center g-5">
-								<div class="col-md-6 col-12">
-									<h4>Формирование бесшовной мозаики</h4>
+							<div class="row mb-5 row-cols-md-2 row-cols-1 g-4">
+								<div
+									class="col d-md-block d-flex flex-column align-items-center justify-content-center"
+								>
+									<h2 class="section-title mb-5">Формирование отчетов</h2>
 									<p>
-										Исходные маршруты могут отличаться и по цвету, и по геопривязке, и по линейному
-										разрешению на местности. Данный же инструмент уточняет геопривязку для всех
-										маршрутов, производит цветокоррекцию и проводит границу между маршрутами таким
-										образом, чтобы она была незаметной.
+										Для комплексной оценки результатов тематической обработки в ПК IMC реализована
+										возможность формирования отчетов, которые могут содержать: снимки, тематические
+										карты, легенду, графики, диаграммы и т.д.
 									</p>
 									<p>
-										На изображении приведен пример формирования бесшовной мозайки из нескольких
-										маршрутов.
+										Отчетные формы предназначены для дальнейшей печати и представлены в основных
+										размерах бумаги (А4, А3, А2, 640 х 480 и т.д.), либо предусматривается
+										возможность произвольного размера, заданного оператором.
 									</p>
+									<p>Также возможно формирование отчета в портретной и альбомной ориентации.</p>
 								</div>
-								<div class="col-md-6 col-12">
-									<img src="assets/images/opportunities/processing/moz.png" alt="" />
-								</div>
-							</div>
-							<div class="row align-items-center g-5 mt-1">
-								<div class="col-md-6 col-12 order-md-1 order-2">
-									<div class="image-compare">
-										<img src="assets/images/opportunities/processing/qual_before.png" alt="" />
-										<img src="assets/images/opportunities/processing/qual_after.png" alt="" />
+								<div class="col">
+									<img
+										src="assets/images/opportunities/reports/report-1.png"
+										class="image-viewer"
+										alt=""
+									/>
+									<div class="caption">
+										На отчете представлен результат тематической обработки в виде сформированного
+										отчета: моделирование затоплений со снимка с КА Landsat - 8, Кировская область.
 									</div>
 								</div>
-								<div class="col-md-6 col-12 order-md-2 order-1">
-									<h4>Повышение линейного разрешения</h4>
-									<p>
-										В программном комплексе IMC есть возможность повышения линейного разрешения
-										снимков и оценка качества исходных материалов.
+							</div>
+							<div class="row row-cols-md-2 row-cols-1 g-4">
+								<div class="col order-md-1 order-2">
+									<img
+										src="assets/images/opportunities/catalog/catalog.png"
+										class="image-viewer"
+										alt=""
+									/>
+									<div class="caption">
+										На отчете представлен результат тематической обработки в виде сформированного
+										отчета: мониторинг пожаров со снимка с КА Landsat - 8, остров Мадейра.
+									</div>
+								</div>
+								<div
+									class="col order-md-2 order-1 d-md-block d-flex flex-column align-items-center justify-content-center"
+								>
+									<p class="mt-5">
+										Отчеты в программном комплексе Image Media Center могут быть как графические,
+										так и текстовые, и могут быть сохранены в форматах JPG, PDF, CSV.
 									</p>
 									<p>
-										Слева изображен исходный снимок, который имеет разрешение 1 м. В результате
-										обработки удалось повысить разрешение до 0,57 м.
+										Функционал ПК IMC позволяет создавать шаблоны отчетов, которые удобно
+										использовать для демонстрации результатов выполнения конкретной задачи с
+										различными входными данными, например, в ходе разновременного мониторинга.
 									</p>
 								</div>
 							</div>
@@ -1187,12 +1359,7 @@
 							<img class="svg" src="assets/icons/arrow.svg" alt="" />
 						</span>
 					</a>
-					<a
-						href="#tabs"
-						id="home-tab"
-						id="tabs-base-link"
-						class="link link_blue link_up tabs__link"
-					>
+					<a href="#tabs" id="tabs-base-link" class="link link_blue link_up tabs__link">
 						К разделам
 						<span class="link__icon">
 							<img class="svg" src="assets/icons/arrow.svg" alt="" />
@@ -1201,7 +1368,7 @@
 				</div>
 			</div>
 
-			<button title="Вверх" class="arrow-button arrow-button_top scroll-to-top">
+			<button title="Scroll to Top" class="arrow-button arrow-button-top">
 				<img class="svg" src="assets/icons/arrow.svg" alt="" />
 			</button>
 		</main>
@@ -1301,6 +1468,8 @@
 			integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
 			crossorigin="anonymous"
 		></script>
+		<script src="js/viewer.min.js"></script>
+		<script src="js/jquery-viewer.min.js"></script>
 		<script src="js/svg-injector.min.js"></script>
 		<script src="js/smooth-scrolling.js"></script>
 		<script
