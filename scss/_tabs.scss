@@ -1,15 +1,19 @@
 .tabs {
-	margin-bottom: 10rem;
+	margin-bottom: 6.5rem;
 	position: relative;
 	padding: 0;
+	padding-bottom: 1.75rem;
 	&::after {
 		content: "";
 		position: absolute;
 		width: 100%;
 		height: 2px;
 		background: rgba($primary-dark, 0.3);
-		bottom: -2rem;
+		bottom: 0;
 		left: 0;
+	}
+	&-content {
+		position: relative;
 	}
 	&-item {
 		display: flex;
@@ -25,20 +29,20 @@
 			width: 100%;
 			height: 2px;
 			background: $green;
-			bottom: -2rem;
+			bottom: -1.75rem;
 			left: 0;
 		}
 		&__image {
-			width: 5rem;
-			height: 5rem;
+			width: 4rem;
+			height: 4rem;
 			max-width: 100%;
 		}
 		&__title {
 			text-align: center;
 			color: inherit;
 			margin-top: 0.5rem;
-			margin-bottom: 1rem;
-			font-size: 1.25rem;
+			margin-bottom: 0.75rem;
+			font-size: 1rem;
 		}
 		&__arrow {
 			width: 1rem;
@@ -69,23 +73,18 @@
 		align-items: center;
 		justify-content: center;
 		position: absolute;
-		bottom: -5rem;
+		bottom: -4rem;
 	}
 	&__link {
-		margin-right: 2.5rem;
+		margin-right: 2rem;
 		font-weight: 600;
 		.link__icon svg {
 			padding: 20%;
 		}
-		&:last-child() {
+		&:last-child {
 			margin-right: 0;
 		}
-		&#next-tab {
-			.link__icon {
-				transform: rotate(45deg);
-			}
-		}
-		&#home-tab {
+		&.link_up {
 			color: $primary-dark;
 			.link__icon {
 				transform: rotate(-45deg);
@@ -104,8 +103,35 @@
 				}
 			}
 		}
+		&.link_down {
+			.link__icon {
+				transform: rotate(45deg);
+			}
+		}
 	}
 }
 .tab_hidden {
 	display: none;
+}
+
+@media screen and (max-width: $sm-screen) {
+	.tabs {
+		overflow-x: scroll;
+		overflow-y: visible;
+		&-item {
+			width: 10rem;
+		}
+		&__links {
+			flex-direction: column;
+			align-items: center;
+			bottom: -6rem;
+		}
+		&__link {
+			margin-right: 0;
+			margin-bottom: 1rem;
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
 }

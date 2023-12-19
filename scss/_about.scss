@@ -24,33 +24,22 @@ $image-offset: 7%;
 		}
 	}
 	&__subtitle {
-		font-size: 1.25rem;
+		font-size: 1rem;
 		color: $primary;
 		font-weight: 400;
 		margin-bottom: 0;
 	}
 	&__title {
-		font-size: 4.25rem;
+		font-size: 3.75rem;
 		font-weight: 500;
 		color: $primary;
-		margin: 0 0 1.25rem;
+		margin: 0 0 1rem;
 	}
 	p,
 	li {
-		font-size: 1.5rem;
+		font-size: 1.25rem;
 		color: $text-dark;
 		line-height: 150%;
-	}
-	ul {
-		list-style: none;
-		padding: 0;
-		margin-bottom: 0.5rem;
-		li {
-			&::before {
-				content: "–";
-				margin-right: 0.5rem;
-			}
-		}
 	}
 	p {
 		margin: 0;

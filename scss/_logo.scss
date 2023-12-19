@@ -4,7 +4,7 @@
 	text-decoration: none;
 	color: inherit;
 	&__image {
-		width: 4rem;
+		width: 3.5rem;
 		display: block;
 		.svg {
 			width: 100%;
@@ -13,7 +13,7 @@
 		}
 	}
 	&__line {
-		height: 6.25rem;
+		height: 5rem;
 		width: 3px;
 		background-color: $primary_dark;
 		display: inline-block;
@@ -22,7 +22,7 @@
 	&__text {
 		text-transform: uppercase;
 		color: $primary_dark;
-		font-size: 1.25rem;
+		font-size: 1rem;
 		font-weight: bold;
 	}
 	&_white &__image path {

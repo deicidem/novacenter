@@ -10,12 +10,12 @@
 		position: relative;
 		display: block;
 		z-index: 1;
-		width: 1.5rem;
-		height: 1.5rem;
+		width: 1.25rem;
+		height: 1.25rem;
 		margin-left: 0;
 		padding: 0;
 		border: 2px solid $primary-dark;
-		border-radius: 1.25rem;
+		border-radius: 1rem;
 		-webkit-transition: all 0.25s ease 0.3s;
 		transition: all 0.25s ease 0.3s;
 		cursor: pointer;
@@ -38,7 +38,7 @@
 		}
 
 		&.open {
-			width: 10rem;
+			width: 8rem;
 			height: auto;
 			-webkit-transition-delay: 0.1s;
 			transition-delay: 0.1s;

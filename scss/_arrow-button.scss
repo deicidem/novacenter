@@ -1,6 +1,6 @@
 .arrow-button {
-	width: 4rem;
-	height: 4rem;
+	width: 3rem;
+	height: 3rem;
 	border: 2px solid $primary;
 	border-radius: 50%;
 	background: none;
@@ -16,7 +16,7 @@
 		height: 0;
 		top: 50%;
 		left: 50%;
-		transition: 0.2s ease-in-out transform;
+		transition: 0.2s ease-in-out;
 		transform: translate(-50%, -50%);
 		position: absolute;
 		background: #fff;
@@ -31,6 +31,7 @@
 		}
 	}
 	&:not(:disabled):not(.slick-disabled):hover {
+		cursor: pointer;
 		&:after {
 			width: 100%;
 			height: 100%;
@@ -61,8 +62,8 @@
 
 .scroll-to-top {
 	position: fixed;
-	bottom: 3rem;
-	right: 3rem;
+	bottom: 2.5rem;
+	right: 2.5rem;
 	display: none;
 	&.active {
 		display: flex;
