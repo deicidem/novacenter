@@ -56,6 +56,8 @@
 	background-color: $primary;
 	border: 2px solid #fff;
 	box-shadow: 0.25rem 0.25rem 0.6rem rgba(#000, 0.2);
+	display: block;
+	text-decoration: none;
 	&__image {
 		width: 100%;
 		height: auto;

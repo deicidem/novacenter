@@ -199,6 +199,9 @@
 .color-table tbody tr:nth-child(8) {
   background: #db6064;
 }
+.color-table tbody tr:nth-child(9) {
+  background: #df7c56;
+}
 
 .standard_search {
   box-sizing: border-box;
@@ -345,6 +348,21 @@
 }
 .link_white:hover .link__icon svg > path {
   fill: #fff;
+}
+.link_right {
+  text-align: right;
+}
+.link_big {
+  display: flex;
+  align-items: center;
+  line-height: 1.5;
+}
+.link_big .link__icon {
+  width: 3rem;
+  height: 3rem;
+}
+.link_big .link__icon svg {
+  padding: 30%;
 }
 
 .logo {
@@ -1725,6 +1743,8 @@ ul li {
   background-color: #0066af;
   border: 2px solid #fff;
   box-shadow: 0.25rem 0.25rem 0.6rem rgba(0, 0, 0, 0.2);
+  display: block;
+  text-decoration: none;
 }
 .satellite-card__image {
   width: 100%;

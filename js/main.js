@@ -372,8 +372,8 @@ function setupImageSlider() {
 	const $counterTotal = $imageSlider.find(".image-slider__control__counter__total");
 	const isDescriptionsExist = $imageSlider.find(".image-slider__description").length > 0;
 	const $slider = $imageSlider.find(".image-slider__slides");
-
 	let $slidesDescriptions = null;
+
 	if (isDescriptionsExist) {
 		$slidesDescriptions = $imageSlider.find(".image-slider__description").find("li");
 	}
@@ -414,19 +414,8 @@ function setupImageSlider() {
 	}
 
 	function updateSlideCounter(currentSlide, slideCount) {
-		let current;
-		let total;
-		if (currentSlide < 10) {
-			current = "0" + (currentSlide + 1);
-		} else {
-			current = currentSlide + 1;
-		}
-
-		if (slideCount < 10) {
-			total = "0" + slideCount;
-		} else {
-			total = slideCount;
-		}
+		const current = currentSlide < 9 ? "0" + (currentSlide + 1) : currentSlide + 1;
+		const total = slideCount < 9 ? "0" + slideCount : slideCount;
 
 		$counterCurrent.text(current);
 		$counterTotal.text(total);

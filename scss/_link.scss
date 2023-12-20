@@ -87,4 +87,19 @@
 			}
 		}
 	}
+	&_right {
+		text-align: right;
+	}
+	&_big {
+		display: flex;
+		align-items: center;
+		line-height: 1.5;
+		.link__icon {
+			width: 3rem;
+			height: 3rem;
+			svg {
+				padding: 30%;
+			}
+		}
+	}
 }
