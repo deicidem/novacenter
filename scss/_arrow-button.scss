@@ -39,12 +39,12 @@
 	}
 	&:disabled,
 	&.slick-disabled {
-		border-color: #939393;
+		border-color: #b7b7b7;
 		&:hover {
 			cursor: no-drop;
 		}
 		svg path {
-			fill: #939393;
+			fill: #b7b7b7;
 		}
 	}
 
@@ -56,6 +56,12 @@
 	&_top {
 		svg {
 			transform: rotate(-90deg);
+		}
+	}
+	&_dark {
+		border-color: $text-dark;
+		svg path {
+			fill: $text-dark;
 		}
 	}
 }

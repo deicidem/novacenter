@@ -1194,56 +1194,156 @@
 				</div>
 
 				<div id="automat" class="tab tab_hidden">
-					<section class="section section_blue">
+					<section class="section section_dark-blue">
 						<div class="container">
-							<h2 class="section-title">Предварительная обработка</h2>
-							<div class="row align-items-center g-5">
-								<div class="col-md-6 col-12">
-									<h4>Формирование бесшовной мозаики</h4>
+							<h2 class="section-title section-title_white mb-5">Автоматизация процессов</h2>
+							<div class="row row-cols-md-2 row-cols-1 g-4">
+								<div class="col">
 									<p>
-										Исходные маршруты могут отличаться и по цвету, и по геопривязке, и по линейному
-										разрешению на местности. Данный же инструмент уточняет геопривязку для всех
-										маршрутов, производит цветокоррекцию и проводит границу между маршрутами таким
-										образом, чтобы она была незаметной.
+										Программный алгоритм (макрос), заранее записанная последовательность
+										пользовательских действий, которые можно применять к разным наборам исходных
+										данных. Механизм макросов используется для автоматизированного решения
+										однотипных задач по заданным алгоритмам обработки в IMC.
 									</p>
 									<p>
-										На изображении приведен пример формирования бесшовной мозайки из нескольких
-										маршрутов.
+										Записанный макрос позволяет в автоматическом режиме проводить тематическую
+										обработку, от предварительной обработки материалов космической съемки до
+										графические и текстовые отчеты на основе результатов обработки.
 									</p>
+									<p>
+										После записи макросы сохраняются в формате MCR. Действия в алгоритме могут быть
+										в любой момент добавлены, удалены, перезаписаны.
+									</p>
+									<ul>
+										<li>возможность сохранения алгоритма в формате MCR;</li>
+										<li>возможность последующего редактирования макроса;</li>
+										<li>работа с относительными путями;</li>
+										<li>запуск макроса в серверном режиме.</li>
+									</ul>
+									<a title="Далее" class="link link_white link__with-image mt-5">
+										<span class="link__text">Показать схему работы алгоритма макроса</span>
+										<span class="link__icon">
+											<img class="svg" src="assets/icons/arrow.svg" alt="" />
+										</span>
+										<img
+											class="link__image d-none"
+											src="assets/images/opportunities/automat/automat-macros.png"
+											alt=""
+										/>
+									</a>
 								</div>
-								<div class="col-md-6 col-12">
+								<div class="col">
 									<img
 										class="image-viewer"
-										src="assets/images/opportunities/processing/moz.png"
+										src="assets/images/opportunities/automat/automat.png"
 										alt=""
 									/>
-								</div>
-							</div>
-							<div class="row align-items-center g-5 mt-1">
-								<div class="col-md-6 col-12 order-md-1 order-2">
-									<div class="image-compare">
-										<img
-											class="image-viewer"
-											src="assets/images/opportunities/processing/qual_before.png"
-											alt=""
-										/>
-										<img
-											class="image-viewer"
-											src="assets/images/opportunities/processing/qual_after.png"
-											alt=""
-										/>
+									<div class="caption">
+										На изображении показаны этапы решения тематической задачи: “Мониторинг водных
+										объектов” в ходе выполнения макроса. Cнисок с КА Santinel - 2, Омская область.
+										На первом изображении - исходный снимок, на втором - индексное изображение,
+										выполненное в ходе работы алгоритма, на третьем - результирующая карта.
 									</div>
 								</div>
-								<div class="col-md-6 col-12 order-md-2 order-1">
-									<h4>Повышение линейного разрешения</h4>
-									<p>
-										В программном комплексе IMC есть возможность повышения линейного разрешения
-										снимков и оценка качества исходных материалов.
-									</p>
-									<p>
-										Слева изображен исходный снимок, который имеет разрешение 1 м. В результате
-										обработки удалось повысить разрешение до 0,57 м.
-									</p>
+							</div>
+						</div>
+					</section>
+
+					<section class="section section_gray">
+						<div class="container">
+							<h2 class="section-title mb-5">Пример работы алгоритма</h2>
+							<h4>Мониторинг паводков и наводнений</h4>
+							<p>
+								Чтобы провести мониторинг паводкоопасных участков или смоделировать зону наводнений,
+								можно выполнить готовый алгоритм или создать свой, для последующего решения типовых
+								задач.
+							</p>
+							<p>
+								Первым этапом выполнения алгоритма является задание рабочих директорий - запись
+								относительных путей с помощью которых будет взаимодействовать макрос (открытие и
+								сохранение файлов).
+							</p>
+							<p>
+								Следующий этап - предварительная обработка снимка: открытие паспорта, коррекция
+								изображения, удаление неинформативных полей и создание границы снимка.
+							</p>
+							<p>
+								После предварительной обработки проводится тематическая. Для моделирования
+								наводнений создается изображение, рассчитываемое с помощью индекса NDWI по архивному
+								и актуальному снимку. К индексному изображению применяется цветовой ряд. С помощью
+								выбранного диапазона значений отделяются водные объекты от других.
+							</p>
+							<p>Для векторного слоя воды создается атрибутивная таблица со значениями площадей.</p>
+							<p>
+								Для того, чтобы выделить участки, которые могут оказаться в опасной зоне,
+								подгружаются дополнительные векторные объекты с данными о строениях, дорожной сети,
+								социально-значимые объекты и другие.
+							</p>
+							<p>
+								После проведения тематической обработки создается результирующая карта с исходным
+								снимком и полученными векторными объектами.
+							</p>
+							<p>
+								По данным результирующей карты формируется отчет с основной информацией, полученной
+								в результате тематической обработки: граница снимка на общей карте, результирующая
+								карта, таблица с атрибутами.
+							</p>
+							<a title="Далее" class="link link_blue link__with-image mt-5">
+								<span class="link__text">Посмотреть схему алгоритма тематической задачи</span>
+								<span class="link__icon">
+									<img class="svg" src="assets/icons/arrow.svg" alt="" />
+								</span>
+								<img
+									class="link__image d-none"
+									src="assets/images/opportunities/automat/thematic-macros.png"
+									alt=""
+								/>
+							</a>
+							<div class="image-slider mt-5">
+								<div class="row">
+									<div class="col-6">
+										<div class="image-slider__slides">
+											<img src="assets/images/opportunities/automat/slide-1.png" alt="" />
+											<img src="assets/images/opportunities/automat/slide-1.png" alt="" />
+											<img src="assets/images/opportunities/automat/slide-1.png" alt="" />
+											<img src="assets/images/opportunities/automat/slide-1.png" alt="" />
+											<img src="assets/images/opportunities/automat/slide-1.png" alt="" />
+										</div>
+									</div>
+									<div class="col-6">
+										<div class="image-slider__control">
+											<div class="image-slider__control__counter">
+												<span class="image-slider__control__counter__current">01</span>
+												/
+												<span class="image-slider__control__counter__total">05</span>
+											</div>
+											<div class="image-slider__control__progress"></div>
+											<div class="image-slider__control__buttons">
+												<button
+													title="Назад"
+													class="arrow-button arrow-button_dark arrow-button_left"
+												>
+													<img class="svg" src="assets/icons/arrow.svg" alt="" />
+												</button>
+												<button
+													title="Вперед"
+													class="arrow-button arrow-button_dark arrow-button_right"
+												>
+													<img class="svg" src="assets/icons/arrow.svg" alt="" />
+												</button>
+											</div>
+										</div>
+										<ul class="image-slider__description mt-4">
+											<li>предварительная обработка, архивный и актуальный снимок</li>
+											<li>
+												тематическая обработка, получение индексного изображения актуального и
+												архивного снимка
+											</li>
+											<li>тематическая обработка, применение цветового ряда</li>
+											<li>результирующая карта</li>
+											<li>отчет</li>
+										</ul>
+									</div>
 								</div>
 							</div>
 						</div>
