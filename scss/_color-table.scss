@@ -1,0 +1,65 @@
+.color-table {
+	border-collapse: separate;
+	border-spacing: 0 0.5rem;
+	thead {
+		th {
+			text-align: left;
+			padding: 0.5rem 0;
+			&:nth-child(3) {
+				padding: 0.5rem 2rem;
+			}
+		}
+	}
+	tbody {
+		color: #fff;
+		td {
+			padding: 1rem 0;
+			&:first-child {
+				font-size: 2rem;
+				padding-left: 2rem;
+				border-top-left-radius: 3rem;
+				border-bottom-left-radius: 3rem;
+				padding-right: 1rem;
+			}
+			&:last-child {
+				border-top-right-radius: 3rem;
+				border-bottom-right-radius: 3rem;
+				padding-right: 2rem;
+			}
+			&:nth-child(2) {
+				width: 45%;
+			}
+			&:nth-child(3) {
+				padding: 1rem 2rem;
+				width: 38%;
+			}
+			&:nth-child(4) {
+				width: 20%;
+			}
+		}
+		tr:nth-child(1) {
+			background: #8cc37d;
+		}
+		tr:nth-child(2) {
+			background: #84c7af;
+		}
+		tr:nth-child(3) {
+			background: #61b8be;
+		}
+		tr:nth-child(4) {
+			background: #63c1ed;
+		}
+		tr:nth-child(5) {
+			background: #5889c3;
+		}
+		tr:nth-child(6) {
+			background: #7d5888;
+		}
+		tr:nth-child(7) {
+			background: #c67091;
+		}
+		tr:nth-child(8) {
+			background: #db6064;
+		}
+	}
+}
