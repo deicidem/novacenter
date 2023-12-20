@@ -3,6 +3,7 @@
 		display: flex;
 		align-items: center;
 		&__counter {
+			flex-shrink: 0;
 			font-weight: 600;
 			&__current {
 				color: $primary-400;
@@ -10,7 +11,7 @@
 		}
 		&__progress {
 			margin: 0 1rem;
-			flex: 1 0 auto;
+			flex: 1 1 auto;
 			ul {
 				display: flex;
 				align-items: center;
@@ -40,6 +41,7 @@
 			}
 		}
 		&__buttons {
+			flex-shrink: 0;
 			display: flex;
 			align-items: center;
 			button:first-child {

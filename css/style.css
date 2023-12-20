@@ -71,6 +71,11 @@
   display: flex;
 }
 
+@media screen and (max-width: 992px) {
+  .arrow-button {
+    border-width: 1px;
+  }
+}
 @media (max-width: 768px) {
   .arrow-button {
     padding: 0;
@@ -81,6 +86,7 @@
   align-items: center;
 }
 .image-slider__control__counter {
+  flex-shrink: 0;
   font-weight: 600;
 }
 .image-slider__control__counter__current {
@@ -88,7 +94,7 @@
 }
 .image-slider__control__progress {
   margin: 0 1rem;
-  flex: 1 0 auto;
+  flex: 1 1 auto;
 }
 .image-slider__control__progress ul {
   display: flex;
@@ -116,6 +122,7 @@
   background: #0e82c3;
 }
 .image-slider__control__buttons {
+  flex-shrink: 0;
   display: flex;
   align-items: center;
 }

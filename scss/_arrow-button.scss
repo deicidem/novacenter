@@ -76,6 +76,12 @@
 	}
 }
 
+@media screen and (max-width: $md-screen) {
+	.arrow-button {
+		border-width: 1px;
+	}
+}
+
 @media (max-width: $sm-screen) {
 	.arrow-button {
 		padding: 0;
