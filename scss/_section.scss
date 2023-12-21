@@ -81,7 +81,7 @@
 			color: #fff;
 		}
 	}
-	&__links {
+	&__between {
 		width: 100%;
 		display: flex;
 		align-items: center;
@@ -89,40 +89,6 @@
 		position: absolute;
 		bottom: -4rem;
 		transform: translateY(50%);
-	}
-	&__link {
-		margin-right: 2rem;
-		font-weight: 600;
-		.link__icon svg {
-			padding: 20%;
-		}
-		&:last-child {
-			margin-right: 0;
-		}
-		&.link_up {
-			color: $primary-dark;
-			.link__icon {
-				transform: rotate(-45deg);
-				&::before {
-					border-color: $primary-dark;
-				}
-				&::after {
-					background: $primary-dark;
-				}
-			}
-			&:hover {
-				.link__icon {
-					svg > path {
-						fill: $primary-dark;
-					}
-				}
-			}
-		}
-		&.link_down {
-			.link__icon {
-				transform: rotate(45deg);
-			}
-		}
 	}
 }
 @media (min-width: 2000px) {

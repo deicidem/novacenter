@@ -371,6 +371,30 @@
 .link_big .link__icon svg {
   padding: 30%;
 }
+.link_dark {
+  color: #335472;
+}
+.link_dark .link__icon::before {
+  border-color: #335472;
+}
+.link_dark .link__icon::after {
+  background: #335472;
+}
+.link_dark:hover .link__icon svg > path {
+  fill: #335472;
+}
+.link_up .link__icon {
+  transform: rotate(-45deg);
+}
+.link_up .link__icon svg {
+  padding: 20%;
+}
+.link_down .link__icon {
+  transform: rotate(45deg);
+}
+.link_down .link__icon svg {
+  padding: 20%;
+}
 
 .logo {
   display: flex;
@@ -731,7 +755,7 @@ ul li {
 .section-text_white {
   color: #fff;
 }
-.section__links {
+.section__between {
   width: 100%;
   display: flex;
   align-items: center;
@@ -739,34 +763,6 @@ ul li {
   position: absolute;
   bottom: -4rem;
   transform: translateY(50%);
-}
-.section__link {
-  margin-right: 2rem;
-  font-weight: 600;
-}
-.section__link .link__icon svg {
-  padding: 20%;
-}
-.section__link:last-child {
-  margin-right: 0;
-}
-.section__link.link_up {
-  color: #335472;
-}
-.section__link.link_up .link__icon {
-  transform: rotate(-45deg);
-}
-.section__link.link_up .link__icon::before {
-  border-color: #335472;
-}
-.section__link.link_up .link__icon::after {
-  background: #335472;
-}
-.section__link.link_up:hover .link__icon svg > path {
-  fill: #335472;
-}
-.section__link.link_down .link__icon {
-  transform: rotate(45deg);
 }
 
 @media (min-width: 2000px) {

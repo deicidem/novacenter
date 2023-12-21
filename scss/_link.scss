@@ -109,4 +109,38 @@
 			}
 		}
 	}
+	&_dark {
+		color: $primary-dark;
+		.link__icon {
+			&::before {
+				border-color: $primary-dark;
+			}
+			&::after {
+				background: $primary-dark;
+			}
+		}
+		&:hover {
+			.link__icon {
+				svg > path {
+					fill: $primary-dark;
+				}
+			}
+		}
+	}
+	&_up {
+		.link__icon {
+			transform: rotate(-45deg);
+			svg {
+				padding: 20%;
+			}
+		}
+	}
+	&_down {
+		.link__icon {
+			transform: rotate(45deg);
+			svg {
+				padding: 20%;
+			}
+		}
+	}
 }
