@@ -136,6 +136,72 @@
   color: #0e82c3;
 }
 
+.slidedown {
+  padding: 2rem 0;
+  border-top: 2px solid #335472;
+}
+.slidedown:first-child {
+  border-top: none;
+}
+.slidedown-button {
+  border: none;
+  background: none;
+  font-size: 1.75rem;
+  color: inherit;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.slidedown-button__icon {
+  margin-right: 1rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  border-radius: 50%;
+  border: 1px solid #0066af;
+  transform-origin: center;
+}
+.slidedown-button__icon svg {
+  width: 50%;
+  height: 50%;
+  transform: rotate(-180deg);
+}
+.slidedown-button__icon svg path {
+  fill: #0066af;
+}
+.slidedown.active .slidedown-button .slidedown-button__icon {
+  background: #0066af;
+  border: 1px solid #fff;
+}
+.slidedown.active .slidedown-button .slidedown-button__icon svg {
+  transform: rotate(0deg);
+}
+.slidedown.active .slidedown-button .slidedown-button__icon svg path {
+  fill: #fff;
+}
+.slidedown-content {
+  display: none;
+  padding-top: 2rem;
+  padding-left: 4rem;
+}
+.slidedown-content h4 {
+  font-size: 1.5rem;
+  line-height: 1.5;
+  margin: 0;
+}
+.slidedown-content ul li {
+  font-size: 1.5rem;
+  line-height: 1.5;
+}
+.slidedown-content p {
+  font-size: 1.5rem;
+  line-height: 1.5;
+}
+
 .color-table {
   border-collapse: separate;
   border-spacing: 0 0.5rem;

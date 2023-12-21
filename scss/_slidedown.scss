@@ -1,0 +1,66 @@
+.slidedown {
+	padding: 2rem 0;
+	border-top: 2px solid $primary_dark;
+	&:first-child {
+		border-top: none;
+	}
+	&-button {
+		border: none;
+		background: none;
+		font-size: 1.75rem;
+		color: inherit;
+		font-weight: 500;
+		display: flex;
+		align-items: center;
+		cursor: pointer;
+		&__icon {
+			margin-right: 1rem;
+			width: 2.5rem;
+			height: 2.5rem;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			background: #fff;
+			border-radius: 50%;
+			border: 1px solid $primary;
+			transform-origin: center;
+			svg {
+				width: 50%;
+				height: 50%;
+				transform: rotate(-180deg);
+				path {
+					fill: $primary;
+				}
+			}
+		}
+	}
+	&.active &-button &-button__icon {
+		background: $primary;
+		border: 1px solid #fff;
+		svg {
+			transform: rotate(0deg);
+
+			path {
+				fill: #fff;
+			}
+		}
+	}
+	&-content {
+		display: none;
+		padding-top: 2rem;
+		padding-left: 4rem;
+		h4 {
+			font-size: 1.5rem;
+			line-height: 1.5;
+			margin: 0;
+		}
+		ul li {
+			font-size: 1.5rem;
+			line-height: 1.5;
+		}
+		p {
+			font-size: 1.5rem;
+			line-height: 1.5;
+		}
+	}
+}

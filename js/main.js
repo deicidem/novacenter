@@ -9,6 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	setupImageCompare();
 	setupImageViewer();
 	setupImageSlider();
+	setupSlidedown();
 });
 
 class HeroSlider {
@@ -359,59 +360,76 @@ function setupImageViewer() {
 }
 
 function setupImageSlider() {
-	const $imageSlider = $(".image-slider");
-	const $prevArrow = $imageSlider.find(".arrow-button_left");
-	const $nextArrow = $imageSlider.find(".arrow-button_right");
-	const $counterCurrent = $imageSlider.find(".image-slider__control__counter__current");
-	const $counterTotal = $imageSlider.find(".image-slider__control__counter__total");
-	const isDescriptionsExist = $imageSlider.find(".image-slider__description").length > 0;
-	const $slider = $imageSlider.find(".image-slider__slides");
-	let $slidesDescriptions = null;
+	$(".image-slider").each(function () {
+		const $imageSlider = $(this);
+		const $prevArrow = $imageSlider.find(".arrow-button_left");
+		const $nextArrow = $imageSlider.find(".arrow-button_right");
+		const $counterCurrent = $imageSlider.find(".image-slider__control__counter__current");
+		const $counterTotal = $imageSlider.find(".image-slider__control__counter__total");
+		const isDescriptionsExist = $imageSlider.find(".image-slider__description").length > 0;
+		const $slider = $imageSlider.find(".image-slider__slides");
+		let $slidesDescriptions = null;
 
-	if (isDescriptionsExist) {
-		$slidesDescriptions = $imageSlider.find(".image-slider__description").find("li");
-	}
+		if (isDescriptionsExist) {
+			$slidesDescriptions = $imageSlider.find(".image-slider__description").find("li");
+		}
 
-	$slider.on("init", function (event, slick) {
-		updateSlideCounter(slick.currentSlide, slick.slideCount);
-		if (isDescriptionsExist) updateActiveSlideDescription(slick.currentSlide);
-	});
-
-	$slider.slick({
-		slidesToShow: 1,
-		infinite: false,
-		prevArrow: $prevArrow,
-		nextArrow: $nextArrow,
-		appendDots: $imageSlider.find(".image-slider__control__progress"),
-		dots: true,
-	});
-
-	$slider.on("beforeChange", function (event, slick, currentSlide, nextSlide) {
-		updateSlideCounter(nextSlide, slick.slideCount);
-		if (isDescriptionsExist) updateActiveSlideDescription(nextSlide);
-	});
-
-	if (isDescriptionsExist) {
-		$slidesDescriptions.on("click", function (event) {
-			event.preventDefault();
-
-			const $clickedSlide = $(this);
-			const slideIndex = $slidesDescriptions.index($clickedSlide);
-
-			$slider.slick("slickGoTo", slideIndex);
+		$slider.on("init", function (event, slick) {
+			updateSlideCounter(slick.currentSlide, slick.slideCount);
+			if (isDescriptionsExist) updateActiveSlideDescription(slick.currentSlide);
 		});
-	}
 
-	function updateActiveSlideDescription(currentSlide) {
-		$slidesDescriptions.removeClass("image-slider__description_active");
-		$slidesDescriptions.eq(currentSlide).addClass("image-slider__description_active");
-	}
+		$slider.slick({
+			slidesToShow: 1,
+			infinite: false,
+			prevArrow: $prevArrow,
+			nextArrow: $nextArrow,
+			appendDots: $imageSlider.find(".image-slider__control__progress"),
+			dots: true,
+		});
 
-	function updateSlideCounter(currentSlide, slideCount) {
-		const current = currentSlide < 9 ? "0" + (currentSlide + 1) : currentSlide + 1;
-		const total = slideCount < 9 ? "0" + slideCount : slideCount;
+		$slider.on("beforeChange", function (event, slick, currentSlide, nextSlide) {
+			updateSlideCounter(nextSlide, slick.slideCount);
+			if (isDescriptionsExist) updateActiveSlideDescription(nextSlide);
+		});
 
-		$counterCurrent.text(current);
-		$counterTotal.text(total);
-	}
+		if (isDescriptionsExist) {
+			$slidesDescriptions.on("click", function (event) {
+				event.preventDefault();
+
+				const $clickedSlide = $(this);
+				const slideIndex = $slidesDescriptions.index($clickedSlide);
+
+				$slider.slick("slickGoTo", slideIndex);
+			});
+		}
+
+		function updateActiveSlideDescription(currentSlide) {
+			$slidesDescriptions.removeClass("image-slider__description_active");
+			$slidesDescriptions.eq(currentSlide).addClass("image-slider__description_active");
+		}
+
+		function updateSlideCounter(currentSlide, slideCount) {
+			const current = currentSlide < 9 ? "0" + (currentSlide + 1) : currentSlide + 1;
+			const total = slideCount < 9 ? "0" + slideCount : slideCount;
+
+			$counterCurrent.text(current);
+			$counterTotal.text(total);
+		}
+	});
+}
+
+function setupSlidedown() {
+	$(".slidedown").each(function () {
+		const $currentSlidedown = $(this);
+
+		const $slidedownButton = $currentSlidedown.find(".slidedown-button");
+		const $slidedownContent = $currentSlidedown.find(".slidedown-content");
+
+		$slidedownButton.on("click", function (event) {
+			event.preventDefault();
+			$slidedownButton.parents(".slidedown").toggleClass("active");
+			$slidedownContent.slideToggle();
+		});
+	});
 }
