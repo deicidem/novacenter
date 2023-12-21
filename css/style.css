@@ -294,7 +294,8 @@
   height: 100%;
   top: 50%;
   left: 50%;
-  border: 1px solid #0066af;
+  border: 0px solid #0066af;
+  transition: 0.2s ease-in-out all;
   background: #fff;
   transform: translate(-50%, -50%);
   position: absolute;
@@ -307,9 +308,10 @@
   height: 100%;
   top: 50%;
   left: 50%;
-  transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out all;
   transform: translate(-50%, -50%);
   position: absolute;
+  border: 1px solid #fff;
   background: #0066af;
   border-radius: 50%;
   z-index: -1;
@@ -331,6 +333,9 @@
   width: 0;
   height: 0;
 }
+.link:hover .link__icon::before {
+  border-width: 1px;
+}
 .link:hover .link__icon svg > path {
   fill: #0066af;
 }
@@ -339,9 +344,11 @@
 }
 .link_white .link__icon::before {
   background: #0066af;
+  border-color: #fff;
 }
 .link_white .link__icon::after {
   background: #fff;
+  border-color: #0066af;
 }
 .link_white .link__icon svg > path {
   fill: #0066af;
@@ -724,6 +731,43 @@ ul li {
 .section-text_white {
   color: #fff;
 }
+.section__links {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  bottom: -4rem;
+  transform: translateY(50%);
+}
+.section__link {
+  margin-right: 2rem;
+  font-weight: 600;
+}
+.section__link .link__icon svg {
+  padding: 20%;
+}
+.section__link:last-child {
+  margin-right: 0;
+}
+.section__link.link_up {
+  color: #335472;
+}
+.section__link.link_up .link__icon {
+  transform: rotate(-45deg);
+}
+.section__link.link_up .link__icon::before {
+  border-color: #335472;
+}
+.section__link.link_up .link__icon::after {
+  background: #335472;
+}
+.section__link.link_up:hover .link__icon svg > path {
+  fill: #335472;
+}
+.section__link.link_down .link__icon {
+  transform: rotate(45deg);
+}
 
 @media (min-width: 2000px) {
   .section {
@@ -895,42 +939,6 @@ ul li {
 }
 .tabs-item_active .tabs-item__arrow path {
   fill: #07959e;
-}
-.tabs__links {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: absolute;
-  bottom: -4rem;
-}
-.tabs__link {
-  margin-right: 2rem;
-  font-weight: 600;
-}
-.tabs__link .link__icon svg {
-  padding: 20%;
-}
-.tabs__link:last-child {
-  margin-right: 0;
-}
-.tabs__link.link_up {
-  color: #335472;
-}
-.tabs__link.link_up .link__icon {
-  transform: rotate(-45deg);
-}
-.tabs__link.link_up .link__icon::before {
-  border-color: #335472;
-}
-.tabs__link.link_up .link__icon::after {
-  background: #335472;
-}
-.tabs__link.link_up:hover .link__icon svg > path {
-  fill: #335472;
-}
-.tabs__link.link_down .link__icon {
-  transform: rotate(45deg);
 }
 
 .tab_hidden {

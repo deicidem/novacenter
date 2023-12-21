@@ -342,26 +342,20 @@ function setupImageCompare() {
 	});
 }
 function setupImageViewer() {
-	const images = document.querySelectorAll(".image-viewer");
-	if (images.length > 0) {
-		images.forEach((image) => {
-			new Viewer(image);
+	const imageElements = document.querySelectorAll(".image-viewer");
+	imageElements.forEach((imageElement) => {
+		new Viewer(imageElement);
+	});
+
+	const linkElementsWithImages = document.querySelectorAll(".link__with-image");
+	linkElementsWithImages.forEach((linkElement) => {
+		const imageElement = linkElement.querySelector(".link__image");
+		const viewer = new Viewer(imageElement);
+		linkElement.addEventListener("click", (event) => {
+			event.preventDefault();
+			viewer.show();
 		});
-	}
-
-	const linksWithImages = document.querySelectorAll(".link__with-image");
-
-	if (linksWithImages.length > 0) {
-		linksWithImages.forEach((link) => {
-			const image = link.querySelector(".link__image");
-			const viewer = new Viewer(image);
-			link.addEventListener("click", (event) => {
-				event.preventDefault();
-
-				viewer.show();
-			});
-		});
-	}
+	});
 }
 
 function setupImageSlider() {
