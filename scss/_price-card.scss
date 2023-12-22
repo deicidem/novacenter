@@ -1,0 +1,61 @@
+@mixin card-style($color) {
+	box-shadow: 0 0.25rem 0.75rem rgba($color, 0.2);
+	border-color: $color;
+	.price-card {
+		&__header {
+			background: $color;
+		}
+	}
+}
+.price-card {
+	@include card-style($primary);
+	border-radius: 10px;
+	border-width: 1px;
+	border-style: solid;
+	overflow: hidden;
+	font-size: 1.25rem;
+	color: $text-dark;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	&_green {
+		@include card-style($green-400);
+	}
+	&_light-blue {
+		@include card-style($light-blue);
+	}
+	&_purple-blue {
+		@include card-style($purple-blue);
+	}
+	&__header {
+		flex: 0 0 auto;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: 0 1.75rem;
+		font-weight: 500;
+		color: #fff;
+		height: 5rem;
+	}
+	&__title {
+		font-size: inherit;
+	}
+	&__price {
+		flex-shrink: 0;
+		margin-left: 0.25rem;
+	}
+	&__content {
+		flex: 1 0 auto;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		padding: 1.5rem 1.5rem 1.75rem;
+	}
+	&__text {
+		margin-bottom: 3rem;
+	}
+	&__link {
+		border-top: 1px solid #b7b7b7;
+		padding-top: 1.5rem;
+	}
+}

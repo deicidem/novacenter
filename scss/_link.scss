@@ -1,9 +1,46 @@
+@mixin link-style($text-color, $arrow-color-main, $arrow-color-secondary) {
+	color: $text-color;
+	.link {
+		&__icon {
+			&::before {
+				background: $arrow-color-secondary;
+				border-color: $arrow-color-main;
+			}
+			&::after {
+				background: $arrow-color-main;
+				border-color: $arrow-color-secondary;
+			}
+			svg > path {
+				fill: $arrow-color-secondary;
+			}
+		}
+	}
+	&:hover {
+		.link {
+			&__icon {
+				svg > path {
+					fill: $arrow-color-main;
+				}
+			}
+		}
+	}
+}
+
+@mixin link-rotation($rotation) {
+	.link__icon {
+		transform: rotate($rotation);
+		svg {
+			padding: 20%;
+		}
+	}
+}
+
 .link {
 	font-size: 1.25rem;
-	color: $primary;
 	text-decoration: none;
 	display: inline-block;
 	cursor: pointer;
+	@include link-style($primary, $primary, #fff);
 	&__icon {
 		vertical-align: middle;
 		margin-left: 0.75rem;
@@ -19,9 +56,9 @@
 			height: 100%;
 			top: 50%;
 			left: 50%;
-			border: 0px solid $primary;
+			border-width: 0px;
+			border-style: solid;
 			transition: 0.2s ease-in-out all;
-			background: #fff;
 			transform: translate(-50%, -50%);
 			position: absolute;
 			border-radius: 50%;
@@ -36,8 +73,8 @@
 			transition: 0.2s ease-in-out all;
 			transform: translate(-50%, -50%);
 			position: absolute;
-			border: 1px solid #fff;
-			background: $primary;
+			border-width: 1px;
+			border-style: solid;
 			border-radius: 50%;
 			z-index: -1;
 		}
@@ -45,7 +82,7 @@
 			position: absolute;
 			width: 100%;
 			height: 100%;
-			padding: 15%;
+			padding: 20%;
 			top: 50%;
 			left: 50%;
 			transform: translate(-50%, -50%);
@@ -65,34 +102,14 @@
 			&::before {
 				border-width: 1px;
 			}
-			svg > path {
-				fill: $primary;
-			}
 		}
 	}
 
 	&_white {
-		color: #fff;
-		.link__icon {
-			&::before {
-				background: $primary;
-				border-color: #fff;
-			}
-			&::after {
-				background: #fff;
-				border-color: $primary;
-			}
-			svg > path {
-				fill: $primary;
-			}
-		}
-		&:hover {
-			.link__icon {
-				svg > path {
-					fill: #fff;
-				}
-			}
-		}
+		@include link-style(#fff, #fff, $primary);
+	}
+	&_dark {
+		@include link-style($primary-dark, $primary-dark, #fff);
 	}
 	&_right {
 		text-align: right;
@@ -109,38 +126,11 @@
 			}
 		}
 	}
-	&_dark {
-		color: $primary-dark;
-		.link__icon {
-			&::before {
-				border-color: $primary-dark;
-			}
-			&::after {
-				background: $primary-dark;
-			}
-		}
-		&:hover {
-			.link__icon {
-				svg > path {
-					fill: $primary-dark;
-				}
-			}
-		}
-	}
+
 	&_up {
-		.link__icon {
-			transform: rotate(-45deg);
-			svg {
-				padding: 20%;
-			}
-		}
+		@include link-rotation(-45deg);
 	}
 	&_down {
-		.link__icon {
-			transform: rotate(45deg);
-			svg {
-				padding: 20%;
-			}
-		}
+		@include link-rotation(45deg);
 	}
 }

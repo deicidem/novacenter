@@ -13,6 +13,7 @@
 		display: flex;
 		align-items: center;
 		cursor: pointer;
+		text-align: left;
 		&__icon {
 			margin-right: 1rem;
 			width: 2.5rem;
@@ -24,6 +25,7 @@
 			border-radius: 50%;
 			border: 1px solid $primary;
 			transform-origin: center;
+			flex-shrink: 0;
 			svg {
 				width: 50%;
 				height: 50%;
@@ -61,6 +63,19 @@
 		p {
 			font-size: 1.5rem;
 			line-height: 1.5;
+		}
+	}
+}
+
+@media screen and (max-width: $sm-screen) {
+	.slidedown {
+		padding: 1rem 0;
+		border-width: 1px;
+		&-button {
+			font-size: 1.5rem;
+		}
+		&-content {
+			padding-left: 0rem;
 		}
 	}
 }
