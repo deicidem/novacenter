@@ -1,3 +1,17 @@
+@mixin section-style($text-color, $background-color) {
+	background: $background-color;
+	color: $text-color;
+	.section-title {
+		color: $text-color;
+		&::after {
+			background: $text-color;
+		}
+		&::before {
+			background: $text-color;
+		}
+	}
+}
+
 .section {
 	max-width: 1600px;
 	margin: 8rem auto;
@@ -8,16 +22,13 @@
 		margin-top: 0;
 	}
 	&_blue {
-		background: #ddeaf6;
-		color: $text-dark;
+		@include section-style($text-dark, #ddeaf6);
 	}
 	&_dark-blue {
-		background: #335472;
-		color: #fff;
+		@include section-style(#fff, #335472);
 	}
 	&_gray {
-		background: #e7e7e7;
-		color: $text-dark;
+		@include section-style($text-dark, #e7e7e7);
 	}
 	&-background {
 		position: absolute;
@@ -39,37 +50,26 @@
 		display: flex;
 		align-items: flex-end;
 		margin-bottom: 3rem;
-		color: $text-dark;
-		&::after {
+		&::after,
+		&::before {
 			display: block;
 			margin-left: 1rem;
 			margin-bottom: 0.5rem;
 			flex: 1 1 auto;
 			content: "";
 			height: 2px;
-			background: $text-dark;
 		}
 		&::before {
+			margin-left: 0;
+			margin-right: 1rem;
 			display: none;
 		}
 		&_right {
 			&::before {
 				display: block;
-				margin-right: 1rem;
-				margin-bottom: 0.5rem;
-				flex: 1 1 auto;
-				content: "";
-				height: 2px;
-				background: #fff;
 			}
 			&::after {
 				display: none;
-			}
-		}
-		&_white {
-			color: #fff;
-			&::after {
-				background: #fff;
 			}
 		}
 	}
@@ -77,9 +77,6 @@
 		font-size: 1.25rem;
 		line-height: 1.5;
 		margin-bottom: 1.75rem;
-		&_white {
-			color: #fff;
-		}
 	}
 	&__between {
 		width: 100%;

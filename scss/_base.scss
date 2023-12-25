@@ -51,14 +51,16 @@ ul {
 }
 
 .image-viewer {
-	cursor: zoom-in;
+	transition: 0.3s ease-in-out;
+	will-change: transform;
+	&:hover {
+		cursor: zoom-in;
+		transform: scale(1.02) translateZ(0px);
+	}
 }
 
 .w-4 {
 	width: 4rem;
-}
-.mb-16 {
-	margin-bottom: 16rem;
 }
 .main {
 	position: relative;

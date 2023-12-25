@@ -1,0 +1,100 @@
+@mixin icon-style($color, $backgound-color) {
+	&::before {
+		@if ($backgound-color == transparent) {
+			background: transparent;
+			width: 0;
+			height: 0;
+		} @else {
+			background: $color;
+		}
+		border-color: transparent;
+	}
+	&::after {
+		background: $backgound-color;
+		border-color: $color;
+	}
+	svg path {
+		fill: $color;
+	}
+}
+@mixin icon-size($size, $border-size) {
+	width: $size;
+	height: $size;
+	svg {
+		width: calc($size / 2);
+		height: calc($size / 2);
+	}
+	&::before,
+	&::after {
+		border-width: $border-size;
+	}
+}
+@mixin icon-hover($path-color) {
+	@if ($path-color != transparent) {
+		&::after {
+			width: 0;
+			height: 0;
+			border-width: 0;
+		}
+		&::before {
+			border-color: $path-color;
+		}
+		svg path {
+			fill: $path-color;
+		}
+	} @else {
+		&::before {
+			width: 100%;
+			height: 100%;
+			background: #fff;
+		}
+	}
+}
+
+.icon {
+	@include icon-style($primary, #fff);
+	@include icon-size(2.5rem, 1px);
+
+	background: none;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	vertical-align: middle;
+	position: relative;
+	z-index: 1;
+	padding: 0;
+	&::before {
+		content: "";
+		width: 100%;
+		height: 100%;
+		top: 50%;
+		left: 50%;
+		border-style: solid;
+		transition: 0.2s ease-in-out all;
+		transform: translate(-50%, -50%);
+		position: absolute;
+		border-radius: 50%;
+		z-index: -2;
+	}
+	&::after {
+		content: "";
+		width: 100%;
+		height: 100%;
+		top: 50%;
+		left: 50%;
+		transition: 0.2s ease-in-out all;
+		transform: translate(-50%, -50%);
+		position: absolute;
+		border-style: solid;
+		border-radius: 50%;
+		z-index: -1;
+	}
+	svg path {
+		transition: 0.2s ease-in-out all;
+	}
+
+	&_blue {
+		@include icon-style(#fff, $primary);
+	}
+}

@@ -1,3 +1,22 @@
+@mixin tab-style($color, $line-color) {
+	color: $color;
+	&::after {
+		background: $line-color;
+	}
+	.tabs-item {
+		&__image {
+			path {
+				fill: $color;
+			}
+		}
+		&__arrow {
+			path {
+				fill: $color;
+			}
+		}
+	}
+}
+
 .tabs {
 	overflow: auto;
 	margin-bottom: 6.5rem;
@@ -11,15 +30,14 @@
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		color: $primary-dark;
 		text-decoration: none;
 		position: relative;
+		@include tab-style($primary-dark, rgba($primary-dark, 0.3));
 		&::after {
 			content: "";
 			position: absolute;
 			width: 100%;
 			height: 2px;
-			background: rgba($primary-dark, 0.3);
 			bottom: -1.75rem;
 			left: 0;
 		}
@@ -41,21 +59,8 @@
 			transform: rotate(180deg);
 		}
 		&_active {
-			color: $green;
 			z-index: 10;
-			&::after {
-				background: $green;
-			}
-		}
-		&_active > &__image {
-			path {
-				fill: $green;
-			}
-		}
-		&_active &__arrow {
-			path {
-				fill: $green;
-			}
+			@include tab-style($green, $green);
 		}
 	}
 }

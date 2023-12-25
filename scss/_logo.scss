@@ -1,12 +1,27 @@
+@mixin logo-style($color) {
+	.logo {
+		&__image path {
+			fill: $color;
+		}
+		&__line {
+			background-color: $color;
+		}
+		&__text {
+			color: $color;
+		}
+	}
+}
+
 .logo {
 	display: flex;
 	align-items: center;
 	text-decoration: none;
 	color: inherit;
+	@include logo-style($primary-dark);
 	&__image {
 		width: 3.5rem;
 		display: block;
-		.svg {
+		svg {
 			width: 100%;
 			min-width: 100%;
 			max-width: 100%;
@@ -15,23 +30,15 @@
 	&__line {
 		height: 5rem;
 		width: 3px;
-		background-color: $primary_dark;
 		display: inline-block;
 		margin: 0 1rem;
 	}
 	&__text {
 		text-transform: uppercase;
-		color: $primary_dark;
 		font-size: 1rem;
 		font-weight: bold;
 	}
-	&_white &__image path {
-		fill: #fff;
-	}
-	&_white &__line {
-		background-color: #fff;
-	}
-	&_white &__text {
-		color: #fff;
+	&_white {
+		@include logo-style(#fff);
 	}
 }

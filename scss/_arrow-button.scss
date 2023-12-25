@@ -1,58 +1,31 @@
-@mixin arrow-button-style($color, $backgound-color) {
-	border-color: $color;
-	&::after {
-		background: $backgound-color;
+@mixin arrow-button-style($icon-color-primary, $icon-color-secondary) {
+	.icon {
+		@include icon-style($icon-color-primary, $icon-color-secondary);
 	}
-	svg path {
-		fill: $color;
+	&:not(:disabled):not(.slick-disabled):hover {
+		cursor: pointer;
+		.icon {
+			@include icon-hover($icon-color-secondary);
+		}
 	}
 }
 
 .arrow-button {
-	width: 3rem;
-	height: 3rem;
-	border-width: 2px;
-	border-style: solid;
-	border-radius: 50%;
+	@include arrow-button-style($primary, transparent);
+
+	border: none;
 	background: none;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	position: relative;
-	z-index: 1;
+	display: inline-block;
 	padding: 0;
-	@include arrow-button-style($primary, #fff);
-	&::after {
-		content: "";
-		width: 0;
-		height: 0;
-		top: 50%;
-		left: 50%;
-		transition: 0.2s ease-in-out;
-		transform: translate(-50%, -50%);
-		position: absolute;
-		border-radius: 50%;
-		z-index: -1;
+	.icon {
+		@include icon-size(3rem, 2px);
 	}
-	svg {
-		width: 50%;
-		height: 50%;
-	}
-	&:not(:disabled):not(.slick-disabled):hover {
-		cursor: pointer;
-		&:after {
-			width: 100%;
-			height: 100%;
-		}
-	}
+
 	&:disabled,
 	&.slick-disabled {
-		border-color: #b7b7b7;
+		@include arrow-button-style(#b7b7b7, transparent);
 		&:hover {
 			cursor: no-drop;
-		}
-		svg path {
-			fill: #b7b7b7;
 		}
 	}
 
@@ -66,8 +39,14 @@
 			transform: rotate(-90deg);
 		}
 	}
+	&_bottom {
+		svg {
+			transform: rotate(90deg);
+		}
+	}
+
 	&_dark {
-		@include arrow-button-style($text-dark, #fff);
+		@include arrow-button-style($text-dark, transparent);
 	}
 }
 
