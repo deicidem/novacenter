@@ -10,6 +10,13 @@
 			background: $text-color;
 		}
 	}
+	.section-background {
+		&_cutted {
+			&::after {
+				background: $background-color;
+			}
+		}
+	}
 }
 
 .section {
@@ -37,9 +44,48 @@
 		left: 0;
 		z-index: -1;
 		max-height: 100%;
+
 		&_right {
 			left: auto;
 			right: 0;
+		}
+		&_cutted {
+			width: 50%;
+			right: 0;
+			opacity: 100%;
+			left: auto;
+			z-index: 10;
+			height: 100%;
+			img {
+				position: relative;
+				height: 100%;
+				width: 100%;
+			}
+			&::after {
+				position: absolute;
+				content: "";
+				width: 100%;
+				height: 100%;
+				left: -1.5rem;
+				top: 0;
+				z-index: -1;
+			}
+			&_down {
+				img {
+					clip-path: polygon(0 0, 100% 0, 100% 100%, 25% 100%);
+				}
+				&::after {
+					clip-path: polygon(0 0, 100% 0, 100% 100%, 25% 100%);
+				}
+			}
+			&_up {
+				img {
+					clip-path: polygon(25% 0, 100% 0, 100% 100%, 0% 100%);
+				}
+				&::after {
+					clip-path: polygon(25% 0, 100% 0, 100% 100%, 0% 100%);
+				}
+			}
 		}
 	}
 	&-title {

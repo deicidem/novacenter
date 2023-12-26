@@ -37,6 +37,11 @@
 			right: 0;
 			top: 0;
 		}
+		&_with-pc {
+			img:first-child {
+				width: 90%;
+			}
+		}
 	}
 }
 

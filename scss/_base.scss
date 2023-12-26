@@ -2,21 +2,27 @@
 	box-sizing: border-box;
 	font-family: "Roboto", sans-serif;
 	min-width: 0;
+	outline-color: $primary-light;
 }
 body {
 	background: #f6f6f6;
 }
 h3 {
 	color: inherit;
-	font-weight: 400;
-	font-size: 2rem;
+	font-weight: 500;
+	font-size: 1.75rem;
+	margin: 1.25rem 0;
 }
 p {
 	color: inherit;
 	font-size: 1.25rem;
 	line-height: 1.5;
 }
-
+a {
+	color: $primary;
+	font-size: 1.25rem;
+	text-decoration: none;
+}
 img {
 	max-width: 100%;
 	object-fit: cover;
@@ -39,6 +45,12 @@ ul {
 	}
 }
 
+small {
+	font-size: 1rem;
+	* {
+		font-size: 1rem;
+	}
+}
 .viewer-toolbar {
 	ul {
 		list-style: initial;

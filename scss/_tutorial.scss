@@ -1,0 +1,37 @@
+.tutorial-image {
+	$page-offset: 0.25rem;
+
+	position: relative;
+	width: fit-content;
+	margin: auto;
+	&::after {
+		content: "";
+		position: absolute;
+		width: 100%;
+		height: calc(100% - $page-offset * 2);
+		top: 50%;
+		right: -$page-offset;
+		transform: translateY(-50%);
+		background: #fbfbfb;
+		z-index: -1;
+	}
+	&::before {
+		content: "";
+		position: absolute;
+		width: 100%;
+		height: calc(100% - $page-offset * 4);
+		top: 50%;
+		right: -$page-offset * 2;
+		transform: translateY(-50%);
+		background: #f2f2f2;
+		z-index: -2;
+	}
+	im img {
+		max-width: 100%;
+		max-height: 100%;
+		object-fit: cover;
+		object-position: center;
+		margin: 0 auto;
+		display: block;
+	}
+}
