@@ -20,7 +20,6 @@
 	.icon {
 		@include icon-size(3rem, 2px);
 	}
-
 	&:disabled,
 	&.slick-disabled {
 		@include arrow-button-style(#b7b7b7, transparent);

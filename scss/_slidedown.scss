@@ -14,38 +14,15 @@
 		align-items: center;
 		cursor: pointer;
 		text-align: left;
-		&__icon {
-			margin-right: 1rem;
-			width: 2.5rem;
-			height: 2.5rem;
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			background: #fff;
-			border-radius: 50%;
-			border: 1px solid $primary;
-			transform-origin: center;
-			flex-shrink: 0;
-			svg {
-				width: 50%;
-				height: 50%;
-				transform: rotate(-180deg);
-				path {
-					fill: $primary;
-				}
-			}
+		.icon {
+			@include icon-size(2.5rem, 2px);
+			@include icon-style($primary_dark, #fff);
+			margin-right: 0.5rem;
 		}
 	}
-	&.active &-button &-button__icon {
-		background: $primary;
-		border: 1px solid #fff;
-		svg {
-			transform: rotate(0deg);
-
-			path {
-				fill: #fff;
-			}
-		}
+	&.active &-button .icon {
+		@include icon-rotate(180deg);
+		@include icon-hover(#fff);
 	}
 	&-content {
 		display: none;

@@ -13,36 +13,22 @@
 			position: absolute;
 			top: 50%;
 			left: 50%;
-			border-radius: 50%;
 			transform: translate(-50%, -50%);
 			width: 4rem;
 			height: 4rem;
-			display: flex;
-			align-items: center;
-			justify-content: center;
 			background: none;
-			border: 3px solid #fff;
 			box-shadow: 0 0.25rem 0.25rem rgba(#000, 0.25);
 			z-index: 1;
-			padding: 0.5rem;
-			&::after {
-				content: "";
-				width: 0;
-				height: 0;
-				top: 50%;
-				left: 50%;
-				transition: 0.2s ease-in-out;
-				transform: translate(-50%, -50%);
-				position: absolute;
-				background: $primary;
-				border-radius: 50%;
-				z-index: -1;
+			padding: 0;
+			border: none;
+			.icon {
+				@include icon-style(#fff, transparent);
+				@include icon-size(4rem, 3px);
 			}
 			&:hover {
 				cursor: pointer;
-				&::after {
-					width: 100%;
-					height: 100%;
+				.icon {
+					@include icon-hover(transparent, $primary);
 				}
 			}
 		}
