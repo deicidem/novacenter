@@ -6703,13 +6703,13 @@ form input[type=submit]:hover {
   fill: #0066af;
 }
 .link .icon {
-  width: 2rem;
-  height: 2rem;
+  width: 1.75rem;
+  height: 1.75rem;
   margin-left: 0.5rem;
 }
 .link .icon svg {
-  width: 1rem;
-  height: 1rem;
+  width: 0.875rem;
+  height: 0.875rem;
 }
 .link .icon::before, .link .icon::after {
   border-width: 1px;
@@ -8436,7 +8436,7 @@ small * {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
-  padding: 0.75rem 1.25rem;
+  padding: 1rem 1.5rem;
   bottom: 0;
   line-height: 1.25;
 }

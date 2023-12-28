@@ -23,7 +23,7 @@
 	cursor: pointer;
 	@include link-style($primary, $primary, #fff);
 	.icon {
-		@include icon-size(2rem, 1px);
+		@include icon-size(1.75rem, 1px);
 		margin-left: 0.5rem;
 	}
 	&_white {
